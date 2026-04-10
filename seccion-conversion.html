@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas que convierten visitas en clientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Animaciones personalizadas */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .whatsapp-green {
+            background: #25D366;
+        }
+        
+        .ai-blue {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Sección Principal -->
+    <section class="py-16 px-4 md:px-8 lg:px-16">
+        <div class="max-w-6xl mx-auto">
+            <!-- Título y Subtítulo -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Herramientas que convierten visitas en clientes
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    No solo creamos tu web, la optimizamos para que genere contactos reales y aumente tus ventas.
+                </p>
+            </div>
+            
+            <!-- Grid de Tarjetas -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- BLOQUE 1 - BOTÓN DE WHATSAPP -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                    <!-- Icono y Título -->
+                    <div class="flex items-center mb-6">
+                        <div class="whatsapp-green w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-whatsapp text-white text-2xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900">
+                            Integración de WhatsApp
+                        </h2>
+                    </div>
+                    
+                    <!-- Texto descriptivo -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Añadimos un botón flotante de WhatsApp para que tus clientes puedan contactarte al instante de forma rápida y sencilla.
+                    </p>
+                    
+                    <!-- Características -->
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Botón visible en toda la web</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Contacto directo e inmediato</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Mejora la conversión de visitas a clientes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Configuración personalizada del mensaje inicial</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- Microcopy destacado -->
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                        <p class="text-green-800 font-semibold flex items-center">
+                            <i class="fas fa-bolt text-green-600 mr-2"></i>
+                            Tus clientes te escriben en segundos
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- BLOQUE 2 - ASISTENTE DE IA -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                    <!-- Icono y Título -->
+                    <div class="flex items-center mb-6">
+                        <div class="ai-blue w-14 h-14 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900">
+                            Asistente inteligente 24/7
+                        </h2>
+                    </div>
+                    
+                    <!-- Texto descriptivo -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Integramos un asistente automático que responde preguntas frecuentes y guía a tus visitantes incluso cuando no estás disponible.
+                    </p>
+                    
+                    <!-- Características -->
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Respuestas automáticas a dudas comunes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Disponible 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Mejora la experiencia del usuario</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-700">Filtra clientes interesados antes del contacto</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- Microcopy destacado -->
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                        <p class="text-blue-800 font-semibold flex items-center">
+                            <i class="fas fa-shield-alt text-blue-600 mr-2"></i>
+                            Nunca pierdas un cliente por no responder a tiempo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA FINAL -->
+            <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                    Convierte tu web en una herramienta para conseguir clientes
+                </h3>
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Quiero mejorar mi web
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Script para interactividad -->
+    <script>
+        // Animación de entrada al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observar las tarjetas
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+        
+        // Efecto click en el botón CTA
+        document.querySelector('button').addEventListener('click', function() {
+            // Aquí puedes agregar la acción que quieras
+            alert('¡Gracias por tu interés! Te contactaremos pronto.');
+        });
+    </script>
+</body>
+</html>
