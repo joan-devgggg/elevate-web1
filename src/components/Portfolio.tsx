@@ -16,39 +16,15 @@ const projects = [
   },
   {
     title: "Dentlux Travel",
-    category: "Clínica Dental",
+    category: "Servicios de Experiencia",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
     desktopImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
     mobileImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=600&fit=crop",
     url: "https://dentluxtravel.com",
-    description: "Clínica dental de turismo dental en Marrakech especializada en carillas dentales con experiencia premium y seguimiento en España.",
-    features: ["Carillas de composite", "Turismo dental", "Experiencia 3 días", "Garantía 1 año"],
+    description: "Servicios premium de experiencia con atención personalizada y seguimiento de calidad.",
+    features: ["Atención personalizada", "Experiencia premium", "Seguimiento calidad", "Servicios exclusivos"],
     color: "from-blue-500 to-purple-500",
     real: true
-  },
-  {
-    title: "Tienda Ropa Local",
-    category: "E-commerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-    desktopImage: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop",
-    mobileImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=600&fit=crop",
-    url: "#",
-    description: "Ejemplo conceptual de e-commerce para boutique de moda con catálogo interactivo y carrito de compras integrado.",
-    features: ["Catálogo productos", "Carrito de compra", "Pasarela pago", "Gestión stock"],
-    color: "from-pink-500 to-purple-500",
-    real: false
-  },
-  {
-    title: "Clínica Dental",
-    category: "Servicios Médicos",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    desktopImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
-    mobileImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=600&fit=crop",
-    url: "#",
-    description: "Ejemplo conceptual de web para clínica dental con sistema de citas online, presentación de servicios y testimonios.",
-    features: ["Citas online", "Galería de casos", "Presentación servicios", "Blog médico"],
-    color: "from-cyan-500 to-blue-500",
-    real: false
   }
 ];
 
@@ -63,14 +39,14 @@ const Portfolio = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Mira webs reales que ya están <span className="gradient-text">funcionando</span>
+            Algunos de nuestros <span className="gradient-text">trabajos recientes</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Webs profesionales que generan clientes cada día.
+            Proyectos profesionales que generan resultados reales.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={i}
