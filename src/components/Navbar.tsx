@@ -22,8 +22,11 @@ const Navbar = () => {
           <img 
             src={elevateLogo} 
             alt="Elevate Web" 
-            className="h-10 w-auto object-contain"
+            className="h-10 md:h-12 w-auto object-contain"
           />
+          <span className="text-lg md:text-xl font-semibold text-gray-900">
+            Elevate Web
+          </span>
         </a>
 
         <div className="hidden md:flex items-center gap-6">
