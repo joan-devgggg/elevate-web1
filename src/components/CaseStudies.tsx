@@ -23,15 +23,6 @@ const CaseStudies = () => {
       color: "bg-green-50 border-green-200",
       iconColor: "text-green-600",
       delay: 0.2
-    },
-    {
-      category: "Taller AutoFix",
-      icon: "🔧",
-      link: "#",
-      results: ["+25% clientes nuevos mensuales", "Recibo llamadas cada semana", "La web genera clientes automáticamente"],
-      color: "bg-orange-50 border-orange-200",
-      iconColor: "text-orange-600",
-      delay: 0.3
     }
   ];
 
@@ -54,7 +45,7 @@ const CaseStudies = () => {
         </motion.div>
 
         {/* Casos */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto justify-center">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={index}
