@@ -7,47 +7,32 @@ const ExitPopup = () => {
   const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
-    // Verificar si ya se mostró en esta sesión
-    if (localStorage.getItem('popupShown')) {
+    // Verificar si ya se mostró alguna vez
+    if (localStorage.getItem('popupMostrado')) {
       return;
     }
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Solo mostrar si el ratón sale por la parte superior de la página (exit intent)
-      if (e.clientY < 10 && !hasShown) {
-        showPopup();
-      }
-    };
-
-    // Trigger secundario por tiempo (25 segundos)
+    // Mostrar popup después de 20 segundos
     const timer = setTimeout(() => {
       if (!hasShown) {
         showPopup();
       }
-    }, 25000);
+    }, 20000);
 
     const showPopup = () => {
       setIsVisible(true);
       setHasShown(true);
-      localStorage.setItem('popupShown', 'true');
+      localStorage.setItem('popupMostrado', 'true');
     };
 
-    // No mostrar en mobile (opcional recomendado)
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile) {
-      return;
-    }
-
-    document.addEventListener('mouseleave', handleMouseLeave);
-
     return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
       clearTimeout(timer);
     };
   }, [hasShown]);
 
   const handleClose = () => {
     setIsVisible(false);
+    localStorage.setItem('popupMostrado', 'true');
   };
 
   const handleWhatsAppClick = () => {
@@ -90,11 +75,11 @@ const ExitPopup = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Te regalamos el diseño inicial (valorado en 150€)
+                Te diseñamos una web pensada para conseguirte clientes (gratis)
               </h3>
               
               <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                Sin compromiso. Solo pagas si te gusta.
+                Valorado en 150€. Solo pagas si te convence.
               </p>
 
             </div>
@@ -119,7 +104,7 @@ const ExitPopup = () => {
 
             {/* Texto de confianza */}
             <p className="text-sm text-gray-500 text-center mt-6">
-              Sin compromiso · Respuesta en 24-48h · 100% gratuito
+              Sin riesgo. Si no te gusta, no pagas nada.
             </p>
 
           </motion.div>
