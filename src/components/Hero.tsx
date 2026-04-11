@@ -6,7 +6,7 @@ const PHONE_URL = "tel:+34644610120";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero-bg relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24">
+    <section id="hero" className="hero-bg relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.div
@@ -35,7 +35,7 @@ const Hero = () => {
             className="flex items-center justify-center gap-1 mb-6"
           >
             <span className="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5</span>
-            <span className="text-sm font-medium text-gray-600">+50 negocios ya consiguen clientes</span>
+            <span className="text-sm font-medium text-gray-600">Clientes reales ya consiguen reservas y contactos</span>
           </motion.div>
 
           <motion.p

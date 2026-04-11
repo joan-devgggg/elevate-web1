@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import UrgencyBanner from "@/components/UrgencyBanner";
 import Hero from "@/components/Hero";
 import IrresistibleOffer from "@/components/IrresistibleOffer";
 import TrustCounters from "@/components/TrustCounters";
@@ -19,7 +18,6 @@ import ExitPopup from "@/components/ExitPopup";
 const Index = () => {
   return (
     <>
-      <UrgencyBanner />
       <Navbar />
       <main>
         <Hero />
