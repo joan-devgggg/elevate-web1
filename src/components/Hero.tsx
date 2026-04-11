@@ -34,7 +34,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="flex items-center justify-center gap-1 mb-6"
           >
-            <span className="text-yellow-500">⭐⭐⭐⭐⭐ 4.9/5</span>
+            <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
             <span className="text-sm font-medium text-gray-600">Clientes reales ya consiguen reservas y contactos</span>
           </motion.div>
 
@@ -44,7 +44,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl"
           >
-            Creamos tu web en 48h para que empieces a recibir clientes desde el primer día.
+            Tu web lista en 48h para empezar a recibir clientes.
           </motion.p>
 
           <motion.p
@@ -53,7 +53,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-sm text-muted-foreground mb-8 font-semibold text-green-600"
           >
-            Sin permanencia · Demo gratuita · Resultados desde día 1
+            Sin permanencia · Demo gratuita
           </motion.p>
 
           <motion.div

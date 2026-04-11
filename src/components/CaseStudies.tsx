@@ -122,20 +122,20 @@ const CaseStudies = () => {
                 )}
               </a>
 
-              <div className="text-center mt-6">
-                <a
-                  href={caseStudy.category === "Restaurante San Remo" ? "https://sanremopalencia.com" : 
-                     caseStudy.category === "Dentlux Travel" ? "https://dentluxtravel.com" : caseStudy.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 text-sm hover:underline transition-colors ${
-                    caseStudy.isOwn ? 'text-purple-600 hover:text-purple-700' : 'text-blue-600 hover:text-blue-700'
-                  }`}
-                >
-                  <span>Ver web</span>
-                  <span className="transform rotate-45 inline-block">→</span>
-                </a>
-              </div>
+              {!caseStudy.isOwn && (
+                <div className="text-center mt-6">
+                  <a
+                    href={caseStudy.category === "Restaurante San Remo" ? "https://sanremopalencia.com" : 
+                       caseStudy.category === "Dentlux Travel" ? "https://dentluxtravel.com" : caseStudy.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                  >
+                    <span>Ver web</span>
+                    <span className="transform rotate-45 inline-block">→</span>
+                  </a>
+                </div>
+              )}
 
               {/* Resultados */}
               <div className="space-y-3">
