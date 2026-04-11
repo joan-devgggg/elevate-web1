@@ -19,9 +19,6 @@ import ExitPopup from "@/components/ExitPopup";
 const Index = () => {
   return (
     <>
-      <div className="bg-red-500 text-white text-center py-4 font-bold text-xl">
-        TEST VERCEL FUNCIONA
-      </div>
       <UrgencyBanner />
       <Navbar />
       <main>
