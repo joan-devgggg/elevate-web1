@@ -16,7 +16,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-muted-foreground mb-3 shadow-soft"
           >
             <span className="inline-block h-2 w-2 rounded-full gradient-bg" />
-            Ves tu web antes de pagar un euro
+            Ves tu web antes de pagar nada
           </motion.div>
 
           <motion.h1
