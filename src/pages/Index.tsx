@@ -13,7 +13,6 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FuarCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import ExitPopup from "@/components/ExitPopup";
 
 const Index = () => {
   return (
@@ -35,7 +34,6 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-      <ExitPopup />
     </>
   );
 };
