@@ -23,6 +23,16 @@ const CaseStudies = () => {
       color: "bg-green-50 border-green-200",
       iconColor: "text-green-600",
       delay: 0.2
+    },
+    {
+      category: "Nuestra propia web",
+      icon: "🏢",
+      link: "https://elevateweb.es",
+      results: ["Optimizada para conversión", "Diseño orientado a captar clientes", "Estrategia real aplicada en negocio propio"],
+      color: "bg-purple-50 border-purple-200",
+      iconColor: "text-purple-600",
+      delay: 0.3,
+      isOwn: true
     }
   ];
 
@@ -45,7 +55,7 @@ const CaseStudies = () => {
         </motion.div>
 
         {/* Casos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={index}
@@ -58,8 +68,17 @@ const CaseStudies = () => {
               {/* Badge de resultado principal */}
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${caseStudy.color} ${caseStudy.iconColor} font-bold text-sm shadow-md`}>
-                  <TrendingUp className="h-4 w-4" />
-                  {caseStudy.results[0]}
+                  {caseStudy.isOwn ? (
+                    <>
+                      <span className="text-xs font-bold">PROPIO</span>
+                      <span className="text-xs">{caseStudy.results[0]}</span>
+                    </>
+                  ) : (
+                    <>
+                      <TrendingUp className="h-4 w-4" />
+                      <span>{caseStudy.results[0]}</span>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -91,6 +110,11 @@ const CaseStudies = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {caseStudy.category}
                 </h3>
+                {caseStudy.isOwn && (
+                  <p className="text-sm text-gray-600 mb-2">
+                    Aplicamos exactamente lo que vendemos
+                  </p>
+                )}
               </a>
 
               <div className="text-center mt-6">
@@ -99,7 +123,9 @@ const CaseStudies = () => {
                      caseStudy.category === "Dentlux Travel" ? "https://dentluxtravel.com" : caseStudy.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 transition-colors"
+                  className={`inline-flex items-center gap-2 text-sm hover:underline transition-colors ${
+                    caseStudy.isOwn ? 'text-purple-600 hover:text-purple-700' : 'text-blue-600 hover:text-blue-700'
+                  }`}
                 >
                   <span>Ver web</span>
                   <span className="transform rotate-45 inline-block">→</span>
