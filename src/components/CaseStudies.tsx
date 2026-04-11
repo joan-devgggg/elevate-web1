@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, TrendingUp, Users, Clock } from "lucide-react";
 import sanremoLogo from "@/assets/Logo elegante de Restaurante San Remo.png";
 import dentluxLogo from "@/assets/PHOTO-2026-04-01-15-22-26.jpg";
+import elevateLogo from "@/assets/Logo estilizado en tonos azules.png";
 
 const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20resultados%20como%20estos";
 
@@ -95,16 +96,20 @@ const CaseStudies = () => {
                     <img 
                       src={sanremoLogo} 
                       alt="Restaurante San Remo" 
-                      className="w-14 h-14 object-contain scale-125"
+                      className="w-12 h-12 object-contain mx-auto"
                     />
                   ) : caseStudy.category === "Dentlux Travel" ? (
                     <img 
                       src={dentluxLogo} 
                       alt="Dentlux Travel" 
-                      className="w-14 h-14 object-contain scale-80"
+                      className="w-12 h-12 object-contain mx-auto"
                     />
                   ) : (
-                    <div className="text-4xl">{caseStudy.icon}</div>
+                    <img 
+                      src={elevateLogo} 
+                      alt="Elevate Web" 
+                      className="w-12 h-12 object-contain mx-auto"
+                    />
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">

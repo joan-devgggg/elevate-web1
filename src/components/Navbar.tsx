@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle, Phone } from "lucide-react";
+import elevateLogo from "@/assets/Logo estilizado en tonos azules.png";
 
 const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20web";
 const PHONE_URL = "tel:+34644610120";
@@ -17,8 +18,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto flex h-16 items-center justify-between">
-        <a href="#" className="text-lg font-bold text-foreground">
-          Elevate Web
+        <a href="#" className="flex items-center gap-2">
+          <img 
+            src={elevateLogo} 
+            alt="Elevate Web" 
+            className="h-10 w-auto object-contain"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-6">
