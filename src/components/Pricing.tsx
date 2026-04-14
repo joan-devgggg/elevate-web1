@@ -89,17 +89,16 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -4 }}
-              className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border"
+              whileHover={{ y: -2, scale: 1.02 }}
+              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border ${plan.featured ? 'border-gray-200 shadow-2xl scale-105' : 'border-gray-200'} relative h-full flex flex-col justify-between transition-transform duration-300`}
             >
               {plan.featured && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                    {plan.badge}
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium border border-green-200">
+                    Más elegido
                   </div>
                 </div>
               )}
-              <div className={`h-full flex flex-col justify-between ${plan.featured ? 'border-blue-500 shadow-2xl ring-2 ring-blue-500 ring-opacity-50' : 'border-gray-200'}`}>
                 {/* Nombre del plan */}
                 <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-8' : 'text-xl mb-6'}`}>
                   {plan.name}
