@@ -6,21 +6,28 @@ const SimpleProcess = () => {
     {
       number: "1",
       title: "Nos cuentas tu negocio",
-      description: "Nos cuentas lo que necesitas",
+      description: "Hablamos contigo para entender lo que necesitas",
       icon: <MessageCircle className="h-6 w-6" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
       number: "2", 
       title: "Te enseñamos tu web en 48h",
-      description: "Te mostramos el diseño final",
+      description: "Ves una primera versión lista para captar clientes",
       icon: <Code className="h-6 w-6" />,
       color: "bg-green-100 text-green-600"
     },
     {
       number: "3",
-      title: "Si te gusta, empezamos a recibir clientes", 
-      description: "Tu web empieza a generar contactos",
+      title: "La ajustamos contigo hasta que te encante", 
+      description: "Hacemos todos los cambios necesarios sin coste extra",
+      icon: <TrendingUp className="h-6 w-6" />,
+      color: "bg-orange-100 text-orange-600"
+    },
+    {
+      number: "4",
+      title: "La lanzamos y empiezas a recibir clientes", 
+      description: "Tu web empieza a generar contactos desde el primer día",
       icon: <TrendingUp className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600"
     }
@@ -31,7 +38,7 @@ const SimpleProcess = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Así funciona en <span className="gradient-text">3 pasos simples</span>
+            Así funciona en <span className="gradient-text">4 pasos simples</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             De la idea a clientes reales en menos de una semana
@@ -42,7 +49,7 @@ const SimpleProcess = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={index}
