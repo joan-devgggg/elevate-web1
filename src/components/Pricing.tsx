@@ -128,11 +128,11 @@ const Pricing = () => {
                       {plan.price.split('inicial')[0].trim()}
                     </div>
                     <div className="text-sm text-gray-500 font-medium">
-                      {plan.price.includes('inicial') ? 'Pago inicial' : ''}
+                      {plan.price.includes('inicial') ? 'Pago único' : ''}
                     </div>
                     {plan.price.includes('inicial') && (
                       <div className={`text-lg font-semibold text-gray-700 mt-2`}>
-                        {plan.price.split('inicial')[1].trim()} (todo incluido)
+                        {plan.name === 'Plan Clientes' ? '+55€/mes (opcional, mantenimiento y mejoras)' : plan.name === 'Plan Crecimiento' ? '+95€/mes (opcional, optimización continua)' : ''}
                       </div>
                     )}
                   </div>
@@ -165,6 +165,18 @@ const Pricing = () => {
                 <p className={`text-gray-500 ${plan.featured ? 'text-base mb-12' : 'text-sm mb-8'}`}>
                   {plan.additionalText}
                 </p>
+                {plan.price.includes('inicial') && (
+                  <div className="flex flex-col gap-1 mt-2">
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span>Sin permanencia</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <span>Activalo solo si lo necesitas</span>
+                    </div>
+                  </div>
+                )}
               )}
 
               {/* Características */}
