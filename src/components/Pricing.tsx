@@ -165,18 +165,18 @@ const Pricing = () => {
                 <p className={`text-gray-500 ${plan.featured ? 'text-base mb-12' : 'text-sm mb-8'}`}>
                   {plan.additionalText}
                 </p>
-                {plan.price.includes('inicial') && (
-                  <div className="flex flex-col gap-1 mt-2">
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                      <span>Sin permanencia</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                      <span>Activalo solo si lo necesitas</span>
-                    </div>
+              )}
+              {plan.price.includes('inicial') && (
+                <div className="flex flex-col gap-1 mt-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span>Sin permanencia</span>
                   </div>
-                )}
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span>Activalo solo si lo necesitas</span>
+                  </div>
+                </div>
               )}
 
               {/* Características */}
