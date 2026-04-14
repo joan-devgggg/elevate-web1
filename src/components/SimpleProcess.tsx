@@ -6,21 +6,21 @@ const SimpleProcess = () => {
     {
       number: "1",
       title: "Nos cuentas tu negocio",
-      description: "Hablamos contigo para entender qué necesitas",
+      description: "Nos cuentas lo que necesitas",
       icon: <MessageCircle className="h-6 w-6" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
       number: "2", 
-      title: "Diseñamos tu web",
-      description: "Te enseñamos una versión lista en 48h",
+      title: "Te enseñamos tu web en 48h",
+      description: "Te mostramos el diseño final",
       icon: <Code className="h-6 w-6" />,
       color: "bg-green-100 text-green-600"
     },
     {
       number: "3",
-      title: "Empiezas a recibir clientes", 
-      description: "Tu web empieza a generar contactos desde el primer día",
+      title: "Si te gusta, empezamos a recibir clientes", 
+      description: "Tu web empieza a generar contactos",
       icon: <TrendingUp className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600"
     }
@@ -36,6 +36,10 @@ const SimpleProcess = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             De la idea a clientes reales en menos de una semana
           </p>
+          <div className="mt-6 inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
+            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+            <span className="text-sm font-medium text-green-700">Si no te gusta, no pagas nada</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">

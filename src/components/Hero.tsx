@@ -15,7 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6"
           >
-            Consigue clientes cada semana con una <span className="gradient-text">web que vende por ti</span>
+            Tu web lista en 48h para conseguir más clientes — <span className="gradient-text">o no pagas nada</span>
           </motion.h1>
 
           <motion.p
@@ -24,7 +24,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl"
           >
-            Creamos tu web en 48h para que empieces a recibir clientes desde el primer día. Sin permanencia.
+            Para negocios locales que quieren clientes sin complicarse. Sin permanencia.
           </motion.p>
 
           <motion.div

@@ -126,8 +126,23 @@ const Pricing = () => {
                       {plan.price.includes('inicial') ? 'Pago único' : ''}
                     </div>
                     {plan.price.includes('inicial') && (
-                      <div className={`text-lg font-semibold text-gray-700 mt-2`}>
+                      <div className="text-lg font-semibold text-gray-700 mt-2">
                         {plan.name === 'Plan Clientes' ? '+55€/mes (opcional, mantenimiento y mejoras)' : plan.name === 'Plan Crecimiento' ? '+95€/mes (opcional, optimización continua)' : ''}
+                      </div>
+                    )}
+                    {plan.name === 'Plan Clientes' && (
+                      <div className="text-sm text-green-600 font-medium mt-2">
+                        La opción más rentable para la mayoría de negocios
+                      </div>
+                    )}
+                    {plan.name === 'Plan Presencia' && (
+                      <div className="text-sm text-blue-600 font-medium mt-2">
+                        Ideal para empezar sin inversión inicial
+                      </div>
+                    )}
+                    {plan.name === 'Plan Crecimiento' && (
+                      <div className="text-sm text-purple-600 font-medium mt-2">
+                        Para negocios que quieren crecer más rápido
                       </div>
                     )}
                   </div>
@@ -159,11 +174,7 @@ const Pricing = () => {
                 <div className="flex flex-col gap-1 mt-2">
                   <div className="flex items-center gap-2 text-sm text-gray-500">
                     <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                    <span>Sin permanencia</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                    <span>Activalo solo si lo necesitas</span>
+                    <span>Sin permanencia · Actívalo cuando quieras</span>
                   </div>
                 </div>
               )}
