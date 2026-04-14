@@ -23,7 +23,7 @@ const OurProcess = () => {
           >
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                Trabajo directamente contigo para crear una web pensada para conseguir clientes reales.
+                Trabajo con negocios locales que necesitan clientes de forma constante, como restaurantes, clínicas y servicios.
               </p>
               
               <p className="text-lg leading-relaxed">
@@ -31,7 +31,7 @@ const OurProcess = () => {
               </p>
               
               <p className="text-lg leading-relaxed font-semibold">
-                Solo alguien que ya ha probado lo que funciona en negocios locales.
+                Solo alguien que ya ha probado lo que funciona en negocios como el tuyo.
               </p>
             </div>
 

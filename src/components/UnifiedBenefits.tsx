@@ -5,23 +5,23 @@ const UnifiedBenefits = () => {
   const benefits = [
     {
       icon: <MessageCircle className="h-6 w-6" />,
-      title: "Recibe mensajes por WhatsApp automáticamente",
-      description: "Tu web convierte visitantes en clientes mientras tú duermes"
+      title: "Recibe mensajes, reservas o citas cada semana",
+      description: "Tu web convierte visitas en clientes mientras tú duermes"
     },
     {
       icon: <Search className="h-6 w-6" />,
       title: "Aparece en Google cuando te buscan",
-      description: "Clientes te encuentran cuando necesitan tus servicios"
+      description: "Clientes locales te encuentran cuando necesitan tus servicios"
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
       title: "Convierte visitas en clientes",
-      description: "Diseño optimizado para generar contactos y ventas"
+      description: "Diseño optimizado para generar mensajes, reservas y citas"
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Funciona 24/7",
-      description: "Tu negocio nunca cierra, sigue generando resultados siempre"
+      description: "Tu negocio nunca cierra, sigue generando clientes siempre"
     }
   ];
 
@@ -33,8 +33,12 @@ const UnifiedBenefits = () => {
             Tu web <span className="gradient-text">trabaja por ti</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Mientras tú te ocupas de tu negocio, tu web se encarga de conseguir clientes
+            Mientras tú te ocupas de tu negocio local, tu web se encarga de conseguir clientes
           </p>
+          <div className="mt-4 inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2">
+            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+            <span className="text-sm font-medium text-blue-700">Trabajamos con restaurantes, clínicas y negocios locales</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">

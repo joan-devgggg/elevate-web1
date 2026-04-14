@@ -13,9 +13,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
           >
-            Tu web lista en 48h para conseguir más clientes — <span className="gradient-text">o no pagas nada</span>
+            Tu web lista en 48h para conseguir más <span className="gradient-text">clientes en tu negocio local</span>
+            <br />
+            <span className="text-2xl md:text-3xl lg:text-4xl text-green-600 font-semibold">o no pagas nada</span>
           </motion.h1>
 
           <motion.p
@@ -24,7 +26,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl"
           >
-            Para negocios locales que quieren clientes sin complicarse. Sin permanencia.
+            Especialmente pensado para restaurantes, clínicas y negocios que dependan de clientes cada semana. Sin permanencia.
           </motion.p>
 
           <motion.div

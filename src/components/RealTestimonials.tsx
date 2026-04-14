@@ -7,7 +7,7 @@ const RealTestimonials = () => {
       business: "Restaurante San Remo",
       before: "Sin reservas online",
       after: "+40% reservas en 30 días",
-      quote: "Desde que tenemos la web, recibimos clientes cada semana",
+      quote: "Desde que tenemos la web, recibimos reservas cada semana",
       url: "https://sanremopalencia.com"
     },
     {
