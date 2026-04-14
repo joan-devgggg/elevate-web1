@@ -1,16 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import IrresistibleOffer from "@/components/IrresistibleOffer";
-import TrustCounters from "@/components/TrustCounters";
-import Process from "@/components/Process";
-import Pricing from "@/components/Pricing";
+import SocialProof from "@/components/SocialProof";
+import SimpleProcess from "@/components/SimpleProcess";
 import CaseStudies from "@/components/CaseStudies";
-import Benefits from "@/components/Benefits";
-import Services from "@/components/Services";
-import Urgency from "@/components/Urgency";
-import DomainFAQ from "@/components/DomainFAQ";
-import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FuarCTA";
+import Pricing from "@/components/Pricing";
+import UnifiedBenefits from "@/components/UnifiedBenefits";
+import SimpleGuarantee from "@/components/SimpleGuarantee";
+import StrongFinalCTA from "@/components/StrongFinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -20,17 +16,13 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <IrresistibleOffer />
-        <TrustCounters />
-        <Process />
-        <Pricing />
+        <SocialProof />
+        <SimpleProcess />
         <CaseStudies />
-        <Benefits />
-        <Services />
-        <Urgency />
-        <DomainFAQ />
-        <FAQ />
-        <FinalCTA />
+        <Pricing />
+        <UnifiedBenefits />
+        <SimpleGuarantee />
+        <StrongFinalCTA />
       </main>
       <Footer />
       <WhatsAppButton />

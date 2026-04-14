@@ -137,18 +137,44 @@ const CaseStudies = () => {
                 </div>
               )}
 
-              {/* Resultados */}
-              <div className="space-y-3">
-                {caseStudy.results.map((result, resultIndex) => (
-                  <div key={resultIndex} className="flex items-start gap-3">
-                    <div className={`inline-flex h-5 w-5 items-center justify-center rounded-full ${caseStudy.iconColor} mt-0.5`}>
-                      <div className="h-2 w-2 rounded-full bg-current"></div>
+              {/* Resultados Antes/Después */}
+              <div className="space-y-4">
+                {caseStudy.category === "Restaurante San Remo" ? (
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                      <div className="text-sm font-medium text-blue-700 mb-1">ANTES</div>
+                      <div className="text-gray-700">Sin reservas online</div>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      {result}
-                    </p>
+                    <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                      <div className="text-sm font-medium text-green-700 mb-1">DESPUÉS</div>
+                      <div className="text-gray-700 font-semibold">+40% reservas en 30 días</div>
+                    </div>
                   </div>
-                ))}
+                ) : caseStudy.category === "Dentlux Travel" ? (
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                      <div className="text-sm font-medium text-blue-700 mb-1">ANTES</div>
+                      <div className="text-gray-700">Sin leads</div>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+                      <div className="text-sm font-medium text-green-700 mb-1">DESPUÉS</div>
+                      <div className="text-gray-700 font-semibold">+300% solicitudes</div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {caseStudy.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="flex items-start gap-3">
+                        <div className={`inline-flex h-5 w-5 items-center justify-center rounded-full ${caseStudy.iconColor} mt-0.5`}>
+                          <div className="h-2 w-2 rounded-full bg-current"></div>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-relaxed">
+                          {result}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

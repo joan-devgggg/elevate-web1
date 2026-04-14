@@ -6,6 +6,22 @@ const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20empezar%
 const Pricing = () => {
   const plans = [
     {
+      name: "Plan Clientes",
+      price: "350€",
+      additionalText: "",
+      features: [
+        "Web totalmente personalizada",
+        "Diseñada para convertir visitas en clientes",
+        "Optimización para Google",
+        "Soporte prioritario"
+      ],
+      buttonText: "Quiero mi web en 48h",
+      featured: true,
+      badge: "La opción más elegida",
+      priceDescription: "La opción más rentable para la mayoría de negocios",
+      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
+    },
+    {
       name: "Plan Presencia",
       price: "65€/mes",
       additionalText: "Sin pago inicial",
@@ -17,47 +33,26 @@ const Pricing = () => {
         "Cambios básicos incluidos",
         "Soporte estándar"
       ],
-      buttonText: "Quiero mi demo gratuita",
+      buttonText: "Quiero mi web en 48h",
       featured: false,
-      description: "Ideal para empezar a tener presencia online profesional",
+      description: "Ideal para empezar sin inversión inicial",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
     },
     {
-      name: "Plan Clientes",
-      price: "350€ inicial + 55€/mes",
-      additionalText: "",
-      features: [
-        "Web totalmente personalizada para tu negocio",
-        "Estructura diseñada para convertir visitas en clientes",
-        "Optimización para aparecer en Google",
-        "Cambios y mejoras continuas",
-        "Soporte prioritario"
-      ],
-      buttonText: "Quiero mi demo gratuita",
-      featured: true,
-      badge: "Más popular",
-      priceDescription: "Pensada para que empieces a recibir clientes desde el primer mes",
-      idealFor: "Recuperas la inversión con 2-3 clientes",
-      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
-    },
-    {
       name: "Plan Crecimiento",
-      price: "700€ inicial + 95€/mes",
+      price: "700€",
       additionalText: "",
       features: [
         "Todo lo del plan Clientes",
-        "Mejora continua de la web",
-        "Ajustes constantes para conseguir más clientes",
-        "Optimización basada en resultados",
-        "Revisión y mejoras periódicas",
-        "Optimización para aparecer en Google Maps",
-        "Soporte dedicado prioritario",
-        "Atención rápida y prioritaria"
+        "Optimización avanzada",
+        "Mejoras continuas",
+        "Soporte dedicado",
+        "Estrategia mensual",
+        "Resultados garantizados"
       ],
-      buttonText: "Quiero mi demo gratuita",
+      buttonText: "Quiero mi web en 48h",
       featured: false,
-      description: "Para negocios que quieren crecer en serio",
-      priceDescription: "Optimización continua para aumentar clientes cada mes",
+      description: "Para negocios que quieren escalar más rápido",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Crecimiento%20para%20escalar%20mi%20negocio"
     }
   ];
@@ -68,10 +63,10 @@ const Pricing = () => {
         {/* Título y Subtítulo */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Elige cómo quieres conseguir <span className="gradient-text">clientes con tu web</span>
+            Elige cómo quieres conseguir <span className="gradient-text">clientes</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Tres opciones según el nivel de resultados que quieras conseguir
+            La mayoría de negocios empiezan con el Plan Clientes
           </p>
           <p className="text-sm text-gray-500 mt-4">
             Sin permanencia · Sin sorpresas · Sin letra pequeña
@@ -152,13 +147,7 @@ const Pricing = () => {
                 </p>
               )}
               
-              {/* Texto ideal para plan Clientes */}
-              {plan.idealFor && (
-                <p className="text-sm font-medium text-green-600 mb-8">
-                  {plan.idealFor}
-                </p>
-              )}
-              
+                            
               
               {/* Texto adicional */}
               {plan.additionalText && (
