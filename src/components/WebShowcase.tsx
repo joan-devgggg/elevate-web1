@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import heroMockup from "@/assets/hero-mockup.png";
+import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
+import dentluxScreenshot from "@/assets/screenshot-dentlux.png";
 
 const WebShowcase = () => {
   return (
@@ -17,42 +18,96 @@ const WebShowcase = () => {
             Así se ve una web que sí consigue clientes
           </h2>
           
-          <p className="text-lg md:text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Diseñadas para convertir visitas en mensajes, reservas y llamadas desde el primer día
           </p>
           
-          {/* Bloque Visual */}
-          <div className="relative">
-            {/* Desktop - Imagen Principal */}
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 mb-12"
+          >
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span className="text-sm font-medium text-green-800">Ejemplos reales de clientes</span>
+          </motion.div>
+          
+          {/* Bloque Visual Realista */}
+          <div className="relative max-w-[700px] mx-auto">
+            {/* Desktop - Portátil con San Remo */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ scale: 1.02 }}
-              className="rounded-2xl shadow-xl overflow-hidden bg-gray-50"
+              className="relative bg-gray-100 rounded-2xl shadow-xl overflow-hidden p-4 md:p-8"
             >
-              <img 
-                src={heroMockup}
-                alt="Web profesional para conseguir clientes"
-                className="w-full h-auto object-cover"
-              />
+              {/* Marco del portátil */}
+              <div className="bg-gray-900 rounded-t-2xl h-4 md:h-6 flex items-center justify-center">
+                <div className="w-12 md:w-16 h-1 bg-gray-700 rounded-full"></div>
+              </div>
+              
+              {/* Pantalla del portátil con screenshot */}
+              <div className="bg-white rounded-b-2xl overflow-hidden">
+                <img 
+                  src={sanremoScreenshot}
+                  alt="Web de Restaurante San Remo - Desktop"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Mobile - Delante con Dentlux (solo en desktop) */}
+              <motion.div
+                initial={{ opacity: 0, x: 30, rotate: 5 }}
+                whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ rotate: -2, scale: 1.05 }}
+                className="hidden lg:block absolute -bottom-4 -right-4 w-32 bg-gray-900 rounded-3xl shadow-2xl overflow-hidden"
+              >
+                {/* Marco del móvil */}
+                <div className="bg-gray-900 h-4 flex items-center justify-center">
+                  <div className="w-8 h-1 bg-gray-700 rounded-full"></div>
+                </div>
+                
+                {/* Pantalla del móvil con screenshot */}
+                <div className="bg-white rounded-b-2xl overflow-hidden">
+                  <img 
+                    src={dentluxScreenshot}
+                    alt="Web de Dentlux Travel - Mobile"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </motion.div>
             </motion.div>
             
-            {/* Mobile - Opción superpuesta (decorativa) */}
+            {/* Mobile - Versión separada para móvil/tablet */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="hidden lg:block absolute -bottom-8 -right-8 w-48 h-32 bg-white rounded-xl shadow-lg p-2"
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="lg:hidden mt-8 max-w-[300px] mx-auto"
             >
-              <div className="w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-8 h-8 bg-blue-500 rounded-lg mx-auto mb-2"></div>
-                  <div className="text-xs text-gray-600 font-medium">Mobile</div>
+              <div className="bg-gray-900 rounded-3xl shadow-xl overflow-hidden">
+                {/* Marco del móvil */}
+                <div className="bg-gray-900 h-4 flex items-center justify-center">
+                  <div className="w-8 h-1 bg-gray-700 rounded-full"></div>
+                </div>
+                
+                {/* Pantalla del móvil con screenshot */}
+                <div className="bg-white rounded-b-2xl overflow-hidden">
+                  <img 
+                    src={dentluxScreenshot}
+                    alt="Web de Dentlux Travel - Mobile"
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
+              <p className="text-center text-sm text-gray-600 mt-4">Versión móvil</p>
             </motion.div>
           </div>
           
