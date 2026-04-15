@@ -1,5 +1,6 @@
+import * as React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, TrendingUp, Users, Clock } from "lucide-react";
+import { MessageCircle, TrendingUp, Users, Clock, ExternalLink } from "lucide-react";
 import sanremoLogo from "@/assets/Logo elegante de Restaurante San Remo.png";
 import dentluxLogo from "@/assets/PHOTO-2026-04-01-15-22-26.jpg";
 import elevateLogo from "@/assets/Logo estilizado en tonos azules.png";
@@ -47,11 +48,14 @@ const CaseStudies = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          <div className="text-xs text-gray-500 uppercase tracking-wider mb-3">
+            Casos recientes
+          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Así es como nuestros clientes <span className="gradient-text">consiguen más ventas</span>
+            Resultados reales de clientes
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Resultados reales de negocios locales como el tuyo. No promesas, solo hechos.
+            Algunos de los últimos proyectos en los que hemos trabajado
           </p>
         </motion.div>
 
@@ -64,7 +68,7 @@ const CaseStudies = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: caseStudy.delay }}
-              className={`relative rounded-2xl border ${caseStudy.color} p-8 bg-white shadow-lg hover:shadow-xl transition-all cursor-pointer`}
+              className={`relative rounded-2xl border ${caseStudy.color} p-8 bg-white shadow-md hover:shadow-lg transition-all cursor-pointer`}
             >
               {/* Badge de resultado principal */}
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -131,14 +135,14 @@ const CaseStudies = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 hover:underline transition-colors"
                   >
-                    <span>Ver web</span>
-                    <span className="transform rotate-45 inline-block">→</span>
+                    <span>Ver esta web</span>
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>
               )}
 
               {/* Resultados Antes/Después */}
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {caseStudy.category === "Restaurante San Remo" ? (
                   <div className="space-y-4">
                     <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
@@ -148,6 +152,9 @@ const CaseStudies = () => {
                     <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                       <div className="text-sm font-medium text-green-700 mb-1">DESPUÉS</div>
                       <div className="text-gray-700 font-semibold">+40% reservas en 30 días</div>
+                      <div className="text-xs text-gray-500 mt-1">
+                        Tras lanzar su nueva web optimizada
+                      </div>
                     </div>
                   </div>
                 ) : caseStudy.category === "Dentlux Travel" ? (
@@ -159,6 +166,9 @@ const CaseStudies = () => {
                     <div className="bg-green-50 rounded-lg p-4 border border-green-200">
                       <div className="text-sm font-medium text-green-700 mb-1">DESPUÉS</div>
                       <div className="text-gray-700 font-semibold">+300% solicitudes</div>
+                      <div className="text-xs text-gray-500 mt-1">
+                        Tras optimizar su web para captar leads
+                      </div>
                     </div>
                   </div>
                 ) : (
