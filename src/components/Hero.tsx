@@ -1,3 +1,4 @@
+import * as React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Phone } from "lucide-react";
 
@@ -49,7 +50,7 @@ const Hero = () => {
               className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-soft transition-all hover:bg-gray-50 w-full sm:w-auto"
             >
               <Phone className="h-5 w-5" />
-              WhatsApp
+              Llamar ahora
             </a>
           </motion.div>
 
@@ -60,6 +61,15 @@ const Hero = () => {
             className="text-sm text-gray-600 mt-4"
           >
             Te enseñamos ejemplos reales en 1 minuto
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-xs text-green-600 font-medium mt-2"
+          >
+            Respuesta inmediata
           </motion.p>
         </div>
       </div>
