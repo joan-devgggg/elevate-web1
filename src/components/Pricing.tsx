@@ -93,51 +93,55 @@ const Pricing = () => {
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
               className={`bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
             >
-              {/* Badge dentro de la card */}
-              {plan.featured && (
-                <div className="mb-4">
-                  <div className="inline-flex items-center justify-center w-full">
-                    <div className="bg-[#E6F7EC] text-[#1F7A4D] px-3 py-1 rounded-full text-xs font-medium">
-                      Más elegido
+              {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
+              <div className="min-h-[200px] flex flex-col">
+                {/* Badge dentro de la card */}
+                {plan.featured && (
+                  <div className="mb-4">
+                    <div className="inline-flex items-center justify-center w-full">
+                      <div className="bg-[#E6F7EC] text-[#1F7A4D] px-3 py-1 rounded-full text-xs font-medium">
+                        Más elegido
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-              {/* Nombre del plan */}
-              <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-4' : 'text-xl mb-4'}`}>
-                {plan.name}
-              </h3>
-              
-              {/* Descripción (siempre encima del precio) */}
-              {plan.description && (
-                <p className="text-gray-600 text-sm mb-6 font-medium">
-                  {plan.description}
-                </p>
-              )}
+                )}
+                
+                {/* Nombre del plan */}
+                <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-3' : 'text-xl mb-3'}`}>
+                  {plan.name}
+                </h3>
+                
+                {/* Descripción (siempre encima del precio) */}
+                {plan.description && (
+                  <p className="text-gray-600 text-sm mb-4 font-medium">
+                    {plan.description}
+                  </p>
+                )}
 
-              {/* Precio - mismo tamaño para todos */}
-              <div className="mb-6">
-                <div className="text-5xl font-bold text-gray-900">
-                  {plan.price}
+                {/* Precio - mismo tamaño para todos */}
+                <div className="mb-4">
+                  <div className="text-5xl font-bold text-gray-900">
+                    {plan.price}
+                  </div>
                 </div>
+                
+                {/* Subtexto adicional */}
+                {plan.additionalText && (
+                  <p className="text-gray-500 text-sm mb-3">
+                    {plan.additionalText}
+                  </p>
+                )}
+
+                {/* Descripción de precio (solo Plan Clientes) */}
+                {plan.priceDescription && (
+                  <p className="text-sm text-green-600 font-medium">
+                    {plan.priceDescription}
+                  </p>
+                )}
               </div>
-              
-              {/* Subtexto adicional */}
-              {plan.additionalText && (
-                <p className="text-gray-500 text-sm mb-8">
-                  {plan.additionalText}
-                </p>
-              )}
 
-              {/* Descripción de precio (solo Plan Clientes) */}
-              {plan.priceDescription && (
-                <p className="text-sm text-green-600 font-medium mb-8">
-                  {plan.priceDescription}
-                </p>
-              )}
-
-              {/* Características - espaciado consistente */}
-              <div className="flex flex-col gap-3 text-left mb-8">
+              {/* MIDDLE SECTION - Características */}
+              <div className="flex-1 flex flex-col gap-3 text-left py-6">
                 {plan.features.map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 mt-0.5">
@@ -150,22 +154,24 @@ const Pricing = () => {
                 ))}
               </div>
 
-              {/* Botón CTA */}
-              <a
-                href={`${WHATSAPP_URL.split('?')[0]}?text=${plan.whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`
-                  inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
-                  ${plan.featured 
-                    ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
-                    : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
-                  }
-                `}
-              >
-                <MessageCircle className="h-4 w-4" />
-                {plan.buttonText}
-              </a>
+              {/* BOTTOM SECTION - Botón CTA */}
+              <div className="mt-auto">
+                <a
+                  href={`${WHATSAPP_URL.split('?')[0]}?text=${plan.whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`
+                    inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
+                    ${plan.featured 
+                      ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
+                      : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
+                    }
+                  `}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  {plan.buttonText}
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
