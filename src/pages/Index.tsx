@@ -5,7 +5,7 @@ import ProblemIdentification from "@/components/ProblemIdentification";
 import CaseStudies from "@/components/CaseStudies";
 import SimpleProcess from "@/components/SimpleProcess";
 import UnifiedBenefits from "@/components/UnifiedBenefits";
-import SocialProof from "@/components/SocialProof";
+import WebShowcase from "@/components/WebShowcase";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
 import Pricing from "@/components/Pricing";
 import CROFAQ from "@/components/CROFAQ";
@@ -23,7 +23,7 @@ const Index = () => {
         <CaseStudies />
         <SimpleProcess />
         <UnifiedBenefits />
-        <SocialProof />
+        <WebShowcase />
         <SimpleGuarantee />
         <Pricing />
         <CROFAQ />
