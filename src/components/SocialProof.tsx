@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import sanremoLogo from "@/assets/Logo elegante de Restaurante San Remo.png";
-import dentluxLogo from "@/assets/PHOTO-2026-04-01-15-22-26.jpg";
+import sanremoLogo from "@/assets/logo-sanremo.png";
+import dentluxLogo from "@/assets/logo-dentlux.jpg";
 
 const SocialProof = () => {
   return (

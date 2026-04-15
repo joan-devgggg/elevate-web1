@@ -1,10 +1,12 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import sanremoLogo from "@/assets/Logo elegante de Restaurante San Remo.png";
-import dentluxLogo from "@/assets/PHOTO-2026-04-01-15-22-26.jpg";
-import sanremoScreenshot from "@/assets/Captura de pantalla 2026-04-15 a las 23.57.20.png";
-import dentluxScreenshot from "@/assets/Captura de pantalla 2026-04-15 a las 23.58.11.png";
+import sanremoLogo from "@/assets/logo-sanremo.png";
+import dentluxLogo from "@/assets/logo-dentlux.jpg";
+import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
+import dentluxScreenshot from "@/assets/screenshot-dentlux.png";
+import fotoAlberto from "@/assets/foto-alberto.png";
+import fotoDentlux from "@/assets/foto-dentlux.jpg";
 
 const CaseStudies = () => {
   const cases = [
@@ -63,8 +65,12 @@ const CaseStudies = () => {
             >
               {/* Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-xs text-gray-600 font-medium">
-                  {caseStudy.name === "Restaurante San Remo" ? "FOTO_ALBERTO" : "FOTO_DENTLUX"}
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img 
+                    src={caseStudy.name === "Restaurante San Remo" ? fotoAlberto : fotoDentlux}
+                    alt={caseStudy.name === "Restaurante San Remo" ? "Alberto Villegas" : "Equipo Dentlux Travel"}
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
