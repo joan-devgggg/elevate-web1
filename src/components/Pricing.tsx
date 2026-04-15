@@ -20,7 +20,7 @@ const Pricing = () => {
       ],
       buttonText: "Empezar sin pago inicial",
       featured: false,
-      description: "Ideal para empezar sin inversión inicial",
+      description: "Ideal para empezar sin riesgo",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
     },
     {
@@ -40,7 +40,7 @@ const Pricing = () => {
       buttonText: "Quiero mi web en 48h",
       featured: true,
       badge: "Más elegido",
-      priceDescription: "Recuperas la inversión con 2–3 clientes",
+      priceDescription: "Recuperas la inversión con solo 2–3 clientes",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
     },
     {
@@ -57,7 +57,7 @@ const Pricing = () => {
       ],
       buttonText: "Quiero escalar mi negocio",
       featured: false,
-      description: "Para negocios que quieren crecer de forma predecible cada mes",
+      description: "Para crecer de forma predecible cada mes",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Crecimiento%20para%20escalar%20mi%20negocio"
     }
   ];
@@ -91,99 +91,53 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
-              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#FAFBFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-transform duration-300`}
+              className={`bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
             >
               {/* Badge dentro de la card */}
               {plan.featured && (
                 <div className="mb-4">
                   <div className="inline-flex items-center justify-center w-full">
-                    <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <div className="bg-[#E6F7EC] text-[#1F7A4D] px-3 py-1 rounded-full text-xs font-medium">
                       Más elegido
                     </div>
                   </div>
                 </div>
               )}
               {/* Nombre del plan */}
-              <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-6' : 'text-xl mb-6'}`}>
+              <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-4' : 'text-xl mb-4'}`}>
                 {plan.name}
               </h3>
               
-              {/* Descripción adicional */}
+              {/* Descripción (siempre encima del precio) */}
               {plan.description && (
-                <p className={`text-gray-600 ${plan.featured ? 'text-base mb-6' : 'text-sm mb-4'} font-medium`}>
+                <p className="text-gray-600 text-sm mb-6 font-medium">
                   {plan.description}
                 </p>
               )}
 
-              {/* Precio con jerarquía elegante */}
-              <div className={`${plan.featured ? 'mb-12' : 'mb-8'}`}>
-                {plan.price.includes('inicial') ? (
-                  <div className="space-y-1">
-                    <div className="text-6xl font-black text-gray-900">
-                      {plan.price.split('inicial')[0].trim()}
-                    </div>
-                    <div className="text-sm text-gray-500 font-medium">
-                      {plan.price.includes('inicial') ? 'Pago único' : ''}
-                    </div>
-                    {plan.price.includes('inicial') && (
-                      <div className="text-lg font-semibold text-gray-700 mt-2">
-                        {plan.name === 'Plan Clientes' ? '+55€/mes (opcional, mantenimiento y mejoras)' : plan.name === 'Plan Crecimiento' ? '+95€/mes (opcional, optimización continua)' : ''}
-                      </div>
-                    )}
-                    {plan.name === 'Plan Clientes' && (
-                      <div className="text-sm text-gray-600 mt-2">
-                        Pago único + opción de mantenimiento mensual (opcional)
-                      </div>
-                    )}
-                    {plan.name === 'Plan Clientes' && (
-                      <div className="text-sm text-green-600 font-medium mt-2">
-                        Recuperas la inversión con 2–3 clientes
-                      </div>
-                    )}
-                    {plan.name === 'Plan Presencia' && (
-                      <div className="text-sm text-blue-600 font-medium mt-2">
-                        Ideal para empezar sin inversión inicial
-                      </div>
-                    )}
-                    {plan.name === 'Plan Crecimiento' && (
-                      <div className="text-sm text-purple-600 font-medium mt-2">
-                        Para negocios que quieren crecer más rápido
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className="space-y-1">
-                    <div className={`font-bold text-gray-900 ${plan.featured ? 'text-5xl' : 'text-4xl'}`}>
-                      {plan.price}
-                    </div>
-                  </div>
-                )}
+              {/* Precio - mismo tamaño para todos */}
+              <div className="mb-6">
+                <div className="text-5xl font-bold text-gray-900">
+                  {plan.price}
+                </div>
               </div>
               
-              {/* Descripción de precio para plan central */}
-              {plan.priceDescription && (
-                <p className="text-sm text-gray-600 mb-8">
-                  {plan.priceDescription}
-                </p>
-              )}
-              
-              {/* Texto adicional */}
+              {/* Subtexto adicional */}
               {plan.additionalText && (
-                <p className={`text-gray-500 ${plan.featured ? 'text-base mb-12' : 'text-sm mb-8'}`}>
+                <p className="text-gray-500 text-sm mb-8">
                   {plan.additionalText}
                 </p>
               )}
-              {plan.price.includes('inicial') && (
-                <div className="flex flex-col gap-1 mt-2">
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                    <span>Sin permanencia · Actívalo cuando quieras</span>
-                  </div>
-                </div>
+
+              {/* Descripción de precio (solo Plan Clientes) */}
+              {plan.priceDescription && (
+                <p className="text-sm text-green-600 font-medium mb-8">
+                  {plan.priceDescription}
+                </p>
               )}
 
-              {/* Características */}
-              <div className={`flex flex-col gap-3 text-left ${plan.featured ? 'mb-8' : 'mb-6'}`}>
+              {/* Características - espaciado consistente */}
+              <div className="flex flex-col gap-3 text-left mb-8">
                 {plan.features.map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 mt-0.5">
@@ -196,7 +150,7 @@ const Pricing = () => {
                 ))}
               </div>
 
-              {/* Botón */}
+              {/* Botón CTA */}
               <a
                 href={`${WHATSAPP_URL.split('?')[0]}?text=${plan.whatsappMessage}`}
                 target="_blank"
@@ -204,7 +158,7 @@ const Pricing = () => {
                 className={`
                   inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
                   ${plan.featured 
-                    ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl' 
+                    ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
                     : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
                   }
                 `}
