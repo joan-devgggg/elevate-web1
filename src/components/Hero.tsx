@@ -2,7 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Phone } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20mi%20web%20en%2048h";
+const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20crear%20mi%20web%20con%20Elevate%20Web.%20%C2%BFPod%C3%A9is%20ense%C3%B1arme%20ejemplos%3F";
 const PHONE_URL = "tel:+34644610120";
 
 const Hero = () => {
@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
           >
-            Tu web lista en 48h para conseguir más <span className="gradient-text">clientes en tu negocio local</span>
+            Tu web lista en 48h para conseguir <span className="gradient-text">clientes cada semana sin depender de Instagram</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-green-600 font-semibold">o no pagas nada</span>
           </motion.h1>
@@ -43,11 +43,11 @@ const Hero = () => {
               className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-primary-foreground shadow-elevated transition-all hover:scale-105 w-full sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
-              Quiero mi web en 48h
+              Quiero empezar a recibir clientes
             </a>
             <a
               href={PHONE_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-soft transition-all hover:bg-gray-50 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-soft transition-all hover:bg-gray-50 w-full sm:w-auto"
             >
               <Phone className="h-5 w-5" />
               Llamar ahora
@@ -58,18 +58,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-sm text-gray-600 mt-4"
+            className="text-xs text-gray-500 mt-4"
           >
-            Te enseñamos ejemplos reales en 1 minuto
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xs text-green-600 font-medium mt-2"
-          >
-            Respuesta inmediata
+            Si no te gusta el diseño que te mostramos, no pagas nada.
           </motion.p>
         </div>
       </div>

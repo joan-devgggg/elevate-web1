@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CROFAQ = () => {
-  const [openItem, setOpenItem] = useState(null);
+  const [openItem, setOpenItem] = useState([0, 1]); // Abrir primeras 2 preguntas por defecto
 
   const faqs = [
     {
@@ -13,6 +13,14 @@ const CROFAQ = () => {
     {
       question: "¿Cuándo empiezo a ver resultados?",
       answer: "La mayoría de clientes empiezan a recibir mensajes y contactos en la primera semana. En 30 días deberías tener clientes recurrentes."
+    },
+    {
+      question: "¿Y si la web no me trae clientes?",
+      answer: "Es raro que pase si tu negocio ya tiene demanda local. Pero si en 30 días no estás contento con los resultados, lo revisamos juntos sin coste adicional. Sin permanencia, cancelas cuando quieras."
+    },
+    {
+      question: "¿Y si no tengo tiempo para ocuparme de esto?",
+      answer: "No tienes que ocuparte de nada. Nosotros hacemos todo: diseño, textos, publicación y mantenimiento. Tú solo nos cuentas tu negocio en una llamada de 20 minutos."
     },
     {
       question: "¿Puedo cancelar el mantenimiento?",
@@ -29,7 +37,11 @@ const CROFAQ = () => {
   ];
 
   const toggleItem = (index) => {
-    setOpenItem(openItem === index ? null : index);
+    if (openItem.includes(index)) {
+      setOpenItem(openItem.filter(item => item !== index));
+    } else {
+      setOpenItem([...openItem, index]);
+    }
   };
 
   return (
@@ -63,7 +75,7 @@ const CROFAQ = () => {
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
-                    {openItem === index ? (
+                    {openItem.includes(index) ? (
                       <ChevronUp className="h-5 w-5 text-gray-500" />
                     ) : (
                       <ChevronDown className="h-5 w-5 text-gray-500" />
@@ -72,7 +84,7 @@ const CROFAQ = () => {
                 </div>
               </button>
               
-              {openItem === index && (
+              {openItem.includes(index) && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}

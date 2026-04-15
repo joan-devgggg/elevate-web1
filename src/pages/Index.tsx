@@ -1,12 +1,13 @@
 import * as React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ProblemIdentification from "@/components/ProblemIdentification";
 import CaseStudies from "@/components/CaseStudies";
 import SimpleProcess from "@/components/SimpleProcess";
-import OurProcess from "@/components/OurProcess";
-import Pricing from "@/components/Pricing";
 import UnifiedBenefits from "@/components/UnifiedBenefits";
+import SocialProof from "@/components/SocialProof";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
+import Pricing from "@/components/Pricing";
 import CROFAQ from "@/components/CROFAQ";
 import StrongFinalCTA from "@/components/StrongFinalCTA";
 import Footer from "@/components/Footer";
@@ -18,12 +19,13 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <ProblemIdentification />
         <CaseStudies />
         <SimpleProcess />
-        <OurProcess />
-        <Pricing />
         <UnifiedBenefits />
+        <SocialProof />
         <SimpleGuarantee />
+        <Pricing />
         <CROFAQ />
         <StrongFinalCTA />
       </main>

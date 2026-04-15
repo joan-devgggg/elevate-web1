@@ -2,14 +2,15 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Check, Star } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20empezar%20con%20mi%20web%20profesional";
+const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20crear%20mi%20web%20con%20Elevate%20Web.%20%C2%BFPod%C3%A9is%20ense%C3%B1arme%20ejemplos%3F";
 
 const Pricing = () => {
   const plans = [
     {
       name: "Plan Presencia",
       price: "65€/mes",
-      additionalText: "Sin pago inicial",
+      additionalText: "Todo incluido desde el primer mes",
+      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
       features: [
         "Web básica para tener presencia online",
         "Diseño limpio y funcional",
@@ -20,13 +21,12 @@ const Pricing = () => {
       ],
       buttonText: "Empezar sin pago inicial",
       featured: false,
-      description: "Ideal para empezar sin riesgo",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
     },
     {
       name: "Plan Clientes",
       price: "350€",
-      additionalText: "",
+      additionalText: "+ 55€/mes mantenimiento opcional",
       features: [
         "Web totalmente personalizada para tu negocio (no plantilla)",
         "Estructura optimizada para convertir visitas en clientes",
@@ -37,7 +37,7 @@ const Pricing = () => {
         "Hosting, dominio y SSL incluidos",
         "Soporte prioritario"
       ],
-      buttonText: "Quiero mi web en 48h",
+      buttonText: "Quiero empezar a recibir clientes",
       featured: true,
       badge: "Más elegido",
       priceDescription: "Recuperas la inversión con solo 2–3 clientes",
@@ -46,7 +46,7 @@ const Pricing = () => {
     {
       name: "Plan Crecimiento",
       price: "700€",
-      additionalText: "",
+      additionalText: "+ 95€/mes mantenimiento opcional",
       features: [
         "Todo lo del plan Clientes",
         "Optimización continua de la web",
@@ -78,6 +78,13 @@ const Pricing = () => {
           </p>
           <p className="text-sm text-gray-500 mt-2">
             Todos los precios son + IVA
+          </p>
+        </div>
+
+        {/* Bloque de Anclaje de Precios */}
+        <div className="bg-blue-50 rounded-xl p-6 mb-12 max-w-4xl mx-auto">
+          <p className="text-center text-gray-700 text-sm leading-relaxed">
+            Una agencia tradicional te cobra entre 1.500€ y 5.000€ por una web similar. Y luego 150€/mes de mantenimiento. Aquí empiezas desde 350€, ves el diseño antes de pagar, y si no te gusta no debes nada.
           </p>
         </div>
 

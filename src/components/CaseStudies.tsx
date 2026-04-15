@@ -63,11 +63,9 @@ const CaseStudies = () => {
             >
               {/* Header */}
               <div className="flex items-center gap-4 mb-6">
-                <img 
-                  src={caseStudy.logo} 
-                  alt={`${caseStudy.name} logo`}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-xs text-gray-600 font-medium">
+                  {caseStudy.name === "Restaurante San Remo" ? "FOTO_ALBERTO" : "FOTO_DENTLUX"}
+                </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
                     {caseStudy.name}
@@ -111,6 +109,11 @@ const CaseStudies = () => {
                 <p className="text-gray-700 text-sm leading-relaxed mb-4">
                   {caseStudy.testimonio}
                 </p>
+                {caseStudy.name === "Dentlux Travel" && (
+                  <div className="mb-4">
+                    {/* VIDEO_TESTIMONIO_DENTLUX: insertar aquí cuando esté disponible */}
+                  </div>
+                )}
                 <p className="text-gray-600 text-sm">
                   {caseStudy.firma}
                 </p>

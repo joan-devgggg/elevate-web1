@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20mi%20web%20en%2048h";
+const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20crear%20mi%20web%20con%20Elevate%20Web.%20%C2%BFPod%C3%A9is%20ense%C3%B1arme%20ejemplos%3F";
 
 const StrongFinalCTA = () => {
   return (
@@ -15,7 +15,7 @@ const StrongFinalCTA = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           >
-            Empieza hoy. Si no te gusta, no pagas nada.
+            Empieza hoy. Si no te gusta el diseño, no pagas nada.
           </motion.h2>
 
           <motion.p
