@@ -11,7 +11,7 @@ const Pricing = () => {
       price: "65€/mes",
       additionalText: "Sin pago inicial",
       features: [
-        "Web profesional básica",
+        "Web básica para tener presencia online",
         "Diseño limpio y funcional",
         "Hosting y dominio incluidos",
         "Certificado SSL",
@@ -28,7 +28,7 @@ const Pricing = () => {
       price: "350€",
       additionalText: "",
       features: [
-        "Web totalmente personalizada para tu negocio",
+        "Web totalmente personalizada para tu negocio (no plantilla)",
         "Estructura optimizada para convertir visitas en clientes",
         "Diseño profesional adaptado a móvil",
         "Optimización para aparecer en Google (SEO)",
@@ -57,7 +57,7 @@ const Pricing = () => {
       ],
       buttonText: "Quiero escalar mi negocio",
       featured: false,
-      description: "Para negocios que quieren escalar más rápido",
+      description: "Para negocios que quieren crecer de forma predecible cada mes",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Crecimiento%20para%20escalar%20mi%20negocio"
     }
   ];
@@ -90,8 +90,8 @@ const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -1, scale: plan.featured ? 1.02 : 1.01 }}
-              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-blue-50/30 shadow-xl' : ''} relative h-full flex flex-col justify-between transition-transform duration-300`}
+              whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
+              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#FAFBFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-transform duration-300`}
             >
               {/* Badge dentro de la card */}
               {plan.featured && (
