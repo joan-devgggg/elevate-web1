@@ -102,116 +102,115 @@ const Pricing = () => {
                   </div>
                 </div>
               )}
-                {/* Nombre del plan */}
-                <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-6' : 'text-xl mb-6'}`}>
-                  {plan.name}
-                </h3>
-                
-                {/* Descripción adicional */}
-                {plan.description && (
-                  <p className={`text-gray-600 ${plan.featured ? 'text-base mb-6' : 'text-sm mb-4'} font-medium`}>
-                    {plan.description}
-                  </p>
-                )}
+              {/* Nombre del plan */}
+              <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-6' : 'text-xl mb-6'}`}>
+                {plan.name}
+              </h3>
+              
+              {/* Descripción adicional */}
+              {plan.description && (
+                <p className={`text-gray-600 ${plan.featured ? 'text-base mb-6' : 'text-sm mb-4'} font-medium`}>
+                  {plan.description}
+                </p>
+              )}
 
-                {/* Precio con jerarquía elegante */}
-                <div className={`${plan.featured ? 'mb-12' : 'mb-8'}`}>
-                  {plan.price.includes('inicial') ? (
-                    <div className="space-y-1">
-                      <div className="text-6xl font-black text-gray-900">
-                        {plan.price.split('inicial')[0].trim()}
-                      </div>
-                      <div className="text-sm text-gray-500 font-medium">
-                        {plan.price.includes('inicial') ? 'Pago único' : ''}
-                      </div>
-                      {plan.price.includes('inicial') && (
-                        <div className="text-lg font-semibold text-gray-700 mt-2">
-                          {plan.name === 'Plan Clientes' ? '+55€/mes (opcional, mantenimiento y mejoras)' : plan.name === 'Plan Crecimiento' ? '+95€/mes (opcional, optimización continua)' : ''}
-                        </div>
-                      )}
-                      {plan.name === 'Plan Clientes' && (
-                        <div className="text-sm text-gray-600 mt-2">
-                          Pago único + opción de mantenimiento mensual (opcional)
-                        </div>
-                      )}
-                      {plan.name === 'Plan Clientes' && (
-                        <div className="text-sm text-green-600 font-medium mt-2">
-                          La opción más rentable para la mayoría de negocios
-                        </div>
-                      )}
-                      {plan.name === 'Plan Presencia' && (
-                        <div className="text-sm text-blue-600 font-medium mt-2">
-                          Ideal para empezar sin inversión inicial
-                        </div>
-                      )}
-                      {plan.name === 'Plan Crecimiento' && (
-                        <div className="text-sm text-purple-600 font-medium mt-2">
-                          Para negocios que quieren crecer más rápido
-                        </div>
-                      )}
+              {/* Precio con jerarquía elegante */}
+              <div className={`${plan.featured ? 'mb-12' : 'mb-8'}`}>
+                {plan.price.includes('inicial') ? (
+                  <div className="space-y-1">
+                    <div className="text-6xl font-black text-gray-900">
+                      {plan.price.split('inicial')[0].trim()}
                     </div>
-                  ) : (
-                    <div className="space-y-1">
-                      <div className={`font-bold text-gray-900 ${plan.featured ? 'text-5xl' : 'text-4xl'}`}>
-                        {plan.price}
-                      </div>
+                    <div className="text-sm text-gray-500 font-medium">
+                      {plan.price.includes('inicial') ? 'Pago único' : ''}
                     </div>
-                  )}
-                </div>
-                
-                {/* Descripción de precio para plan central */}
-                {plan.priceDescription && (
-                  <p className="text-sm text-gray-600 mb-8">
-                    {plan.priceDescription}
-                  </p>
-                )}
-                
-                {/* Texto adicional */}
-                {plan.additionalText && (
-                  <p className={`text-gray-500 ${plan.featured ? 'text-base mb-12' : 'text-sm mb-8'}`}>
-                    {plan.additionalText}
-                  </p>
-                )}
-                {plan.price.includes('inicial') && (
-                  <div className="flex flex-col gap-1 mt-2">
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                      <span>Sin permanencia · Actívalo cuando quieras</span>
+                    {plan.price.includes('inicial') && (
+                      <div className="text-lg font-semibold text-gray-700 mt-2">
+                        {plan.name === 'Plan Clientes' ? '+55€/mes (opcional, mantenimiento y mejoras)' : plan.name === 'Plan Crecimiento' ? '+95€/mes (opcional, optimización continua)' : ''}
+                      </div>
+                    )}
+                    {plan.name === 'Plan Clientes' && (
+                      <div className="text-sm text-gray-600 mt-2">
+                        Pago único + opción de mantenimiento mensual (opcional)
+                      </div>
+                    )}
+                    {plan.name === 'Plan Clientes' && (
+                      <div className="text-sm text-green-600 font-medium mt-2">
+                        La opción más rentable para la mayoría de negocios
+                      </div>
+                    )}
+                    {plan.name === 'Plan Presencia' && (
+                      <div className="text-sm text-blue-600 font-medium mt-2">
+                        Ideal para empezar sin inversión inicial
+                      </div>
+                    )}
+                    {plan.name === 'Plan Crecimiento' && (
+                      <div className="text-sm text-purple-600 font-medium mt-2">
+                        Para negocios que quieren crecer más rápido
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-1">
+                    <div className={`font-bold text-gray-900 ${plan.featured ? 'text-5xl' : 'text-4xl'}`}>
+                      {plan.price}
                     </div>
                   </div>
                 )}
-
-                {/* Características */}
-                <div className={`flex flex-col gap-3 text-left ${plan.featured ? 'mb-8' : 'mb-6'}`}>
-                  {plan.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3">
-                      <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 mt-0.5">
-                        <Check className="h-3 w-3 text-blue-600" />
-                      </div>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {feature}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Botón */}
-                <a
-                  href={`${WHATSAPP_URL.split('?')[0]}?text=${plan.whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`
-                    inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
-                    ${plan.featured 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl' 
-                      : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium px-6 py-3'
-                    }
-                  `}
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  {plan.buttonText}
-                </a>
               </div>
+              
+              {/* Descripción de precio para plan central */}
+              {plan.priceDescription && (
+                <p className="text-sm text-gray-600 mb-8">
+                  {plan.priceDescription}
+                </p>
+              )}
+              
+              {/* Texto adicional */}
+              {plan.additionalText && (
+                <p className={`text-gray-500 ${plan.featured ? 'text-base mb-12' : 'text-sm mb-8'}`}>
+                  {plan.additionalText}
+                </p>
+              )}
+              {plan.price.includes('inicial') && (
+                <div className="flex flex-col gap-1 mt-2">
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span>Sin permanencia · Actívalo cuando quieras</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Características */}
+              <div className={`flex flex-col gap-3 text-left ${plan.featured ? 'mb-8' : 'mb-6'}`}>
+                {plan.features.map((feature) => (
+                  <div key={feature} className="flex items-start gap-3">
+                    <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 mt-0.5">
+                      <Check className="h-3 w-3 text-blue-600" />
+                    </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {feature}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Botón */}
+              <a
+                href={`${WHATSAPP_URL.split('?')[0]}?text=${plan.whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`
+                  inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
+                  ${plan.featured 
+                    ? 'bg-blue-600 text-white hover:bg-blue-700 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl' 
+                    : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium px-6 py-3'
+                  }
+                `}
+              >
+                <MessageCircle className="h-4 w-4" />
+                {plan.buttonText}
+              </a>
             </motion.div>
           ))}
         </div>
