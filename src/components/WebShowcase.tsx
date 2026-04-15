@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
+import showcaseImage from "@/assets/ChatGPT Image 16 abr 2026, 01_39_48.png";
 
 const WebShowcase = () => {
   return (
@@ -33,8 +33,8 @@ const WebShowcase = () => {
             className="max-w-[1100px] mx-auto"
           >
             <img 
-              src={sanremoScreenshot}
-              alt="Web profesional de Restaurante San Remo - Ejemplo real"
+              src={showcaseImage}
+              alt="Web profesional - Ejemplo real de clientes"
               className="w-full rounded-2xl md:rounded-[16px] shadow-lg object-cover"
             />
           </motion.div>
