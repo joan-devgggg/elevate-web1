@@ -1,6 +1,7 @@
+import * as React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import RealTestimonials from "@/components/RealTestimonials";
+import CaseStudies from "@/components/CaseStudies";
 import SimpleProcess from "@/components/SimpleProcess";
 import OurProcess from "@/components/OurProcess";
 import Pricing from "@/components/Pricing";
@@ -17,8 +18,8 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <CaseStudies />
         <SimpleProcess />
-        <RealTestimonials />
         <OurProcess />
         <Pricing />
         <UnifiedBenefits />
