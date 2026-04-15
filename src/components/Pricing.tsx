@@ -7,26 +7,6 @@ const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20empezar%
 const Pricing = () => {
   const plans = [
     {
-      name: "Plan Clientes",
-      price: "350€",
-      additionalText: "",
-      features: [
-        "Web totalmente personalizada para tu negocio",
-        "Estructura optimizada para convertir visitas en clientes",
-        "Diseño profesional adaptado a móvil",
-        "Optimización para aparecer en Google",
-        "Integración con WhatsApp y formularios",
-        "Cambios ilimitados hasta que te encante",
-        "Hosting, dominio y SSL incluidos",
-        "Soporte prioritario"
-      ],
-      buttonText: "Quiero mi web en 48h",
-      featured: true,
-      badge: "La opción más elegida",
-      priceDescription: "La opción más rentable para la mayoría de negocios",
-      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
-    },
-    {
       name: "Plan Presencia",
       price: "65€/mes",
       additionalText: "Sin pago inicial",
@@ -38,10 +18,30 @@ const Pricing = () => {
         "Cambios básicos incluidos",
         "Soporte estándar"
       ],
-      buttonText: "Quiero mi web en 48h",
+      buttonText: "Empezar sin pago inicial",
       featured: false,
       description: "Ideal para empezar sin inversión inicial",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
+    },
+    {
+      name: "Plan Clientes",
+      price: "350€",
+      additionalText: "",
+      features: [
+        "Web totalmente personalizada para tu negocio",
+        "Estructura optimizada para convertir visitas en clientes",
+        "Diseño profesional adaptado a móvil",
+        "Optimización para aparecer en Google (SEO)",
+        "Integración con WhatsApp y formularios",
+        "Cambios ilimitados hasta que te encante",
+        "Hosting, dominio y SSL incluidos",
+        "Soporte prioritario"
+      ],
+      buttonText: "Quiero mi web en 48h",
+      featured: true,
+      badge: "Más elegido",
+      priceDescription: "Recuperas la inversión con 2–3 clientes",
+      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
     },
     {
       name: "Plan Crecimiento",
@@ -55,7 +55,7 @@ const Pricing = () => {
         "Soporte prioritario y directo",
         "Estrategia mensual personalizada"
       ],
-      buttonText: "Quiero mi web en 48h",
+      buttonText: "Quiero escalar mi negocio",
       featured: false,
       description: "Para negocios que quieren escalar más rápido",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Crecimiento%20para%20escalar%20mi%20negocio"
@@ -91,13 +91,13 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.02 : 1.01 }}
-              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'shadow-2xl scale-105' : ''} relative h-full flex flex-col justify-between transition-transform duration-300`}
+              className={`bg-white rounded-2xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-blue-50/30 shadow-xl' : ''} relative h-full flex flex-col justify-between transition-transform duration-300`}
             >
               {/* Badge dentro de la card */}
               {plan.featured && (
                 <div className="mb-4">
                   <div className="inline-flex items-center justify-center w-full">
-                    <div className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium border border-green-200">
+                    <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
                       Más elegido
                     </div>
                   </div>
@@ -137,7 +137,7 @@ const Pricing = () => {
                     )}
                     {plan.name === 'Plan Clientes' && (
                       <div className="text-sm text-green-600 font-medium mt-2">
-                        La opción más rentable para la mayoría de negocios
+                        Recuperas la inversión con 2–3 clientes
                       </div>
                     )}
                     {plan.name === 'Plan Presencia' && (
@@ -204,8 +204,8 @@ const Pricing = () => {
                 className={`
                   inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
                   ${plan.featured 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl' 
-                    : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-medium px-6 py-3'
+                    ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl' 
+                    : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
                   }
                 `}
               >
