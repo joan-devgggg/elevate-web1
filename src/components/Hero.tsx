@@ -18,23 +18,23 @@ const Hero = () => {
           >
             Tu web lista en 48h para conseguir <span className="gradient-text">clientes cada semana sin depender de Instagram</span>
             <br />
-            <span className="text-2xl md:text-3xl lg:text-4xl text-green-600 font-semibold">o no pagas nada</span>
+            <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl"
+            className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl"
           >
-            Especialmente pensado para restaurantes, clínicas y negocios que dependan de clientes cada semana. Sin permanencia.
+            Para restaurantes, clínicas y negocios locales
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8"
+            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-6"
           >
             <a
               href={WHATSAPP_URL}
