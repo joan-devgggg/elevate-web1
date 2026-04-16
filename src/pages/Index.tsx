@@ -8,6 +8,7 @@ import UnifiedBenefits from "@/components/UnifiedBenefits";
 import WebShowcase from "@/components/WebShowcase";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
 import Pricing from "@/components/Pricing";
+import CustomerAcquisitionSystem from "@/components/CustomerAcquisitionSystem";
 import CROFAQ from "@/components/CROFAQ";
 import StrongFinalCTA from "@/components/StrongFinalCTA";
 import Footer from "@/components/Footer";
@@ -26,6 +27,7 @@ const Index = () => {
         <WebShowcase />
         <SimpleGuarantee />
         <Pricing />
+        <CustomerAcquisitionSystem />
         <CROFAQ />
         <StrongFinalCTA />
       </main>

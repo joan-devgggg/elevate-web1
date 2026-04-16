@@ -207,36 +207,7 @@ const Pricing = () => {
           </div>
         </motion.div>
 
-        {/* Bloque Upsell - Más Clientes */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex flex-col items-center gap-4 px-12 py-8 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl border border-gray-200 shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900">
-              ¿Quieres más clientes todavía?
-            </h3>
-            <p className="text-lg text-gray-700 max-w-md">
-              Puedes combinar tu web con anuncios en redes sociales y multiplicar resultados
-            </p>
-            <button
-              onClick={() => {
-                const servicesSection = document.getElementById('servicios-adicionales');
-                if (servicesSection) {
-                  servicesSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105"
-            >
-              <MessageCircle className="h-5 w-5" />
-              Ver cómo conseguir más clientes
-            </button>
-          </div>
-        </motion.div>
-      </div>
+              </div>
     </section>
   );
 };
