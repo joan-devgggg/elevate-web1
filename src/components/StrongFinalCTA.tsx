@@ -52,7 +52,7 @@ const StrongFinalCTA = () => {
             className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 rounded-full px-8 py-4 text-lg font-bold shadow-xl transition-all hover:scale-105"
           >
             <MessageCircle className="h-5 w-5" />
-            Quiero mi web en 48h
+            Quiero llenar mi agenda
           </motion.a>
         </div>
       </div>

@@ -3,12 +3,13 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProblemIdentification from "@/components/ProblemIdentification";
 import CaseStudies from "@/components/CaseStudies";
+import CustomerSystem from "@/components/CustomerSystem";
+import WhatsAppProof from "@/components/WhatsAppProof";
 import SimpleProcess from "@/components/SimpleProcess";
 import UnifiedBenefits from "@/components/UnifiedBenefits";
 import WebShowcase from "@/components/WebShowcase";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
 import Pricing from "@/components/Pricing";
-import CustomerAcquisitionSystem from "@/components/CustomerAcquisitionSystem";
 import CROFAQ from "@/components/CROFAQ";
 import StrongFinalCTA from "@/components/StrongFinalCTA";
 import Footer from "@/components/Footer";
@@ -22,12 +23,13 @@ const Index = () => {
         <Hero />
         <ProblemIdentification />
         <CaseStudies />
+        <CustomerSystem />
+        <WhatsAppProof />
         <SimpleProcess />
         <UnifiedBenefits />
         <WebShowcase />
         <SimpleGuarantee />
         <Pricing />
-        <CustomerAcquisitionSystem />
         <CROFAQ />
         <StrongFinalCTA />
       </main>

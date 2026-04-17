@@ -71,7 +71,7 @@ const Pricing = () => {
             Elige cómo quieres conseguir <span className="gradient-text">clientes</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            La mayoría de negocios empiezan con el Plan Clientes
+            La mayoría de negocios empiezan con la web y luego activan el sistema para conseguir clientes cada semana
           </p>
           <p className="text-sm text-gray-500 mt-4">
             Sin permanencia · Sin sorpresas · Sin letra pequeña

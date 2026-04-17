@@ -16,7 +16,7 @@ const CaseStudies = () => {
       logo: sanremoLogo,
       screenshot: sanremoScreenshot,
       url: "https://sanremopalencia.com",
-      result: "+25 reservas online cada semana en solo 30 días",
+      result: "Antes: dependían solo del teléfono\nAhora: +25 reservas online cada semana en solo 30 días",
       testimonio: "Ahora tenemos reservas constantes sin depender del teléfono",
       firma: "— Alberto Villegas, dueño de restaurante en Palencia",
       delay: 0.1
@@ -27,7 +27,7 @@ const CaseStudies = () => {
       logo: dentluxLogo,
       screenshot: dentluxScreenshot,
       url: "https://dentluxtravel.com",
-      result: "+35 solicitudes de clientes al mes desde la web",
+      result: "Antes: no recibían solicitudes constantes\nAhora: +35 solicitudes de clientes al mes desde la web",
       testimonio: "Ahora recibimos mensajes y solicitudes todos los días sin hacer nada",
       firma: "— Equipo Dentlux Travel, agencia en Alicante",
       delay: 0.2
@@ -105,7 +105,7 @@ const CaseStudies = () => {
 
               {/* Resultado */}
               <div className="bg-green-50 text-green-800 rounded-lg px-4 py-2 mt-4 mb-4">
-                <p className="font-medium">
+                <p className="font-medium whitespace-pre-line">
                   {caseStudy.result}
                 </p>
               </div>

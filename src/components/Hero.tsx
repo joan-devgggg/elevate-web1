@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
           >
-            Tu web lista en 48h para conseguir <span className="gradient-text">clientes cada semana sin depender de Instagram</span>
+            Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana sin depender de Instagram</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
           </motion.h1>
@@ -43,7 +43,7 @@ const Hero = () => {
               className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-primary-foreground shadow-elevated transition-all hover:scale-105 w-full sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
-              Quiero empezar a recibir clientes
+              Quiero clientes cada semana
             </a>
             <a
               href={PHONE_URL}
