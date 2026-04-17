@@ -14,7 +14,7 @@ const CustomerSystem = () => {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Cómo consiguen clientes cada semana nuestros clientes
+            El sistema que usan nuestros clientes para llenar su agenda cada semana
           </h2>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -36,7 +36,7 @@ const CustomerSystem = () => {
           </h3>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Un sistema que atrae clientes, los convierte y no deja escapar ninguno.
+            Atrae clientes, convierte visitas y llena tu agenda sin depender de Instagram o recomendaciones
           </p>
         </motion.div>
 
@@ -52,7 +52,7 @@ const CustomerSystem = () => {
           >
             <div className="text-4xl mb-4">🟦</div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
-              Atraemos clientes
+              Empiezas a recibir clientes desde el primer día
             </h4>
             <div className="space-y-2 text-gray-700">
               <p>Anuncios en Meta desde el primer día</p>
@@ -71,7 +71,7 @@ const CustomerSystem = () => {
           >
             <div className="text-4xl mb-4">🟪</div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
-              Convertimos visitas
+              Convierte visitas en reservas y contactos reales
             </h4>
             <div className="space-y-2 text-gray-700">
               <p>Web optimizada para reservas y contactos</p>
@@ -89,7 +89,7 @@ const CustomerSystem = () => {
           >
             <div className="text-4xl mb-4">🟩</div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
-              Cerramos automáticamente
+              No pierdes ningún cliente que te escriba
             </h4>
             <div className="space-y-2 text-gray-700">
               <p>Respuesta instantánea 24h</p>
@@ -108,19 +108,27 @@ const CustomerSystem = () => {
           className="text-center mt-16 max-w-3xl mx-auto"
         >
           <p className="text-lg text-gray-600 mb-8">
-            Disponible a partir de 450€/mes según negocio<br />
+            Desde 450€/mes para conseguir clientes cada semana<br />
             Incluye anuncios, optimización y automatización completa
           </p>
           
           <a
-            href="https://wa.me/34644610120?text=Hola%2C%20quiero%20activar%20el%20sistema%20de%20clientes"
+            href="https://wa.me/34644610120?text=Hola%2C%20quiero%20clientes%20cada%20semana"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-black text-white rounded-full px-8 py-4 text-lg font-bold hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center justify-center gap-2 bg-black text-white rounded-full px-8 py-4 text-lg font-bold hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl mb-6"
           >
             <MessageCircle className="h-5 w-5" />
-            Quiero activar el sistema
+            Quiero clientes cada semana
           </a>
+          
+          <p className="text-sm text-gray-500 mb-6">
+            Te respondemos en menos de 1 hora por WhatsApp
+          </p>
+          
+          <p className="text-lg text-gray-600 font-medium">
+            Esto es exactamente lo que están usando los negocios que has visto arriba.
+          </p>
         </motion.div>
       </div>
     </section>
