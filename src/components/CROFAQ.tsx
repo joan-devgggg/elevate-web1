@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const CROFAQ = () => {
-  const [openItem, setOpenItem] = useState([0, 1]); // Abrir primeras 2 preguntas por defecto
+  const [openItem, setOpenItem] = useState([]); // Todas las preguntas cerradas por defecto
 
   const faqs = [
     {
