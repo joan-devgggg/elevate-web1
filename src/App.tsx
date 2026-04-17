@@ -10,9 +10,6 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    
-    <h1>TEST VERCEL FUNCIONA</h1>
-
     <TooltipProvider>
       <Toaster />
       <Sonner />
