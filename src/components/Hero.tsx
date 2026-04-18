@@ -7,7 +7,7 @@ const PHONE_URL = "tel:+34644610120";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero-bg relative overflow-hidden pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24">
+    <section id="hero" className="hero-bg relative overflow-hidden pt-20 pb-24 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Eyebrow pill */}
@@ -32,15 +32,6 @@ const Hero = () => {
             <br />
             <span className="text-xl md:text-2xl lg:text-3xl text-gray-500 font-medium">Web + anuncios + chatbot WhatsApp, todo incluido.</span>
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl"
-          >
-            Para restaurantes, clínicas y negocios locales
-          </motion.p>
 
           {/* Micro-beneficios - column on mobile */}
           <motion.div
@@ -69,7 +60,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="text-sm text-gray-500 text-center mb-6"
           >
-            Confiado por restaurantes, clínicas dentales, peluquerías, centros de estética y más negocios locales
+            Confiado por +47 negocios locales en toda España
           </motion.p>
 
           <motion.div

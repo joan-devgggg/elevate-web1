@@ -27,7 +27,7 @@ const WhatsAppButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed right-5 z-50 md:bottom-6" style={{ bottom: 'calc(70px + 1rem)' }}>
       {/* Bubble tipo chat */}
       {showBubble && (
         <div className="absolute bottom-20 right-0 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-lg border border-gray-100 whitespace-nowrap animate-slide-fade" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
