@@ -7,6 +7,23 @@ const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20c
 const Pricing = () => {
   const plans = [
     {
+      name: "Plan Presencia",
+      price: "65€/mes",
+      additionalText: "Todo incluido desde el primer mes",
+      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
+      features: [
+        "Web básica para tener presencia online",
+        "Diseño limpio y funcional",
+        "Hosting y dominio incluidos",
+        "Certificado SSL",
+        "Cambios básicos incluidos",
+        "Soporte estándar"
+      ],
+      buttonText: "Empezar sin pago inicial",
+      featured: false,
+      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
+    },
+    {
       name: "Plan Clientes",
       price: "350€",
       additionalText: "+ 55€/mes mantenimiento opcional",
@@ -25,23 +42,6 @@ const Pricing = () => {
       badge: "Más elegido",
       priceDescription: "Recuperas la inversión con solo 2–3 clientes",
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
-    },
-    {
-      name: "Plan Presencia",
-      price: "65€/mes",
-      additionalText: "Todo incluido desde el primer mes",
-      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
-      features: [
-        "Web básica para tener presencia online",
-        "Diseño limpio y funcional",
-        "Hosting y dominio incluidos",
-        "Certificado SSL",
-        "Cambios básicos incluidos",
-        "Soporte estándar"
-      ],
-      buttonText: "Empezar sin pago inicial",
-      featured: false,
-      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
     },
     {
       name: "Plan Sistema",
@@ -92,16 +92,16 @@ const Pricing = () => {
         </div>
 
         {/* Grid de Planes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
           {plans.map((plan, index) => (
             <motion.div
-              key={plan.name}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
-              className={`bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
+              className={`bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300 ${plan.name === 'Plan Clientes' ? 'md:order-2 order-first' : plan.name === 'Plan Presencia' ? 'md:order-1 order-2' : 'md:order-3 order-3'}`}
             >
               {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
               <div className="min-h-[200px] flex flex-col">
@@ -130,7 +130,7 @@ const Pricing = () => {
 
                 {/* Precio - mismo tamaño para todos */}
                 <div className="mb-4">
-                  <div className="text-5xl font-bold text-gray-900">
+                  <div className={`${plan.price === "Precio personalizado" ? "text-4xl" : "text-5xl"} font-bold text-gray-900`}>
                     {plan.price}
                   </div>
                 </div>
@@ -182,10 +182,11 @@ const Pricing = () => {
                   className={`
                     inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
                     ${plan.featured 
-                      ? 'bg-gray-900 text-white hover:bg-gray-800 text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
+                      ? 'text-white text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
                       : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
                     }
                   `}
+                  style={plan.featured ? { background: 'linear-gradient(135deg, #2563EB, #7C3AED)' } : {}}
                 >
                   <MessageCircle className="h-4 w-4" />
                   {plan.buttonText}

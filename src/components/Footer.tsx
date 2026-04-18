@@ -1,13 +1,19 @@
 import { MessageCircle } from "lucide-react";
+import elevateLogo from "@/assets/Logo estilizado en tonos azules.png";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-card py-12">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
+          <div className="flex flex-col md:flex-row items-center gap-2">
+            <img 
+              src={elevateLogo} 
+              alt="Elevate Web" 
+              className="h-8 w-auto object-contain"
+            />
             <div className="text-xl font-bold text-foreground">Elevate Web</div>
-            <p className="text-sm text-muted-foreground mt-1">Tu web profesional sin complicaciones</p>
+            <p className="text-sm text-muted-foreground md:ml-2">Tu web profesional sin complicaciones</p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-muted-foreground">

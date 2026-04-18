@@ -37,6 +37,10 @@ const CROFAQ = () => {
     {
       question: "¿Los anuncios están incluidos en algún plan?",
       answer: "Los anuncios están incluidos en el Plan Sistema. El presupuesto publicitario es tuyo y lo controlas tú directamente — nosotros nos encargamos de gestionar las campañas para maximizar tus resultados."
+    },
+    {
+      question: "¿Necesito saber de tecnología?",
+      answer: "No necesitas saber nada. Nos encargamos de todo lo técnico. Tú solo decides si te gusta el diseño."
     }
   ];
 

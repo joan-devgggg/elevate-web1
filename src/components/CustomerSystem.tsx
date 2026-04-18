@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Megaphone, MousePointerClick } from "lucide-react";
+import { MessageCircle, Megaphone, Zap } from "lucide-react";
 
 const CustomerSystem = () => {
   return (
@@ -76,7 +76,7 @@ const CustomerSystem = () => {
           >
             <div className="flex justify-center mb-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <MousePointerClick className="h-8 w-8 text-purple-600" />
+                <Zap className="h-8 w-8 text-purple-600" />
               </div>
             </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
@@ -118,7 +118,7 @@ const CustomerSystem = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="text-center mt-16 max-w-3xl mx-auto"
+          className="text-center mt-8 max-w-3xl mx-auto"
         >
           <p className="text-lg text-gray-600 mb-8">
             Desde 450€/mes para conseguir clientes cada semana<br />

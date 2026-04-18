@@ -112,15 +112,15 @@ const CaseStudies = () => {
 
               {/* Testimonio */}
               <div className="mb-4">
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                  {caseStudy.testimonio}
+                <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">
+                  "{caseStudy.testimonio}"
                 </p>
                 {caseStudy.name === "Dentlux Travel" && (
                   <div className="mb-4">
                     {/* VIDEO_TESTIMONIO_DENTLUX: insertar aquí cuando esté disponible */}
                   </div>
                 )}
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-500 text-sm">
                   {caseStudy.firma}
                 </p>
               </div>
@@ -153,7 +153,7 @@ const CaseStudies = () => {
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                 Sistema + Estrategia = Resultados que marcan la diferencia
               </h3>
-              <p className="text-gray-400 text-sm md:text-base">
+              <p className="text-white font-bold text-sm md:text-base">
                 Coste por resultado un 53% inferior al de empresas similares
               </p>
             </div>
