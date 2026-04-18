@@ -1,6 +1,7 @@
 import * as React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AnimatedMetrics from "@/components/AnimatedMetrics";
 import ProblemIdentification from "@/components/ProblemIdentification";
 import CaseStudies from "@/components/CaseStudies";
 import CustomerSystem from "@/components/CustomerSystem";
@@ -20,6 +21,7 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <AnimatedMetrics />
         <ProblemIdentification />
         <CaseStudies />
         <CustomerSystem />

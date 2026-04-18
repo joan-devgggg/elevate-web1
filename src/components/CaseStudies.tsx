@@ -37,6 +37,19 @@ const AnimatedCounter = ({ target }: { target: number }) => {
 };
 
 const CaseStudies = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const totalSlides = 6;
+
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, totalSlides]);
+
   const cases = [
     {
       name: "Restaurante San Remo",
@@ -159,6 +172,73 @@ const CaseStudies = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Carrusel de Webs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.25 }}
+          className="mt-16 max-w-6xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-3">
+            Webs que ya están consiguiendo clientes
+          </h3>
+          <p className="text-gray-600 text-center mb-8">
+            Cada web está diseñada específicamente para el negocio, no es una plantilla
+          </p>
+
+          <div className="relative">
+            {/* Carousel Container */}
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {[1, 2, 3, 4, 5, 6].map((num) => (
+                  <div key={num} className="w-full flex-shrink-0 px-4">
+                    <div className="aspect-video bg-gray-200 rounded-2xl shadow-lg flex items-center justify-center">
+                      <span className="text-gray-500">[Captura web cliente {num}]</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors hidden md:block"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % totalSlides)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors hidden md:block"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-2 mt-6">
+              {[0, 1, 2, 3, 4, 5].map((num) => (
+                <button
+                  key={num}
+                  onClick={() => setCurrentSlide(num)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    num === currentSlide ? "bg-blue-600" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
         {/* Banner de Anuncios */}
         <motion.div
