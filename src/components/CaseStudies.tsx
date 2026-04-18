@@ -1,12 +1,32 @@
 import * as React from "react";
-import { motion } from "framer-motion";
-import { ExternalLink, TrendingUp } from "lucide-react";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { TrendingUp, ExternalLink } from "lucide-react";
+import { useEffect, useRef } from "react";
 import sanremoLogo from "@/assets/logo-sanremo.png";
 import dentluxLogo from "@/assets/logo-dentlux.jpg";
 import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
 import dentluxScreenshot from "@/assets/screenshot-dentlux.png";
 import fotoAlberto from "@/assets/foto-alberto.png";
 import fotoDentlux from "@/assets/foto-dentlux.jpg";
+
+const AnimatedCounter = ({ target }: { target: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, target, {
+        duration: 1.5,
+        ease: "easeOut"
+      });
+      return controls.stop;
+    }
+  }, [isInView, count, target]);
+
+  return <span ref={ref}>{rounded.get()}%</span>;
+};
 
 const CaseStudies = () => {
   const cases = [
@@ -144,7 +164,7 @@ const CaseStudies = () => {
             <TrendingUp className="text-blue-600 w-12 h-12 md:w-16 md:h-16 flex-shrink-0" />
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Nuestros anuncios consiguen resultados un 53% más baratos que la media del sector
+                Nuestros anuncios consiguen resultados un <AnimatedCounter target={53} /> más baratos que la media del sector
               </h3>
               <p className="text-white font-bold text-sm md:text-base">
                 Mismo presupuesto. Más clientes. Cada semana.
