@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { TrendingUp, ExternalLink } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import sanremoLogo from "@/assets/logo-sanremo.png";
 import dentluxLogo from "@/assets/logo-dentlux.jpg";
 import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
@@ -13,7 +13,15 @@ const AnimatedCounter = ({ target }: { target: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const count = useMotionValue(0);
+  const [displayValue, setDisplayValue] = useState(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const unsubscribe = rounded.on("change", (latest) => {
+      setDisplayValue(latest);
+    });
+    return unsubscribe;
+  }, [rounded]);
 
   useEffect(() => {
     if (isInView) {
@@ -25,7 +33,7 @@ const AnimatedCounter = ({ target }: { target: number }) => {
     }
   }, [isInView, count, target]);
 
-  return <span ref={ref}>{rounded.get()}%</span>;
+  return <span ref={ref}>{displayValue}%</span>;
 };
 
 const CaseStudies = () => {
