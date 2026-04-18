@@ -9,3 +9,4 @@ Diseño web profesional por suscripción. Hosting, mantenimiento y cambios ilimi
 - Mantenimiento técnico
 - Cambios ilimitados
 - Sin compromiso de permanencia
+// Trigger Vercel deployment
