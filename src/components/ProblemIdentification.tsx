@@ -40,8 +40,8 @@ const ProblemIdentification = () => {
             ))}
           </div>
           
-          <p className="text-lg text-gray-600 font-medium">
-            Si te has sentido identificado, esto es para ti.
+          <p className="text-lg text-gray-900 font-bold">
+            Si has dicho sí a alguna de estas, estás perdiendo clientes cada semana.
           </p>
         </motion.div>
       </div>

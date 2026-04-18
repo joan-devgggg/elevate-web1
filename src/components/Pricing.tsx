@@ -7,23 +7,6 @@ const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20c
 const Pricing = () => {
   const plans = [
     {
-      name: "Plan Presencia",
-      price: "65€/mes",
-      additionalText: "Todo incluido desde el primer mes",
-      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
-      features: [
-        "Web básica para tener presencia online",
-        "Diseño limpio y funcional",
-        "Hosting y dominio incluidos",
-        "Certificado SSL",
-        "Cambios básicos incluidos",
-        "Soporte estándar"
-      ],
-      buttonText: "Empezar sin pago inicial",
-      featured: false,
-      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
-    },
-    {
       name: "Plan Clientes",
       price: "350€",
       additionalText: "+ 55€/mes mantenimiento opcional",
@@ -44,21 +27,41 @@ const Pricing = () => {
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
     },
     {
-      name: "Plan Crecimiento",
-      price: "700€",
-      additionalText: "+ 95€/mes mantenimiento opcional",
+      name: "Plan Presencia",
+      price: "65€/mes",
+      additionalText: "Todo incluido desde el primer mes",
+      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
       features: [
-        "Todo lo del plan Clientes",
-        "Optimización continua de la web",
+        "Web básica para tener presencia online",
+        "Diseño limpio y funcional",
+        "Hosting y dominio incluidos",
+        "Certificado SSL",
+        "Cambios básicos incluidos",
+        "Soporte estándar"
+      ],
+      buttonText: "Empezar sin pago inicial",
+      featured: false,
+      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
+    },
+    {
+      name: "Plan Sistema",
+      price: "Precio personalizado",
+      additionalText: "Según el volumen de anuncios de tu negocio",
+      features: [
+        "Todo lo del Plan Clientes",
+        "Chatbot WhatsApp automatizado 24h",
+        "Gestión completa de anuncios en Meta",
+        "Optimización continua de campañas",
         "Mejora de conversión basada en datos",
-        "Ajustes constantes para conseguir más clientes",
         "Soporte prioritario y directo",
         "Estrategia mensual personalizada"
       ],
-      buttonText: "Quiero escalar mi negocio",
+      buttonText: "Quiero saber si es para mí",
       featured: false,
       description: "Para crecer de forma predecible cada mes",
-      whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Crecimiento%20para%20escalar%20mi%20negocio"
+      whatsappMessage: "Hola%2C%20quiero%20información%20sobre%20el%20Plan%20Sistema",
+      badge: "Sistema completo",
+      hasInfoBox: true
     }
   ];
 
@@ -103,11 +106,11 @@ const Pricing = () => {
               {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
               <div className="min-h-[200px] flex flex-col">
                 {/* Badge dentro de la card */}
-                {plan.featured && (
+                {plan.badge && (
                   <div className="mb-4">
                     <div className="inline-flex items-center justify-center w-full">
-                      <div className="bg-[#E6F7EC] text-[#1F7A4D] px-3 py-1 rounded-full text-xs font-medium">
-                        Más elegido
+                      <div className={`${plan.featured ? "bg-[#E6F7EC] text-[#1F7A4D]" : "bg-gray-900 text-white"} px-3 py-1 rounded-full text-xs font-medium`}>
+                        {plan.badge}
                       </div>
                     </div>
                   </div>
@@ -137,6 +140,15 @@ const Pricing = () => {
                   <p className="text-gray-500 text-sm mb-3">
                     {plan.additionalText}
                   </p>
+                )}
+
+                {/* Info box for Plan Sistema */}
+                {plan.hasInfoBox && (
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3">
+                    <p className="text-blue-800 text-sm">
+                      El presupuesto de anuncios es tuyo y lo controlas tú directamente
+                    </p>
+                  </div>
                 )}
 
                 {/* Descripción de precio (solo Plan Clientes) */}
@@ -178,6 +190,11 @@ const Pricing = () => {
                   <MessageCircle className="h-4 w-4" />
                   {plan.buttonText}
                 </a>
+                {plan.badge === "Sistema completo" && (
+                  <p className="text-gray-500 text-xs text-center mt-3">
+                    Precio según volumen de anuncios — te lo explicamos en 5 min por WhatsApp
+                  </p>
+                )}
               </div>
             </motion.div>
           ))}

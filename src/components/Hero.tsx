@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, Check } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20me%20interesa%20crear%20mi%20web%20con%20Elevate%20Web.%20%C2%BFPod%C3%A9is%20ense%C3%B1arme%20ejemplos%3F";
 const PHONE_URL = "tel:+34644610120";
@@ -16,7 +16,9 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
           >
-            Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana sin depender de Instagram</span>
+            Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
+            <br />
+            <span className="text-xl md:text-2xl lg:text-3xl text-foreground font-semibold">Con web, anuncios y automatización incluidos</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
           </motion.h1>
@@ -30,11 +32,32 @@ const Hero = () => {
             Para restaurantes, clínicas y negocios locales
           </motion.p>
 
+          {/* Micro-beneficios - column on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-6"
+            className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto mb-6 text-sm text-green-600"
+          >
+            <div className="flex items-center">
+              <Check size={16} className="mr-2" />
+              <span>Web lista en 48h</span>
+            </div>
+            <div className="flex items-center">
+              <Check size={16} className="mr-2" />
+              <span>Sin pago inicial</span>
+            </div>
+            <div className="flex items-center">
+              <Check size={16} className="mr-2" />
+              <span>Sin permanencia</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col gap-4 w-full sm:w-auto mb-6"
           >
             <a
               href={WHATSAPP_URL}

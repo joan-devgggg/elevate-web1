@@ -74,7 +74,8 @@ const SimpleGuarantee = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105"
+            style={{ background: 'linear-gradient(135deg, #2563EB, #7C3AED)' }}
           >
             <MessageCircle className="h-5 w-5" />
             Quiero empezar sin riesgo

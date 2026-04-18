@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, TrendingUp, Bot } from "lucide-react";
+import { MessageCircle, Megaphone, MousePointerClick } from "lucide-react";
 
 const CustomerSystem = () => {
   return (
@@ -14,7 +14,8 @@ const CustomerSystem = () => {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            El sistema que usan nuestros clientes para llenar su agenda cada semana
+            El sistema completo para llenar<br />
+            <span className="gradient-text">tu agenda cada semana</span>
           </h2>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -50,7 +51,11 @@ const CustomerSystem = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-blue-50 border border-blue-200 rounded-2xl p-8 text-center"
           >
-            <div className="text-4xl mb-4">🟦</div>
+            <div className="flex justify-center mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                <Megaphone className="h-8 w-8 text-blue-600" />
+              </div>
+            </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
               Empiezas a recibir clientes desde el primer día
             </h4>
@@ -69,7 +74,11 @@ const CustomerSystem = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-purple-50 border border-purple-200 rounded-2xl p-8 text-center"
           >
-            <div className="text-4xl mb-4">🟪</div>
+            <div className="flex justify-center mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                <MousePointerClick className="h-8 w-8 text-purple-600" />
+              </div>
+            </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
               Convierte visitas en reservas y contactos reales
             </h4>
@@ -87,7 +96,11 @@ const CustomerSystem = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center"
           >
-            <div className="text-4xl mb-4">🟩</div>
+            <div className="flex justify-center mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                <MessageCircle className="h-8 w-8 text-green-600" />
+              </div>
+            </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
               No pierdes ningún cliente que te escriba
             </h4>
@@ -116,7 +129,7 @@ const CustomerSystem = () => {
             href="https://wa.me/34644610120?text=Hola%2C%20quiero%20clientes%20cada%20semana"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-black text-white rounded-full px-8 py-4 text-lg font-bold hover:bg-gray-800 transition-colors shadow-lg hover:shadow-xl mb-6"
+            className="gradient-bg inline-flex items-center justify-center gap-2 text-white rounded-full px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all mb-6"
           >
             <MessageCircle className="h-5 w-5" />
             Quiero clientes cada semana

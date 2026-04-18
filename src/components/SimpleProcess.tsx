@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Code, TrendingUp } from "lucide-react";
+import { MessageCircle, Code, PenLine, Rocket } from "lucide-react";
 
 const SimpleProcess = () => {
   const steps = [
@@ -21,14 +21,14 @@ const SimpleProcess = () => {
       number: "3",
       title: "La ajustamos contigo hasta que te encante", 
       description: "Hacemos todos los cambios necesarios sin coste extra",
-      icon: <TrendingUp className="h-6 w-6" />,
+      icon: <PenLine className="h-6 w-6" />,
       color: "bg-orange-100 text-orange-600"
     },
     {
       number: "4",
       title: "La lanzamos y empiezas a recibir clientes", 
       description: "Tu web empieza a generar contactos desde el primer día",
-      icon: <TrendingUp className="h-6 w-6" />,
+      icon: <Rocket className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600"
     }
   ];

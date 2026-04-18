@@ -33,6 +33,10 @@ const CROFAQ = () => {
     {
       question: "¿Qué incluye exactamente el precio?",
       answer: "Web profesional completa, diseño personalizado, hosting, dominio, certificado SSL, optimización para Google y soporte directo conmigo."
+    },
+    {
+      question: "¿Los anuncios están incluidos en algún plan?",
+      answer: "Los anuncios están incluidos en el Plan Sistema. El presupuesto publicitario es tuyo y lo controlas tú directamente — nosotros nos encargamos de gestionar las campañas para maximizar tus resultados."
     }
   ];
 

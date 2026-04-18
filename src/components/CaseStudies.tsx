@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, TrendingUp } from "lucide-react";
 import sanremoLogo from "@/assets/logo-sanremo.png";
 import dentluxLogo from "@/assets/logo-dentlux.jpg";
 import sanremoScreenshot from "@/assets/screenshot-sanremo.png";
@@ -130,7 +130,7 @@ const CaseStudies = () => {
                 href={caseStudy.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity duration-200 inline-flex items-center gap-2 mt-4"
+                className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-opacity duration-200 inline-flex items-center gap-2 mt-4"
               >
                 Ver web real →
                 <ExternalLink className="h-4 w-4" />
@@ -138,6 +138,27 @@ const CaseStudies = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Banner de Anuncios */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-12 max-w-6xl mx-auto"
+        >
+          <div className="bg-gray-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-center gap-6">
+            <TrendingUp className="text-blue-600 w-12 h-12 md:w-16 md:h-16 flex-shrink-0" />
+            <div className="text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                Sistema + Estrategia = Resultados que marcan la diferencia
+              </h3>
+              <p className="text-gray-400 text-sm md:text-base">
+                Coste por resultado un 53% inferior al de empresas similares
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

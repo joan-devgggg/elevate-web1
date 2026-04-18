@@ -7,7 +7,6 @@ import CustomerSystem from "@/components/CustomerSystem";
 import WhatsAppProof from "@/components/WhatsAppProof";
 import SimpleProcess from "@/components/SimpleProcess";
 import UnifiedBenefits from "@/components/UnifiedBenefits";
-import WebShowcase from "@/components/WebShowcase";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
 import Pricing from "@/components/Pricing";
 import CROFAQ from "@/components/CROFAQ";
@@ -27,7 +26,6 @@ const Index = () => {
         <WhatsAppProof />
         <SimpleProcess />
         <UnifiedBenefits />
-        <WebShowcase />
         <SimpleGuarantee />
         <Pricing />
         <CROFAQ />
