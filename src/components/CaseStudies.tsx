@@ -89,7 +89,7 @@ const CaseStudies = () => {
             Resultados reales de clientes
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Negocios como el tuyo ya están consiguiendo clientes cada semana
+            Estos son ejemplos reales de mensajes que llegan cuando el sistema está activo.
           </p>
         </motion.div>
 
