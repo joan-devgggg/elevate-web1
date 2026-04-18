@@ -24,10 +24,14 @@ const Index = () => {
         <CaseStudies />
         <CustomerSystem />
         <WhatsAppProof />
+        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <SimpleProcess />
+        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <UnifiedBenefits />
+        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <SimpleGuarantee />
         <Pricing />
+        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <CROFAQ />
         <StrongFinalCTA />
       </main>

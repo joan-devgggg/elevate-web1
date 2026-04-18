@@ -8,7 +8,8 @@ const ProblemIdentification = () => {
     "Tienes WhatsApp lleno de consultas pero ninguna web donde mandarlos",
     "Pierdes clientes cada semana porque no apareces en Google",
     "Has pensado en tener web pero las agencias te piden 2.000€ o más",
-    "Tu competencia ya tiene web y tú todavía no"
+    "Tu competencia ya tiene web y tú todavía no",
+    "Recibes consultas por WhatsApp pero tardas en responder y el cliente se va con otro"
   ];
 
   return (

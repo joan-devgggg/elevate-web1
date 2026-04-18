@@ -7,7 +7,7 @@ const PHONE_URL = "tel:+34644610120";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero-bg relative overflow-hidden pt-16 pb-16 md:pt-24 md:pb-24">
+    <section id="hero" className="hero-bg relative overflow-hidden pt-12 pb-12 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Eyebrow pill */}
@@ -24,13 +24,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
+            className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
           >
             Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
             <br />
-            <span className="text-xl md:text-2xl lg:text-3xl text-foreground font-semibold">Con web, anuncios y automatización incluidos</span>
-            <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
+            <br />
+            <span className="text-xl md:text-2xl lg:text-3xl text-gray-500 font-medium">Web + anuncios + chatbot WhatsApp, todo incluido.</span>
           </motion.h1>
 
           <motion.p
@@ -62,6 +62,15 @@ const Hero = () => {
               <span>Sin permanencia</span>
             </div>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-sm text-gray-500 text-center mb-6"
+          >
+            Confiado por restaurantes, clínicas dentales, peluquerías, centros de estética y más negocios locales
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -5,8 +5,8 @@ const UnifiedBenefits = () => {
   const benefits = [
     {
       icon: <MessageCircle className="h-6 w-6" />,
-      title: "Recibe mensajes, reservas o citas cada semana",
-      description: "Tu web convierte visitas en clientes mientras tú duermes"
+      title: "Recibe reservas mientras duermes",
+      description: "Tu web trabaja sola. Cada visita es una oportunidad de negocio, a cualquier hora."
     },
     {
       icon: <Search className="h-6 w-6" />,
@@ -15,8 +15,8 @@ const UnifiedBenefits = () => {
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "Convierte visitas en clientes",
-      description: "Diseño optimizado para generar mensajes, reservas y citas"
+      title: "Convierte el móvil en tu mejor vendedor",
+      description: "Diseño optimizado para móvil donde el 80% de tus clientes te van a buscar"
     },
     {
       icon: <Clock className="h-6 w-6" />,

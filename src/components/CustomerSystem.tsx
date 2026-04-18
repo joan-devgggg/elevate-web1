@@ -37,7 +37,7 @@ const CustomerSystem = () => {
           </h3>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Atrae clientes, convierte visitas y llena tu agenda sin depender de Instagram o recomendaciones
+            Tres piezas que trabajan juntas mientras tú atiendes tu negocio
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ const CustomerSystem = () => {
         >
           <p className="text-lg text-gray-600 mb-8">
             Desde 450€/mes para conseguir clientes cada semana<br />
-            Incluye anuncios, optimización y automatización completa
+            Web + gestión de anuncios en Meta + chatbot WhatsApp automatizado
           </p>
           
           <a

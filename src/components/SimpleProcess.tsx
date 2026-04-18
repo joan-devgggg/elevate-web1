@@ -27,7 +27,7 @@ const SimpleProcess = () => {
     {
       number: "4",
       title: "La lanzamos y empiezas a recibir clientes", 
-      description: "Tu web empieza a generar contactos desde el primer día",
+      description: "Clientes reales desde el día del lanzamiento.",
       icon: <Rocket className="h-6 w-6" />,
       color: "bg-purple-100 text-purple-600"
     }

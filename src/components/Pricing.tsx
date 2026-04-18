@@ -27,6 +27,7 @@ const Pricing = () => {
       name: "Plan Clientes",
       price: "350€",
       additionalText: "+ 55€/mes mantenimiento opcional",
+      description: "Web profesional optimizada para conseguir clientes, lista en 48h.",
       features: [
         "Web totalmente personalizada para tu negocio (no plantilla)",
         "Estructura optimizada para convertir visitas en clientes",
@@ -87,7 +88,7 @@ const Pricing = () => {
         {/* Bloque de Anclaje de Precios */}
         <div className="bg-blue-50 rounded-xl p-6 mb-12 max-w-4xl mx-auto">
           <p className="text-center text-gray-700 text-sm leading-relaxed">
-            Una agencia tradicional te cobra entre 1.500€ y 5.000€ por una web similar. Y luego 150€/mes de mantenimiento. Aquí empiezas desde 350€, ves el diseño antes de pagar, y si no te gusta no debes nada.
+            Una agencia tradicional te cobra entre 1.500€ y 5.000€ por una web similar. Y luego 150€/mes de mantenimiento. Aquí empiezas desde 65€/mes, ves el diseño antes de pagar, y si no te gusta no debes nada.
           </p>
         </div>
 

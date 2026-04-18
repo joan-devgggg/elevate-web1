@@ -17,8 +17,8 @@ const CaseStudies = () => {
       screenshot: sanremoScreenshot,
       url: "https://sanremopalencia.com",
       result: "Antes: dependían solo del teléfono\nAhora: +25 reservas online cada semana en solo 30 días",
-      testimonio: "Ahora tenemos reservas constantes sin depender del teléfono",
-      firma: "— Alberto Villegas, dueño de restaurante en Palencia",
+      testimonio: "Pasamos de depender solo del teléfono a recibir +25 reservas online cada semana en solo 30 días.",
+      firma: "— Alberto Villegas, Restaurante San Remo · Palencia",
       delay: 0.1
     },
     {
@@ -28,8 +28,8 @@ const CaseStudies = () => {
       screenshot: dentluxScreenshot,
       url: "https://dentluxtravel.com",
       result: "Antes: no recibían solicitudes constantes\nAhora: +35 solicitudes de clientes al mes desde la web",
-      testimonio: "Ahora recibimos mensajes y solicitudes todos los días sin hacer nada",
-      firma: "— Equipo Dentlux Travel, agencia en Alicante",
+      testimonio: "Ahora recibimos +35 solicitudes de clientes al mes desde la web, todos los días sin hacer nada.",
+      firma: "— Equipo Dentlux Travel · Alicante",
       delay: 0.2
     }
   ];
@@ -61,7 +61,7 @@ const CaseStudies = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: caseStudy.delay }}
-              className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 p-6"
+              className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-200 hover:-translate-y-1 p-6"
             >
               {/* Header */}
               <div className="flex items-center gap-4 mb-6">
@@ -101,13 +101,6 @@ const CaseStudies = () => {
                     </span>
                   </div>
                 </a>
-              </div>
-
-              {/* Resultado */}
-              <div className="bg-green-50 text-green-800 rounded-lg px-4 py-2 mt-4 mb-4">
-                <p className="font-medium whitespace-pre-line">
-                  {caseStudy.result}
-                </p>
               </div>
 
               {/* Testimonio */}
@@ -151,10 +144,10 @@ const CaseStudies = () => {
             <TrendingUp className="text-blue-600 w-12 h-12 md:w-16 md:h-16 flex-shrink-0" />
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                Sistema + Estrategia = Resultados que marcan la diferencia
+                Nuestros anuncios consiguen resultados un 53% más baratos que la media del sector
               </h3>
               <p className="text-white font-bold text-sm md:text-base">
-                Coste por resultado un 53% inferior al de empresas similares
+                Mismo presupuesto. Más clientes. Cada semana.
               </p>
             </div>
           </div>

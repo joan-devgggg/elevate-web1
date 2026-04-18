@@ -61,7 +61,7 @@ const WhatsAppProof = () => {
           className="text-center mt-12 max-w-3xl mx-auto"
         >
           <p className="text-gray-600">
-            Los mensajes llegan automáticamente cuando los clientes visitan tu web y hacen clic en el botón de WhatsApp.
+            Así llegan los clientes cuando el sistema está activo. Sin que hagas nada.
           </p>
         </motion.div>
       </div>

@@ -25,7 +25,7 @@ const StrongFinalCTA = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl md:text-2xl mb-8 opacity-90"
           >
-            Tu web lista para conseguir clientes en 48h
+            Sin permanencia. Sin pago si no te gusta. Solo clientes.
           </motion.p>
 
           <motion.div

@@ -35,6 +35,18 @@ const CROFAQ = () => {
       answer: "Web profesional completa, diseño personalizado, hosting, dominio, certificado SSL, optimización para Google y soporte directo conmigo."
     },
     {
+      question: "¿Cuánto tengo que gastar en anuncios cada mes?",
+      answer: "El presupuesto mínimo recomendado es de 200-300€/mes en Meta Ads. Ese dinero va directamente a Meta — tú lo controlas en todo momento. Nosotros gestionamos las campañas para que cada euro rinda al máximo."
+    },
+    {
+      question: "¿Cuánto tiempo tardan en llegar los primeros clientes con el Plan Sistema?",
+      answer: "Con los anuncios activos, los primeros contactos suelen llegar en los primeros 3-7 días. El chatbot empieza a responder clientes desde el mismo día que se lanza la web."
+    },
+    {
+      question: "¿Puedo empezar solo con la web y añadir el sistema después?",
+      answer: "Sí, así empieza la mayoría de clientes. Empiezas con el Plan Clientes cuando quieras y activamos los anuncios y el chatbot sin ningún coste de transición."
+    },
+    {
       question: "¿Los anuncios están incluidos en algún plan?",
       answer: "Los anuncios están incluidos en el Plan Sistema. El presupuesto publicitario es tuyo y lo controlas tú directamente — nosotros nos encargamos de gestionar las campañas para maximizar tus resultados."
     },
