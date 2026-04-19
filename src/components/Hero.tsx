@@ -38,7 +38,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto mb-6 text-sm text-green-600"
+            className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto mb-6 text-sm text-blue-600"
           >
             <div className="flex items-center">
               <Check size={16} className="mr-2" />

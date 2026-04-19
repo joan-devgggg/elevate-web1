@@ -1,10 +1,10 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Megaphone, Zap } from "lucide-react";
+import { MessageCircle, Megaphone, ArrowUpRight } from "lucide-react";
 
 const CustomerSystem = () => {
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section className="py-20 md:py-24 pt-10 md:pt-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Título y Subtítulo */}
         <motion.div
@@ -42,7 +42,7 @@ const CustomerSystem = () => {
         </motion.div>
 
         {/* Bloques */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 max-w-6xl mx-auto mt-12">
           {/* Bloque 1 - Atraemos clientes */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -76,7 +76,7 @@ const CustomerSystem = () => {
           >
             <div className="flex justify-center mb-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <Zap className="h-8 w-8 text-purple-600" />
+                <ArrowUpRight className="h-8 w-8 text-purple-600" />
               </div>
             </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
@@ -137,10 +137,6 @@ const CustomerSystem = () => {
           
           <p className="text-sm text-gray-500 mb-6">
             Te respondemos en menos de 1 hora por WhatsApp
-          </p>
-          
-          <p className="text-lg text-gray-600 font-medium">
-            Esto es exactamente lo que están usando los negocios que has visto arriba.
           </p>
         </motion.div>
       </div>

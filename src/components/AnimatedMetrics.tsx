@@ -19,7 +19,7 @@ const metrics = [
   {
     value: 48,
     suffix: "h",
-    description: "tiempo medio de entrega de la web",
+    description: "tu web lista desde que empezamos",
     isDecimal: false,
   },
   {

@@ -256,7 +256,7 @@ const CaseStudies = () => {
           transition={{ delay: 0.3 }}
           className="mt-12 max-w-6xl mx-auto"
         >
-          <div className="bg-gray-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="bg-gray-900 rounded-2xl p-6 md:p-12 flex flex-col md:flex-row items-center justify-center gap-6">
             <TrendingUp className="text-blue-600 w-12 h-12 md:w-16 md:h-16 flex-shrink-0" />
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-2">

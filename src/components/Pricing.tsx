@@ -75,7 +75,7 @@ const Pricing = () => {
             Elige cómo quieres conseguir <span className="gradient-text">clientes</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            La mayoría de negocios empiezan con la web y luego activan el sistema para conseguir clientes cada semana
+            Empieza con la web y activa el sistema cuando quieras.
           </p>
           <p className="text-sm text-gray-500 mt-4">
             Sin permanencia · Sin sorpresas · Sin letra pequeña
@@ -102,7 +102,7 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
-              className={`bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300 ${plan.name === 'Plan Clientes' ? 'md:order-2 order-first' : plan.name === 'Plan Presencia' ? 'md:order-1 order-2' : 'md:order-3 order-3'}`}
+              className={`${plan.name === "Plan Clientes" ? "order-1 md:order-unset" : plan.name === "Plan Presencia" ? "order-2 md:order-unset" : "order-3 md:order-unset"} bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
             >
               {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
               <div className="min-h-[200px] flex flex-col">
@@ -131,7 +131,7 @@ const Pricing = () => {
 
                 {/* Precio - mismo tamaño para todos */}
                 <div className="mb-4">
-                  <div className={`${plan.price === "Precio personalizado" ? "text-4xl" : "text-5xl"} font-bold text-gray-900`}>
+                  <div className={`${plan.price === "Precio personalizado" ? "text-3xl md:text-4xl" : "text-5xl"} font-bold text-gray-900`}>
                     {plan.price}
                   </div>
                 </div>
@@ -183,7 +183,7 @@ const Pricing = () => {
                   className={`
                     inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
                     ${plan.featured 
-                      ? 'text-white text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5' 
+                      ? 'text-white text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mb-4 md:mb-0' 
                       : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
                     }
                   `}

@@ -5,11 +5,10 @@ import { X } from "lucide-react";
 const ProblemIdentification = () => {
   const problems = [
     "Dependes de Instagram o del boca a boca para conseguir clientes",
-    "Tienes WhatsApp lleno de consultas pero ninguna web donde mandarlos",
     "Pierdes clientes cada semana porque no apareces en Google",
     "Has pensado en tener web pero las agencias te piden 2.000€ o más",
     "Tu competencia ya tiene web y tú todavía no",
-    "Recibes consultas por WhatsApp pero tardas en responder y el cliente se va con otro"
+    "Gestionas todo tú solo y no tienes tiempo para atender cada consulta que llega"
   ];
 
   return (
