@@ -5,7 +5,6 @@ import AnimatedMetrics from "@/components/AnimatedMetrics";
 import ProblemIdentification from "@/components/ProblemIdentification";
 import CaseStudies from "@/components/CaseStudies";
 import CustomerSystem from "@/components/CustomerSystem";
-import WhatsAppProof from "@/components/WhatsAppProof";
 import SimpleProcess from "@/components/SimpleProcess";
 import UnifiedBenefits from "@/components/UnifiedBenefits";
 import SimpleGuarantee from "@/components/SimpleGuarantee";
@@ -25,8 +24,6 @@ const Index = () => {
         <ProblemIdentification />
         <CaseStudies />
         <CustomerSystem />
-        <WhatsAppProof />
-        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <SimpleProcess />
         <div className="w-3/5 mx-auto border-t border-gray-200"></div>
         <UnifiedBenefits />
