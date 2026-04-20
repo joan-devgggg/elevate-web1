@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Minimize2, Maximize2 } from 'lucide-react';
 
@@ -97,7 +97,7 @@ const Chatbot = () => {
     }, 40000); // 40 segundos
     
     return () => clearTimeout(intelligentOpenTimer);
-  }, [isOpen, hasOpenedIntelligently, hasScrolled, messages.length]);
+  }, [isOpen, hasOpenedIntelligently, hasScrolled, messages.length, trackEvent]);
   
   // DETECCIÓN DE SCROLL PARA APERTURA INTELIGENTE
   useEffect(() => {
@@ -147,6 +147,7 @@ const Chatbot = () => {
     
     document.addEventListener('mouseleave', handleMouseLeave);
     return () => document.removeEventListener('mouseleave', handleMouseLeave);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, messages.length]);
   
   // PERSONALIZACIÓN AUTOMÁTICA
@@ -167,10 +168,10 @@ const Chatbot = () => {
         options: ['Sí, confirmar', 'No, es otro']
       }]);
     }
-  }, []);
+  }, [conversationState.tipo_negocio]);
 
   // TRACKING DE EVENTOS
-  const trackEvent = (eventType: string, additionalData?: any) => {
+  const trackEvent = useCallback((eventType: string, additionalData?: Record<string, unknown>) => {
     const eventData = {
       event: eventType,
       timestamp: new Date().toISOString(),
@@ -181,7 +182,7 @@ const Chatbot = () => {
     
     console.log('TRACKING:', eventData);
     // Aquí se podría integrar con Google Analytics, Facebook Pixel, etc.
-  };
+  }, [conversationState.nivel_interes, conversationState.tipo_negocio]);
 
   const toggleChat = () => {
     const wasClosed = !isOpen;
@@ -689,7 +690,7 @@ const Chatbot = () => {
     const nuevoNumeroInteracciones = (conversationState.numero_interacciones || 0) + 1;
     
     // REGISTRAR QUÉ SE HA OFRECIDO
-    let actualizaEstado: ConversationState = {
+    const actualizaEstado: ConversationState = {
       ...conversationState,
       respuestas_rapidas: conversationState.respuestas_rapidas + 1,
       nivel_interes: interesDetectado,
@@ -800,7 +801,7 @@ const Chatbot = () => {
     // ACTUALIZAR MEMORIA DE CONVERSACIÓN
     const nuevoNumeroInteracciones = (conversationState.numero_interacciones || 0) + 1;
     
-    let actualizaEstado: ConversationState = {
+    const actualizaEstado: ConversationState = {
       ...conversationState,
       respuestas_rapidas: conversationState.respuestas_rapidas + 1,
       nivel_interes: interesDetectado,

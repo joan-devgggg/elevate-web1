@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background:
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.08), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
 section {
   scroll-margin-top: 80px;
 }
@@ -56,6 +62,15 @@ section {
 
 .animate-slide-fade {
   animation: slide-fade 0.6s ease-out;
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-soft {
+  animation: float-soft 4s ease-in-out infinite;
 }
 
 @layer base {
@@ -154,5 +169,9 @@ section {
 
   .shadow-soft {
     box-shadow: var(--shadow-soft);
+  }
+
+  .section-divider {
+    @apply mx-auto w-full max-w-3xl border-t border-border/70;
   }
 }

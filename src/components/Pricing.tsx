@@ -67,33 +67,33 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-white">
+    <section id="pricing" className="py-16 md:py-28 bg-white">
       <div className="container mx-auto px-4">
         {/* Título y Subtítulo */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-5">
             Elige cómo quieres conseguir <span className="gradient-text">clientes</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Empieza con la web y activa el sistema cuando quieras.
           </p>
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-slate-500 mt-4">
             Sin permanencia · Sin sorpresas · Sin letra pequeña
           </p>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-slate-500 mt-2">
             Todos los precios son + IVA
           </p>
         </div>
 
         {/* Bloque de Anclaje de Precios */}
-        <div className="bg-blue-50 rounded-xl p-6 mb-12 max-w-4xl mx-auto">
-          <p className="text-center text-gray-700 text-sm leading-relaxed">
+        <div className="bg-blue-50 rounded-3xl p-5 md:p-6 mb-10 md:mb-12 max-w-4xl mx-auto border border-blue-100">
+          <p className="text-center text-slate-700 text-sm leading-relaxed">
             Una agencia tradicional te cobra entre 1.500€ y 5.000€ por una web similar. Y luego 150€/mes de mantenimiento. Aquí empiezas desde 65€/mes, ves el diseño antes de pagar, y si no te gusta no debes nada.
           </p>
         </div>
 
         {/* Grid de Planes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto mt-10">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -102,7 +102,7 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
-              className={`${plan.name === "Plan Clientes" ? "order-1 md:order-unset" : plan.name === "Plan Presencia" ? "order-2 md:order-unset" : "order-3 md:order-unset"} bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
+              className={`${plan.name === "Plan Clientes" ? "order-1 md:order-unset" : plan.name === "Plan Presencia" ? "order-2 md:order-unset" : "order-3 md:order-unset"} bg-white rounded-3xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl md:scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
             >
               {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
               <div className="min-h-[200px] flex flex-col">
@@ -124,21 +124,21 @@ const Pricing = () => {
                 
                 {/* Descripción (siempre encima del precio) */}
                 {plan.description && (
-                  <p className="text-gray-600 text-sm mb-4 font-medium">
+                    <p className="text-slate-600 text-sm mb-4 font-medium">
                     {plan.description}
                   </p>
                 )}
 
                 {/* Precio - mismo tamaño para todos */}
                 <div className="mb-4">
-                  <div className={`${plan.price === "Precio personalizado" ? "text-3xl md:text-4xl" : "text-5xl"} font-bold text-gray-900`}>
+                    <div className={`${plan.price === "Precio personalizado" ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl"} font-bold text-gray-900`}>
                     {plan.price}
                   </div>
                 </div>
                 
                 {/* Subtexto adicional */}
                 {plan.additionalText && (
-                  <p className="text-gray-500 text-sm mb-3">
+                    <p className="text-slate-500 text-sm mb-3">
                     {plan.additionalText}
                   </p>
                 )}
@@ -167,7 +167,7 @@ const Pricing = () => {
                     <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 mt-0.5">
                       <Check className="h-3 w-3 text-blue-600" />
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-slate-700 text-sm leading-relaxed">
                       {feature}
                     </p>
                   </div>
@@ -183,7 +183,7 @@ const Pricing = () => {
                   className={`
                     inline-flex w-full items-center justify-center gap-2 rounded-full transition-all duration-200
                     ${plan.featured 
-                      ? 'text-white text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mb-4 md:mb-0' 
+                      ? 'text-white text-base md:text-lg font-bold px-8 py-4 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mb-4 md:mb-0' 
                       : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-900 text-sm font-medium px-6 py-3'
                     }
                   `}
@@ -193,10 +193,10 @@ const Pricing = () => {
                   {plan.buttonText}
                 </a>
                 {plan.badge === "Sistema completo" && (
-                  <p className="text-gray-500 text-xs text-center mt-3">
-                    Precio según volumen de anuncios — te lo explicamos en 5 min por WhatsApp
-                  </p>
-                )}
+                    <p className="text-slate-500 text-xs text-center mt-3">
+                      Precio según volumen de anuncios — te lo explicamos en 5 min por WhatsApp
+                    </p>
+                  )}
               </div>
             </motion.div>
           ))}
@@ -208,9 +208,9 @@ const Pricing = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.7 }}
-          className="text-center mt-12"
+          className="text-center mt-10"
         >
-          <div className="inline-flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm text-slate-600">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500"></div>
               <span>Sin permanencia</span>
@@ -225,8 +225,7 @@ const Pricing = () => {
             </div>
           </div>
         </motion.div>
-
-              </div>
+      </div>
     </section>
   );
 };

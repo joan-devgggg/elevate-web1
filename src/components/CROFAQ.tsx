@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const CROFAQ = () => {
-  const [openItem, setOpenItem] = useState([]); // Todas las preguntas cerradas por defecto
+  const [openItem, setOpenItem] = useState<number[]>([]);
 
   const faqs = [
     {
@@ -65,13 +65,13 @@ const CROFAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section id="faq" className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Preguntas <span className="gradient-text">frecuentes</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             Todo lo que necesitas saber antes de empezar
           </p>
         </div>
@@ -88,17 +88,17 @@ const CROFAQ = () => {
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full text-left bg-white rounded-lg border border-gray-200 p-6 hover:bg-gray-50 transition-colors"
+                className="w-full text-left bg-white rounded-2xl border border-slate-200 p-5 md:p-6 hover:bg-slate-50 transition-colors shadow-sm"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  <h3 className="text-base md:text-lg font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openItem.includes(index) ? (
-                      <ChevronUp className="h-5 w-5 text-gray-500" />
+                      <ChevronUp className="h-5 w-5 text-slate-500" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-500" />
+                      <ChevronDown className="h-5 w-5 text-slate-500" />
                     )}
                   </div>
                 </div>
@@ -110,9 +110,9 @@ const CROFAQ = () => {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gray-50 border border-gray-200 border-t-0 rounded-b-lg p-6"
+                  className="bg-slate-50 border border-slate-200 border-t-0 rounded-b-2xl p-5 md:p-6"
                 >
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-slate-700 leading-relaxed text-sm md:text-base">
                     {faq.answer}
                   </p>
                 </motion.div>

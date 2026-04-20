@@ -7,30 +7,31 @@ const PHONE_URL = "tel:+34644610120";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero-bg relative overflow-hidden pt-20 pb-24 md:pt-16 md:pb-16 lg:pt-24 lg:pb-24">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+    <section id="hero" className="hero-bg relative overflow-hidden pt-24 pb-16 sm:pt-28 md:pt-24 md:pb-20">
+      <div className="container mx-auto px-4">
+        <div className="relative flex flex-col items-center text-center max-w-4xl mx-auto">
+          <div className="absolute -top-8 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl animate-float-soft" />
           {/* Eyebrow pill */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 mb-5"
           >
-            📍 <span className="hidden sm:inline">Para restaurantes, clínicas y negocios locales</span><span className="sm:hidden">Para negocios locales</span>
+            📍 <span className="hidden sm:inline">Para negocios locales que quieren más reservas y mensajes</span><span className="sm:hidden">Para negocios locales</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.2] mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.12] mb-5"
           >
             Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
             <br />
-            <span className="text-xl md:text-2xl lg:text-3xl text-gray-500 font-medium">Web + anuncios + chatbot WhatsApp, todo incluido.</span>
+            <span className="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-600 font-medium">Web + anuncios + chatbot WhatsApp, todo incluido.</span>
           </motion.h1>
 
           {/* Micro-beneficios - column on mobile */}
@@ -38,7 +39,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto mb-6 text-sm text-blue-600"
+            className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto mb-5 text-sm text-slate-700"
           >
             <div className="flex items-center">
               <Check size={16} className="mr-2" />
@@ -58,29 +59,29 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-sm text-gray-500 text-center mb-6"
+            className="text-sm text-slate-500 text-center mb-5"
           >
-            Confiado por +47 negocios locales en toda España
+            Confiado por 47 negocios locales en toda España
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col gap-4 w-full sm:w-auto mb-6"
+            className="flex flex-col gap-3 w-full sm:w-auto mb-4"
           >
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-primary-foreground shadow-elevated transition-all hover:scale-105 w-full sm:w-auto"
+              className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base sm:text-lg font-bold text-primary-foreground shadow-elevated transition-all hover:scale-105 w-full sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
               Quiero clientes cada semana
             </a>
             <a
               href={PHONE_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-xs font-medium text-gray-700 shadow-soft transition-all hover:bg-gray-50 w-auto"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 shadow-soft transition-all hover:bg-slate-50 w-full sm:w-auto"
             >
               <Phone className="h-4 w-4" />
               Llamar ahora
@@ -91,9 +92,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-xs text-gray-500 mt-4"
+            className="text-xs text-slate-500 mt-3 max-w-md"
           >
-            Si no te gusta el diseño que te mostramos, no pagas nada.
+            Si no te encaja el diseño inicial, no pagas nada.
           </motion.p>
         </div>
       </div>

@@ -30,7 +30,15 @@ const metrics = [
   },
 ];
 
-const AnimatedMetric = ({ value, suffix, description, isDecimal, isStar }: any) => {
+type AnimatedMetricProps = {
+  value: number;
+  suffix: string;
+  description: string;
+  isDecimal: boolean;
+  isStar?: boolean;
+};
+
+const AnimatedMetric = ({ value, suffix, description, isDecimal, isStar = false }: AnimatedMetricProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const count = useMotionValue(0);

@@ -25,12 +25,12 @@ const Index = () => {
         <CaseStudies />
         <CustomerSystem />
         <SimpleProcess />
-        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
+        <div className="section-divider" />
         <UnifiedBenefits />
-        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
+        <div className="section-divider" />
         <SimpleGuarantee />
         <Pricing />
-        <div className="w-3/5 mx-auto border-t border-gray-200"></div>
+        <div className="section-divider" />
         <CROFAQ />
         <StrongFinalCTA />
       </main>

@@ -42,9 +42,9 @@ const WhatsAppButton = () => {
     <div className="fixed right-5 z-50 md:bottom-6" style={{ bottom: bottomPosition }}>
       {/* Bubble tipo chat */}
       {showBubble && (
-        <div className="absolute bottom-20 right-0 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-lg border border-gray-100 whitespace-nowrap animate-slide-fade" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+        <div className="absolute bottom-20 right-0 bg-white text-gray-800 px-4 py-3 rounded-2xl shadow-lg border border-gray-100 max-w-[220px] md:max-w-none animate-slide-fade" style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
           {/* Mensaje principal */}
-          <div className="text-base font-semibold text-gray-900 mb-1">
+          <div className="text-sm md:text-base font-semibold text-gray-900 mb-1">
             ¿Quieres tu demo gratuita?
           </div>
 
@@ -67,7 +67,7 @@ const WhatsAppButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => setShowBubble(false)}
-        className="flex h-11 w-11 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all hover:scale-105 animate-pulse-slow"
+        className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all hover:scale-105 animate-pulse-slow"
         style={{
           boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
         }}

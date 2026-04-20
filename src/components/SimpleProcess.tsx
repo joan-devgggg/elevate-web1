@@ -34,22 +34,22 @@ const SimpleProcess = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 md:py-20 pb-10 md:pb-20 bg-gray-50">
+    <section id="como-funciona" className="py-16 md:py-20 pb-10 md:pb-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Así funciona en <span className="gradient-text">4 pasos simples</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             De la idea a clientes reales en menos de una semana
           </p>
-          <div className="mt-6 inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2">
+          <div className="mt-5 inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 shadow-sm">
             <div className="w-2 h-2 rounded-full bg-green-500"></div>
             <span className="text-sm font-medium text-green-700">Si no te gusta, no pagas nada</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -59,22 +59,22 @@ const SimpleProcess = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="relative"
             >
-              <div className="bg-white rounded-2xl p-8 text-center shadow-lg border border-gray-200 h-full">
+                <div className="bg-white rounded-3xl p-7 text-center shadow-lg border border-gray-200 h-full">
                 <div className="flex justify-center mb-6">
-                  <div className={`flex h-16 w-16 items-center justify-center rounded-full ${step.color}`}>
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-full ${step.color} shadow-sm`}>
                     {step.icon}
                   </div>
                 </div>
                 
-                <div className="text-4xl font-bold text-gray-900 mb-4">
+                <div className="text-4xl font-bold text-gray-900 mb-3">
                   {step.number}
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   {step.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {step.description}
                 </p>
               </div>
