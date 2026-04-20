@@ -27,10 +27,10 @@ const Pricing = () => {
       name: "Plan Clientes",
       price: "350€",
       additionalText: "+ 55€/mes mantenimiento opcional",
-      description: "Web profesional optimizada para conseguir clientes, lista en 48h.",
+      description: "Web profesional optimizada para convertir visitas en leads, lista en 48h.",
       features: [
         "Web totalmente personalizada para tu negocio (no plantilla)",
-        "Estructura optimizada para convertir visitas en clientes",
+        "Estructura optimizada para convertir visitas en leads",
         "Diseño profesional adaptado a móvil",
         "Optimización para aparecer en Google (SEO)",
         "Integración con WhatsApp y formularios",
@@ -50,7 +50,7 @@ const Pricing = () => {
       additionalText: "Según el volumen de anuncios de tu negocio",
       features: [
         "Todo lo del Plan Clientes",
-        "Chatbot WhatsApp automatizado 24h",
+        "CRM con seguimiento y automatización de leads",
         "Gestión completa de anuncios en Meta",
         "Optimización continua de campañas",
         "Mejora de conversión basada en datos",

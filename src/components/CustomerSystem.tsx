@@ -19,8 +19,8 @@ const CustomerSystem = () => {
           </h2>
           
           <p className="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Los resultados que has visto arriba no vienen solo de tener una web.<br />
-            Vienen de tener un sistema completo funcionando.
+            Los resultados no vienen solo de tener una web.<br />
+            Vienen de captar, responder y hacer seguimiento sin perder ningún lead.
           </p>
         </motion.div>
 
@@ -33,7 +33,7 @@ const CustomerSystem = () => {
           className="text-center mb-6"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-            Sistema de clientes en automático
+            Captación, CRM y seguimiento en automático
           </h3>
           
           <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ const CustomerSystem = () => {
               </div>
             </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
-              Empiezas a recibir clientes desde el primer día
+              Empiezas a recibir leads desde el primer día
             </h4>
             <div className="space-y-2 text-gray-700">
               <p>Anuncios en Meta desde el primer día</p>
@@ -102,12 +102,12 @@ const CustomerSystem = () => {
               </div>
             </div>
             <h4 className="text-xl font-bold text-gray-900 mb-4">
-              No pierdes ningún cliente que te escriba
+              No pierdes ningún chat interesado
             </h4>
             <div className="space-y-2 text-gray-700">
               <p>Respuesta instantánea 24h</p>
-              <p>Filtra curiosos</p>
-              <p>Convierte mensajes en citas</p>
+              <p>Se guarda cada conversación en el CRM</p>
+              <p>Seguimiento automático hasta cerrar</p>
             </div>
           </motion.div>
         </div>
@@ -122,7 +122,7 @@ const CustomerSystem = () => {
         >
           <p className="text-base md:text-lg text-slate-600 mb-6">
             Desde 450€/mes para conseguir clientes cada semana<br />
-            Web + gestión de anuncios en Meta + chatbot WhatsApp automatizado
+            Web + gestión de anuncios en Meta + CRM + automatización de seguimiento
           </p>
           
           <a

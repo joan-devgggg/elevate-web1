@@ -39,8 +39,8 @@ const CROFAQ = () => {
       answer: "El presupuesto mínimo recomendado es de 200-300€/mes en Meta Ads. Ese dinero va directamente a Meta — tú lo controlas en todo momento. Nosotros gestionamos las campañas para que cada euro rinda al máximo."
     },
     {
-      question: "¿Cuánto tiempo tardan en llegar los primeros clientes con el Plan Sistema?",
-      answer: "Con los anuncios activos, los primeros contactos suelen llegar en los primeros 3-7 días. El chatbot empieza a responder clientes desde el mismo día que se lanza la web."
+      question: "¿Cuánto tiempo tardan en llegar los primeros leads con el Plan Sistema?",
+      answer: "Con los anuncios activos, los primeros contactos suelen llegar en los primeros 3-7 días. El CRM guarda cada lead y el seguimiento empieza desde el mismo día que se lanza la web."
     },
     {
       question: "¿Puedo empezar solo con la web y añadir el sistema después?",

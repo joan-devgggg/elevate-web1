@@ -28,7 +28,7 @@ const Footer = () => {
             </a>
             <span className="hidden sm:block">·</span>
             <a href="mailto:elevateweb@gmail.com" className="hover:text-foreground transition-colors">
-               elevateweb@gmail.com
+              elevateweb@gmail.com
             </a>
           </div>
         </div>

@@ -27,11 +27,11 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.12] mb-5"
           >
-            Tu web lista en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
+            Tu sistema listo en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
             <br />
-            <span className="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-600 font-medium">Web + anuncios + chatbot WhatsApp, todo incluido.</span>
+            <span className="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-600 font-medium">Web + anuncios + CRM + automatización de leads, todo incluido.</span>
           </motion.h1>
 
           {/* Micro-beneficios - column on mobile */}
@@ -43,7 +43,7 @@ const Hero = () => {
           >
             <div className="flex items-center">
               <Check size={16} className="mr-2" />
-              <span>Web lista en 48h</span>
+              <span>Sistema listo en 48h</span>
             </div>
             <div className="flex items-center">
               <Check size={16} className="mr-2" />
@@ -94,7 +94,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-xs text-slate-500 mt-3 max-w-md"
           >
-            Si no te encaja el diseño inicial, no pagas nada.
+            Si no te encaja el sistema inicial, no pagas nada.
           </motion.p>
         </div>
       </div>
