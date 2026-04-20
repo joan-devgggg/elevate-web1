@@ -10,7 +10,7 @@ const Pricing = () => {
       name: "Plan Presencia",
       price: "65€/mes",
       additionalText: "Todo incluido desde el primer mes",
-      description: "Diseño + hosting + dominio + mantenimiento. Sin pago inicial.",
+      description: "Si solo necesitas una web profesional y lista para enseñar tu negocio.",
       features: [
         "Web básica para tener presencia online",
         "Diseño limpio y funcional",
@@ -19,7 +19,7 @@ const Pricing = () => {
         "Cambios básicos incluidos",
         "Soporte estándar"
       ],
-      buttonText: "Empezar sin pago inicial",
+      buttonText: "Quiero solo una web",
       featured: false,
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Presencia%20para%20mi%20negocio"
     },
@@ -27,10 +27,10 @@ const Pricing = () => {
       name: "Plan Clientes",
       price: "350€",
       additionalText: "+ 55€/mes mantenimiento opcional",
-      description: "Web profesional optimizada para convertir visitas en leads, lista en 48h.",
+      description: "Si quieres una web que no solo se vea bien, sino que convierta mejor.",
       features: [
         "Web totalmente personalizada para tu negocio (no plantilla)",
-        "Estructura optimizada para convertir visitas en leads",
+        "Estructura optimizada para convertir visitas en clientes",
         "Diseño profesional adaptado a móvil",
         "Optimización para aparecer en Google (SEO)",
         "Integración con WhatsApp y formularios",
@@ -38,7 +38,7 @@ const Pricing = () => {
         "Hosting, dominio y SSL incluidos",
         "Soporte prioritario"
       ],
-      buttonText: "Quiero empezar a recibir clientes",
+      buttonText: "Quiero una web que convierta",
       featured: true,
       badge: "Más elegido",
       priceDescription: "Recuperas la inversión con solo 2–3 clientes",
@@ -57,9 +57,9 @@ const Pricing = () => {
         "Soporte prioritario y directo",
         "Estrategia mensual personalizada"
       ],
-      buttonText: "Quiero saber si es para mí",
+      buttonText: "Quiero el sistema completo",
       featured: false,
-      description: "Para crecer de forma predecible cada mes",
+      description: "Si quieres anuncios, CRM y seguimiento para no perder oportunidades.",
       whatsappMessage: "Hola%2C%20quiero%20información%20sobre%20el%20Plan%20Sistema",
       badge: "Sistema completo",
       hasInfoBox: true
@@ -75,7 +75,7 @@ const Pricing = () => {
             Elige cómo quieres conseguir <span className="gradient-text">clientes</span>
           </h2>
           <p className="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Empieza con la web y activa el sistema cuando quieras.
+            Dos caminos claros: una web profesional o un sistema completo para captar y cerrar clientes.
           </p>
           <p className="text-sm text-slate-500 mt-4">
             Sin permanencia · Sin sorpresas · Sin letra pequeña
@@ -88,7 +88,7 @@ const Pricing = () => {
         {/* Bloque de Anclaje de Precios */}
         <div className="bg-blue-50 rounded-3xl p-5 md:p-6 mb-10 md:mb-12 max-w-4xl mx-auto border border-blue-100">
           <p className="text-center text-slate-700 text-sm leading-relaxed">
-            Una agencia tradicional te cobra entre 1.500€ y 5.000€ por una web similar. Y luego 150€/mes de mantenimiento. Aquí empiezas desde 65€/mes, ves el diseño antes de pagar, y si no te gusta no debes nada.
+            Elige solo web si buscas presencia, o sistema completo si quieres captación, CRM y seguimiento.
           </p>
         </div>
 

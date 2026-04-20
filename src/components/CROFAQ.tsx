@@ -32,7 +32,7 @@ const CROFAQ = () => {
     },
     {
       question: "¿Qué incluye exactamente el precio?",
-      answer: "Web profesional completa, diseño personalizado, hosting, dominio, certificado SSL, optimización para Google y soporte directo conmigo."
+      answer: "Depende del plan: si eliges solo web, incluye diseño personalizado, hosting, dominio, certificado SSL y soporte. Si eliges el sistema, además añade anuncios, CRM y seguimiento."
     },
     {
       question: "¿Cuánto tengo que gastar en anuncios cada mes?",
@@ -44,7 +44,7 @@ const CROFAQ = () => {
     },
     {
       question: "¿Puedo empezar solo con la web y añadir el sistema después?",
-      answer: "Sí, así empieza la mayoría de clientes. Empiezas con el Plan Clientes cuando quieras y activamos los anuncios y el chatbot sin ningún coste de transición."
+      answer: "Sí, claro. Puedes empezar con la web y activar después el sistema completo cuando te encaje."
     },
     {
       question: "¿Los anuncios están incluidos en algún plan?",
@@ -52,7 +52,7 @@ const CROFAQ = () => {
     },
     {
       question: "¿Necesito saber de tecnología?",
-      answer: "No necesitas saber nada. Nos encargamos de todo lo técnico. Tú solo decides si te gusta el diseño."
+      answer: "No necesitas saber nada. Nos encargamos de todo lo técnico. Tú solo decides si te gusta la web o el sistema."
     }
   ];
 

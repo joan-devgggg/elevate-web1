@@ -27,11 +27,11 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.12] mb-5"
           >
-            Tu sistema listo en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
+            Tu web o tu sistema listo en 48h para convertir visitas en <span className="gradient-text">clientes cada semana</span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold">o no pagas nada.</span>
             <br />
-            <span className="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-600 font-medium">Web + anuncios + CRM + automatización de leads, todo incluido.</span>
+            <span className="text-base sm:text-lg md:text-2xl lg:text-3xl text-slate-600 font-medium">Dos caminos claros: solo web o web + captación + seguimiento.</span>
           </motion.h1>
 
           {/* Micro-beneficios - column on mobile */}
@@ -43,7 +43,7 @@ const Hero = () => {
           >
             <div className="flex items-center">
               <Check size={16} className="mr-2" />
-              <span>Sistema listo en 48h</span>
+              <span>Web o sistema en 48h</span>
             </div>
             <div className="flex items-center">
               <Check size={16} className="mr-2" />
@@ -77,14 +77,14 @@ const Hero = () => {
               className="gradient-bg inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base sm:text-lg font-bold text-primary-foreground shadow-elevated transition-all hover:scale-105 w-full sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
-              Quiero clientes cada semana
+              Quiero un sistema completo
             </a>
             <a
               href={PHONE_URL}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 shadow-soft transition-all hover:bg-slate-50 w-full sm:w-auto"
             >
               <Phone className="h-4 w-4" />
-              Llamar ahora
+              Quiero solo una web
             </a>
           </motion.div>
 
@@ -94,7 +94,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-xs text-slate-500 mt-3 max-w-md"
           >
-            Si no te encaja el sistema inicial, no pagas nada.
+            Si solo quieres una web, te la hacemos. Si quieres más clientes, te montamos el sistema completo.
           </motion.p>
         </div>
       </div>
