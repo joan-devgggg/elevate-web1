@@ -33,11 +33,11 @@ const UnifiedBenefits = () => {
             Tu web <span className="gradient-text">trabaja por ti</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Mientras tú te ocupas de tu negocio local, tu web se encarga de conseguir clientes
+            Mientras tú te ocupas de tu negocio, tu web se encarga de captar oportunidades
           </p>
           <div className="mt-4 inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2">
             <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-            <span className="text-sm font-medium text-blue-700">Trabajamos con restaurantes, clínicas y negocios locales</span>
+            <span className="text-sm font-medium text-blue-700">Pensado para restaurantes, clínicas y negocios locales</span>
           </div>
         </div>
 

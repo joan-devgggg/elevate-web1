@@ -5,10 +5,10 @@ const WHATSAPP_URL = "https://wa.me/34644610120?text=Hola%2C%20quiero%20empezar%
 
 const SimpleGuarantee = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
             Empieza <span className="gradient-text">sin riesgo</span>
           </h2>
         </div>
@@ -44,7 +44,7 @@ const SimpleGuarantee = () => {
               </div>
               <div>
                 <h3 className="font-bold text-gray-900">Cambios ilimitados</h3>
-                <p className="text-sm text-gray-600">Ajustamos todo hasta que estés 100% satisfecho</p>
+                <p className="text-sm text-gray-600">Ajustamos todo hasta que estés satisfecho</p>
               </div>
             </motion.div>
 
@@ -128,7 +128,7 @@ const SimpleGuarantee = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base md:text-lg font-bold text-white shadow-lg transition-all hover:scale-105 w-full sm:w-auto"
             style={{ background: 'linear-gradient(135deg, #2563EB, #7C3AED)' }}
           >
             <MessageCircle className="h-5 w-5" />

@@ -6,7 +6,7 @@ const metrics = [
   {
     value: 47,
     suffix: "",
-    description: "negocios locales confían en nosotros",
+    description: "negocios locales ya confían en nosotros",
     isDecimal: false,
   },
   {
@@ -19,13 +19,13 @@ const metrics = [
   {
     value: 48,
     suffix: "h",
-    description: "tu web lista desde que empezamos",
+    description: "tu web lista desde que arrancamos",
     isDecimal: false,
   },
   {
     value: 53,
     suffix: "%",
-    description: "menos coste por cliente vs. empresas similares",
+    description: "menos coste por cliente que la media",
     isDecimal: false,
   },
 ];
