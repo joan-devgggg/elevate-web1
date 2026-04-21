@@ -37,8 +37,8 @@
     .hero{padding:26px 0 58px}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:end}
     .lead{font-size:clamp(1.08rem,1.8vw,1.35rem);max-width:60ch;color:var(--muted);margin:20px 0 28px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;border:1px solid transparent;font-weight:800;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease}
+    .cta-row{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border-radius:50px;border:1px solid transparent;font-weight:800;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease;font-size:1rem;width:100%}
     .btn:hover{transform:translateY(-2px)}
     .btn.primary{background:linear-gradient(135deg,var(--accent),#eefb85);color:#0a1300;box-shadow:0 14px 40px rgba(200,241,53,.18)}
     .btn.secondary{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.02)}
@@ -52,9 +52,10 @@
     .metric .label{color:var(--muted);font-size:.95rem;margin-top:6px}
     .floating-tag{position:absolute;left:18px;bottom:18px;padding:10px 12px;border-radius:999px;background:rgba(200,241,53,.1);border:1px solid rgba(200,241,53,.18);color:var(--accent);font-size:.84rem;font-weight:800}
     .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .metric-box{padding:24px;border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--line);box-shadow:var(--shadow);min-height:154px;display:flex;flex-direction:column;justify-content:space-between}
+    .metric-box{padding:24px;border-radius:16px;background:#111;border:1px solid rgba(255,255,255,.06);box-shadow:none;min-height:154px;display:flex;flex-direction:column;justify-content:space-between}
     .metric-box strong,.stat{font-family:'Syne';font-size:clamp(2rem,3vw,3.3rem);line-height:1;color:var(--accent)}
-    .metric-box span,.muted{color:var(--muted)}
+    .metric-box span{color:var(--text)}
+    .muted{color:var(--muted)}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
     .panel{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
     .cards{display:grid;gap:14px;margin-top:24px}
@@ -70,6 +71,13 @@
     .step-card .n{font-family:'Syne';font-size:1.4rem;color:var(--accent)}
     .testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .testimonial{padding:24px;display:grid;gap:16px}
+    .testimonial-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+    .person{display:flex;align-items:center;gap:14px;min-width:0}
+    .person img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(200,241,53,.3);flex:0 0 auto}
+    .person .meta{min-width:0}
+    .person .meta strong{display:block}
+    .person .meta span{display:block;color:var(--muted);font-size:.95rem}
+    .brand-logo{max-height:40px;max-width:120px;object-fit:contain;filter:brightness(0) invert(1);flex:0 0 auto}
     .result{font-family:'Syne';font-size:clamp(2rem,3vw,3rem);color:var(--accent)}
     .carousel-wrap{display:grid;gap:12px}
     .carousel-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -113,7 +121,7 @@
     .fade-in{opacity:0;transform:translateY(24px);transition:opacity .5s ease, transform .5s ease}
     .fade-in.visible{opacity:1;transform:translateY(0)}
     @media (max-width: 920px){.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width: 720px){.section{padding:70px 0}.nav-links{display:none}.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr}.hero{padding-top:14px}.hero-card{transform:none;min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.cta-row{flex-direction:row;gap:8px;align-items:stretch}.cta-row .btn{width:calc(50% - 4px);padding:12px 14px;min-height:48px}.trustbar{font-size:.9rem}.carousel-arrows{display:none}.slide{padding:0}.slide-inner{aspect-ratio:9/16}.faq-item.open .faq-a{max-height:240px}.system-text{font-size:clamp(1.7rem,8vw,2.55rem)}}
+    @media (max-width: 720px){.section{padding:70px 0}.nav-links{display:none}.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr}.hero{padding-top:14px}.hero-card{transform:none;min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.cta-row{gap:12px}.cta-row .btn{width:100%;padding:12px 16px;min-height:48px;font-size:1rem}.trustbar{font-size:.9rem}.carousel-arrows{display:none}.slide{padding:0}.slide-inner{aspect-ratio:9/16}.faq-item.open .faq-a{max-height:240px}.system-text{font-size:clamp(1.7rem,8vw,2.55rem)}}
     @media (min-width: 721px){.slide{flex-basis:50%}.slide-inner{aspect-ratio:4/3}.arrow{display:grid}}
   </style>
 </head>
@@ -144,13 +152,12 @@
           <div class="trustbar">Restaurantes · Clínicas · Abogados · Reformas · Negocios locales · 47 negocios en España ya confían en nosotros</div>
         </div>
         <aside class="hero-card fade-in">
-          <div class="eyebrow">Sistema que convierte</div>
-          <div style="margin-top:18px;font-family:Syne;font-size:clamp(1.8rem,4vw,3rem);line-height:1.02;max-width:8ch;">Presencia online que trabaja por ti.</div>
+          <div class="eyebrow">Respuesta rápida</div>
+          <div style="margin-top:18px;font-family:Syne;font-size:clamp(1.8rem,4vw,3rem);line-height:1.02;max-width:8ch;">Tu web lista para vender.</div>
           <div class="hero-metric">
             <div class="metric"><div class="num" data-count="47">0</div><div class="label">negocios locales confían en nosotros</div></div>
             <div class="metric"><div class="num" data-static="4.9 ★">4.9 ★</div><div class="label">valoración media de nuestros clientes</div></div>
           </div>
-          <div class="floating-tag">Entrega en 48h · Sin permanencia</div>
         </aside>
       </div>
     </section>
@@ -232,13 +239,25 @@
         <p class="muted" style="margin:14px 0 24px">Estos son algunos de los negocios que ya están recibiendo clientes cada semana.</p>
         <div class="testimonials-grid">
           <article class="testimonial fade-in">
-            <div><strong>Alberto Villegas</strong><div class="muted">Restaurante San Remo · Palencia</div></div>
+            <div class="testimonial-head">
+              <div class="person">
+                <img src="/src/assets/foto-alberto.png" alt="Alberto Villegas" />
+                <div class="meta"><strong>Alberto Villegas</strong><span>Restaurante San Remo · Palencia</span></div>
+              </div>
+              <img class="brand-logo" src="/src/assets/logo-sanremo.png" alt="Logo Restaurante San Remo" />
+            </div>
             <div class="result">+25 reservas online cada semana</div>
             <p class="muted">Pasamos de depender solo del teléfono a recibir reservas online cada semana en solo 30 días.</p>
             <a class="btn secondary" href="https://wa.me/34644610120" target="_blank" rel="noopener">Ver su web →</a>
           </article>
           <article class="testimonial fade-in">
-            <div><strong>Equipo Dentlux Travel</strong><div class="muted">Dentlux Travel · Alicante</div></div>
+            <div class="testimonial-head">
+              <div class="person">
+                <img src="/src/assets/foto-dentlux.jpg" alt="Equipo Dentlux Travel" />
+                <div class="meta"><strong>Equipo Dentlux Travel</strong><span>Dentlux Travel · Alicante</span></div>
+              </div>
+              <img class="brand-logo" src="/src/assets/logo-dentlux.jpg" alt="Logo Dentlux" />
+            </div>
             <div class="result">+35 solicitudes al mes</div>
             <p class="muted">Ahora recibimos solicitudes de clientes todos los días sin hacer nada.</p>
             <a class="btn secondary" href="https://wa.me/34644610120" target="_blank" rel="noopener">Ver su web →</a>
