@@ -49,14 +49,16 @@ const Pricing = () => {
       price: "Precio personalizado",
       additionalText: "Según el volumen de anuncios de tu negocio",
       features: [
-        "Gestión profesional de anuncios en Meta",
-        "Filtro inteligente en WhatsApp (IA)",
-        "Seguimiento automático e inmediato",
-        "Base de datos (CRM) para control total"
+        "Todo el Plan Clientes incluido: Web personalizada, hosting y SEO",
+        "Gestión profesional de anuncios en Meta para atraer tráfico de calidad",
+        "Agente de IA en WhatsApp 24/7 que filtra y responde a cada contacto",
+        "Seguimiento automático inmediato para maximizar la conversión",
+        "Base de datos (CRM) en Airtable para el control total de tus leads",
+        "Soporte prioritario para asegurar el rendimiento de tu sistema"
       ],
       buttonText: "Quiero el sistema completo",
       featured: false,
-      description: "Si quieres un sistema que filtre, responda y haga seguimiento por ti.",
+      description: "La solución integral para el negocio local que busca resultados reales y no solo presencia. Un sistema llave en mano diseñado para escalar tu facturación de forma automática.",
       whatsappMessage: "Hola%2C%20quiero%20información%20sobre%20el%20Plan%20Sistema",
       badge: "Sistema completo",
       hasInfoBox: true
@@ -99,21 +101,21 @@ const Pricing = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -1, scale: plan.featured ? 1.03 : 1.01 }}
-              className={`${plan.name === "Plan Clientes" ? "order-1 md:order-unset" : plan.name === "Plan Presencia" ? "order-2 md:order-unset" : "order-3 md:order-unset"} bg-white rounded-3xl p-6 md:p-8 text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl md:scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
+              className={`${plan.name === "Plan Clientes" ? "order-1 md:order-unset" : plan.name === "Plan Presencia" ? "order-2 md:order-unset" : "order-3 md:order-unset"} ${plan.name === "Plan Sistema: Resultados en Piloto Automático" ? "p-5 md:p-8" : "p-6 md:p-8"} bg-white rounded-3xl text-center shadow-lg border border-gray-200 ${plan.featured ? 'bg-[#F8FAFF] shadow-xl md:scale-[1.02]' : ''} relative h-full flex flex-col justify-between transition-all duration-300`}
             >
-              {/* TOP SECTION - Badge, nombre, descripción, precio, subtext */}
-              <div className="min-h-[200px] flex flex-col">
-                {/* Badge dentro de la card */}
-                {plan.badge && (
-                  <div className="mb-4">
-                    <div className="inline-flex items-center justify-center w-full">
-                      <div className={`${plan.featured ? "bg-[#E6F7EC] text-[#1F7A4D]" : "bg-gray-900 text-white"} px-3 py-1 rounded-full text-xs font-medium`}>
-                        {plan.badge}
-                      </div>
+              {/* Badge fuera del TOP section para que esté siempre arriba */}
+              {plan.badge && (
+                <div className="mb-2.5">
+                  <div className="inline-flex items-center justify-center w-full">
+                    <div className={`${plan.featured ? "bg-[#E6F7EC] text-[#1F7A4D]" : "bg-gray-900 text-white"} px-3 py-1 rounded-full text-xs font-medium`}>
+                      {plan.badge}
                     </div>
                   </div>
-                )}
-                
+                </div>
+              )}
+
+              {/* TOP SECTION - nombre, descripción, precio, subtext */}
+              <div className="min-h-[200px] flex flex-col">
                 {/* Nombre del plan */}
                 <h3 className={`font-semibold text-gray-900 ${plan.featured ? 'text-2xl mb-3' : 'text-xl mb-3'}`}>
                   {plan.name}
@@ -142,7 +144,7 @@ const Pricing = () => {
 
                 {/* Info box for Plan Sistema */}
                 {plan.hasInfoBox && (
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 mt-4">
                     <p className="text-blue-800 text-sm">
                       El presupuesto de anuncios es tuyo y lo controlas tú directamente
                     </p>
