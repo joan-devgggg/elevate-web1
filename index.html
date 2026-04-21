@@ -1,352 +1,145 @@
 <!doctype html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elevate Web | Más clientes cada semana para tu negocio local</title>
-  <meta name="description" content="Elevate Web crea webs y sistemas de captación para negocios locales en España. Tu web lista en 48h, sin permanencia y con sistema para recibir clientes cada semana." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Elevate Web | Más clientes cada semana para tu negocio local" />
-  <meta property="og:description" content="Web profesional lista en 48 horas y sistemas de captación para negocios locales en España." />
-  <meta property="og:url" content="https://elevateweb.es" />
-  <meta property="og:site_name" content="Elevate Web" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    :root{--bg:#0a0a0a;--panel:#121212;--panel2:#171717;--line:rgba(255,255,255,.1);--text:#f3f2ea;--muted:#b7b3a7;--accent:#c8ff3d;--accent2:#ffd54a;--shadow:0 24px 80px rgba(0,0,0,.45);--radius:24px}
-    html{scroll-behavior:smooth}
-    *{box-sizing:border-box}
-    body{margin:0;background:radial-gradient(circle at top left, rgba(200,255,61,.1), transparent 25%), radial-gradient(circle at 80% 0, rgba(255,213,74,.08), transparent 20%), var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.5;overflow-x:hidden}
-    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at center, black 35%, transparent 90%);pointer-events:none;opacity:.22}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(1180px, calc(100% - 32px));margin:0 auto}
-    .section{padding:88px 0;position:relative}
-    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:var(--muted);font-size:.88rem}
-    h1,h2,h3{font-family:'Syne',sans-serif;letter-spacing:-.04em;line-height:.95;margin:0}
-    h1{font-size:clamp(3.1rem,8vw,7.6rem);max-width:11ch}
-    h2{font-size:clamp(2.1rem,4.5vw,4.4rem);max-width:12ch}
-    p{margin:0}
-    .hero{padding:28px 0 60px}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:end}
-    .hero-copy{padding:28px 0 20px}
-    .hero p.lead{font-size:clamp(1.1rem,1.8vw,1.35rem);max-width:60ch;color:var(--muted);margin:22px 0 30px}
-    .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border-radius:999px;border:1px solid transparent;font-weight:800;transition:.25s ease;will-change:transform,background,border,color;cursor:pointer}
-    .btn:hover{transform:translateY(-2px)}
-    .btn.primary{background:linear-gradient(135deg,var(--accent),#f0ff83);color:#081000;box-shadow:0 14px 40px rgba(200,255,61,.2)}
-    .btn.secondary{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.02)}
-    .btn.secondary:hover{border-color:rgba(200,255,61,.5);background:rgba(200,255,61,.06)}
-    .trustbar{margin-top:18px;color:var(--muted);font-size:.95rem}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-height:320px;position:relative;overflow:hidden;isolation:isolate}
-    .hero-card::before{content:'"';position:absolute;top:-20px;right:16px;font-family:'Syne';font-size:14rem;line-height:1;color:rgba(200,255,61,.12);z-index:-1}
-    .hero-metric{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:auto}
-    .metric{padding:18px;border-radius:20px;background:rgba(10,10,10,.7);border:1px solid rgba(255,255,255,.08)}
-    .metric .num{font-family:'Syne';font-size:2.2rem;color:var(--accent)}
-    .metric .label{color:var(--muted);font-size:.95rem;margin-top:6px}
-    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .metric-box{padding:24px;border-radius:24px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--line);box-shadow:var(--shadow);min-height:154px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-    .metric-box strong{font-family:'Syne';font-size:clamp(2rem,3vw,3.4rem);line-height:1;color:var(--accent)}
-    .metric-box span{color:var(--muted)}
-    .problem-grid,.who-grid,.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .panel{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-    .problem-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
-    .problem-list li,.step,.faq-item,.price-card,.testimonial,.capture{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:22px}
-    .problem-list li{padding:16px 18px 16px 50px;position:relative}
-    .problem-list li::before{content:'✕';position:absolute;left:18px;top:16px;color:var(--accent2);font-weight:800}
-    .remate{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);color:var(--text);font-size:1.08rem}
-    .who-quote{font-family:'Syne';font-size:clamp(2rem,5vw,4rem);line-height:.95;color:rgba(200,255,61,.12);position:absolute;inset:auto 22px 10px auto;pointer-events:none;max-width:6ch;text-align:right}
-    .who-grid .panel{position:relative;overflow:hidden}
-    .who-copy p{color:var(--muted);margin-bottom:16px;font-size:1.02rem}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .step{padding:22px;min-height:240px;position:relative;overflow:hidden}
-    .step .n{font-family:'Syne';font-size:1.3rem;color:var(--accent);margin-bottom:14px}
-    .step h3{font-size:1.4rem;margin-bottom:12px}
-    .step p{color:var(--muted)}
-    .step .small{margin-top:14px;color:#dbd7c8;font-size:.92rem}
-    .testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .testimonial{padding:24px;display:grid;gap:16px}
-    .result{font-family:'Syne';font-size:clamp(2rem,3vw,3.1rem);color:var(--accent)}
-    .testimonials-note{margin-top:20px;color:var(--muted)}
-    .capture-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .capture{aspect-ratio:1.25;padding:16px;display:flex;align-items:end;color:var(--muted);background:linear-gradient(135deg, rgba(255,255,255,.03), rgba(255,255,255,.015))}
-    .system-text{font-family:'Syne';font-size:clamp(1.9rem,4vw,3.5rem);line-height:1.08;max-width:18ch}
-    .system-note{color:var(--accent);margin-top:18px;font-weight:700}
-    .pricing-topnote{color:var(--muted);margin:12px 0 24px;max-width:70ch}
-    .pricing-grid{grid-template-columns:repeat(3,1fr)}
-    .price-card{padding:24px;display:flex;flex-direction:column;gap:14px;position:relative}
-    .badge{position:absolute;top:16px;right:16px;padding:8px 12px;border-radius:999px;background:var(--accent);color:#081000;font-size:.82rem;font-weight:800}
-    .price{font-family:'Syne';font-size:clamp(2rem,4vw,3.4rem)}
-    .price small{font-size:.9rem;color:var(--muted);font-family:'DM Sans'}
-    .price-card ul{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-    .price-card li{padding-left:20px;position:relative;color:#dfdccf}
-    .price-card li::before{content:'•';position:absolute;left:0;color:var(--accent)}
-    .price-card.featured{border-color:rgba(200,255,61,.4);transform:translateY(-8px)}
-    .faq-list{display:grid;gap:12px}
-    .faq-item{overflow:hidden}
-    .faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text);padding:18px 20px;font:inherit;font-weight:800;display:flex;justify-content:space-between;gap:16px;cursor:pointer}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;color:var(--muted);padding:0 20px}
-    .faq-item.open .faq-a{padding:0 20px 18px;max-height:140px}
-    .faq-item.open .chev{transform:rotate(45deg)}
-    .chev{transition:transform .25s ease;color:var(--accent)}
-    .final-cta{background:linear-gradient(135deg, var(--accent), var(--accent2));color:#091000}
-    .final-cta .wrap{padding:56px 0}
-    .final-cta .btn.secondary{border-color:rgba(9,16,0,.2);background:rgba(255,255,255,.14);color:#091000}
-    footer{padding:30px 0 44px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
-    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
-    .reveal.in{opacity:1;transform:none}
-    @media (max-width: 980px){.hero-grid,.problem-grid,.who-grid,.pricing-grid,.testimonials-grid,.metrics,.steps{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.capture-grid{grid-template-columns:1fr 1fr}.hero h1{max-width:100%}}
-    @media (max-width: 720px){.section{padding:70px 0}.hero-grid,.problem-grid,.who-grid,.pricing-grid,.testimonials-grid,.metrics,.steps{grid-template-columns:1fr}.hero{padding-top:16px}.hero-card{min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.capture-grid{grid-template-columns:1fr}.cta-row{flex-direction:column;align-items:stretch}.btn{width:100%}.faq-item.open .faq-a{max-height:220px}.system-text{font-size:clamp(1.7rem,8vw,2.5rem)}}
-  </style>
-</head>
-<body>
-  <main>
-    <section class="hero section">
-      <div class="wrap hero-grid">
-        <div class="hero-copy reveal">
-          <div class="eyebrow">Elevate Web · España</div>
-          <h1>Más clientes cada semana para tu negocio local.</h1>
-          <p class="lead">Web profesional lista en 48 horas — si no te convence el diseño, no pagas nada.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="https://wa.me/34644610120">Quiero ver mi web gratis</a>
-            <a class="btn secondary" href="#testimonios">Ver ejemplos reales</a>
-          </div>
-          <div class="trustbar">Restaurantes · Clínicas · Abogados · Reformas · Negocios locales · 47 negocios en España ya confían en nosotros</div>
-        </div>
-        <aside class="hero-card reveal">
-          <div class="eyebrow">Sistema que convierte</div>
-          <div style="margin-top:18px;font-family:Syne;font-size:clamp(1.8rem,4vw,3rem);line-height:1.02;max-width:8ch;">Presencia online que trabaja por ti.</div>
-          <div class="hero-metric">
-            <div class="metric"><div class="num" data-count="47">0</div><div class="label">negocios locales confían en nosotros</div></div>
-            <div class="metric"><div class="num" data-count="4.9" data-suffix=" ★">0</div><div class="label">valoración media</div></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap metrics">
-        <div class="metric-box reveal"><strong data-count="47">0</strong><span>negocios locales confían en nosotros</span></div>
-        <div class="metric-box reveal"><strong data-count="4.9" data-suffix=" ★">0</strong><span>valoración media</span></div>
-        <div class="metric-box reveal"><strong data-count="48" data-suffix="h">0</strong><span>tu web lista desde que arrancamos</span></div>
-        <div class="metric-box reveal"><strong data-count="53" data-suffix="%">0</strong><span>menos coste por cliente que la media del sector</span></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap problem-grid">
-        <div class="panel reveal">
-          <div class="eyebrow">Problema</div>
-          <h2 style="margin-top:16px;">¿Te suena alguna de estas situaciones?</h2>
-          <ul class="problem-list">
-            <li>Dependes de Instagram o del boca a boca para conseguir clientes</li>
-            <li>Pierdes clientes cada semana porque no apareces en Google</li>
-            <li>Has pensado en tener web pero las agencias te piden 2.000€ o más</li>
-            <li>Tu competencia ya tiene web y tú todavía no</li>
-            <li>Gestionas todo tú solo y no tienes tiempo para atender cada consulta</li>
-            <li>Tus clientes buscan en Google y encuentran a otro</li>
-          </ul>
-          <p class="remate">Cada semana que pasa sin sistema es una semana regalada a tu competencia.</p>
-          <div class="cta-row" style="margin-top:18px"><a class="btn secondary" href="https://wa.me/34644610120">Quiero solucionarlo</a></div>
-        </div>
-        <div class="panel reveal" style="display:flex;align-items:end;min-height:100%">
-          <div>
-            <div class="eyebrow">Realidad</div>
-            <div class="system-text" style="margin-top:16px;">La mayoría de negocios no pierde por falta de producto. Pierde por falta de sistema.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap who-grid">
-        <div class="panel reveal who-copy">
-          <div class="eyebrow">Quién soy</div>
-          <h2 style="margin-top:16px;">Por qué existe Elevate Web</h2>
-          <p>Empecé haciendo páginas web para negocios locales que no tenían presencia online — y vi de primera mano cómo perdían clientes cada semana por eso.</p>
-          <p>Con el tiempo fui añadiendo más piezas: primero el SEO, luego los formularios, luego la automatización. Y cuando vi que los anuncios de Meta podían multiplicar los resultados, incorporé a un especialista externo en gestión de campañas para poder ofrecerlo como parte del sistema completo.</p>
-          <p>Hoy Elevate Web no es solo una web. Es el sistema completo para que tu negocio local reciba clientes cada semana sin que tengas que ocuparte de nada.</p>
-          <p style="margin-top:10px;color:var(--text)">— Elevate Web · España</p>
-        </div>
-        <div class="panel reveal" style="min-height:360px;display:flex;align-items:end">
-          <div class="who-quote">Diseño que vende.</div>
-          <div>
-            <div class="eyebrow">Evolución</div>
-            <p style="margin-top:18px;color:var(--muted);max-width:30ch">No vendemos páginas. Construimos captación, seguimiento y conversión.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">Proceso</div>
-        <h2 style="margin-top:16px;">Así funciona en 4 pasos</h2>
-        <p style="color:var(--muted);margin:14px 0 24px">De cero a clientes reales en menos de una semana</p>
-        <div class="steps">
-          <div class="step reveal"><div class="n">01</div><h3>Nos cuentas tu negocio</h3><p>Hablamos contigo para entender lo que necesitas.</p><div class="small">Normalmente en el mismo día.</div></div>
-          <div class="step reveal"><div class="n">02</div><h3>Te enseñamos tu web en 48h</h3><p>Ves una primera versión lista para captar clientes.</p><div class="small">Normalmente en 24–36h ya tienes algo que ver.</div></div>
-          <div class="step reveal"><div class="n">03</div><h3>La ajustamos contigo hasta que te encante</h3><p>Cambios ilimitados sin coste extra.</p></div>
-          <div class="step reveal"><div class="n">04</div><h3>La lanzamos y tu negocio empieza a trabajar solo</h3><p>Reservas, contactos y mensajes mientras tú atiendes tu negocio.</p></div>
-        </div>
-        <p style="color:var(--muted);margin-top:18px">Si no te gusta el diseño en el paso 2, no pagas nada.</p>
-      </div>
-    </section>
-
-    <section id="testimonios" class="section">
-      <div class="wrap">
-        <div class="eyebrow">Testimonios</div>
-        <h2 style="margin-top:16px;">Resultados reales de clientes</h2>
-        <p style="color:var(--muted);margin:14px 0 24px">Estos son algunos de los negocios que ya están recibiendo clientes cada semana.</p>
-        <div class="testimonials-grid">
-          <article class="testimonial reveal">
-            <div><strong>Alberto Villegas</strong><div style="color:var(--muted)">Restaurante San Remo · Palencia</div></div>
-            <div class="result">+25 reservas online cada semana</div>
-            <p style="color:var(--muted)">Pasamos de depender solo del teléfono a recibir reservas online cada semana en solo 30 días.</p>
-            <a class="btn secondary" href="https://wa.me/34644610120">Ver su web →</a>
-          </article>
-          <article class="testimonial reveal">
-            <div><strong>Equipo Dentlux Travel</strong><div style="color:var(--muted)">Dentlux Travel · Alicante</div></div>
-            <div class="result">+35 solicitudes al mes</div>
-            <p style="color:var(--muted)">Ahora recibimos solicitudes de clientes todos los días sin hacer nada.</p>
-            <a class="btn secondary" href="https://wa.me/34644610120">Ver su web →</a>
-          </article>
-        </div>
-        <div class="testimonials-note">Añade aquí capturas reales de WhatsApp o Google Reviews de clientes — [INSERTAR CAPTURAS]</div>
-        <div class="capture-grid">
-          <div class="capture reveal">Captura real próximamente</div>
-          <div class="capture reveal">Captura real próximamente</div>
-          <div class="capture reveal">Captura real próximamente</div>
-          <div class="capture reveal">Captura real próximamente</div>
-          <div class="capture reveal">Captura real próximamente</div>
-          <div class="capture reveal">Captura real próximamente</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap panel reveal" id="sistema" style="display:grid;gap:18px">
-        <div class="eyebrow">Sistema</div>
-        <h2>Lo que pasa un lunes por la mañana</h2>
-        <div class="system-text">Lunes por la mañana. Abres el móvil. Tres personas han pedido información esta noche. Una ya ha confirmado cita. Las otras dos han recibido un mensaje automático con tus precios y disponibilidad. Tú no has hecho nada.</div>
-        <div class="system-note">Nuestros clientes con el sistema reciben entre 15 y 500 leads al mes.</div>
-        <a class="btn primary" href="#precios">Ver cómo se consigue →</a>
-      </div>
-    </section>
-
-    <section id="precios" class="section">
-      <div class="wrap">
-        <div class="eyebrow">Precios</div>
-        <h2 style="margin-top:16px;">Elige cómo quieres conseguir clientes</h2>
-        <p class="pricing-topnote">Sin permanencia · Sin pago si no te gusta · Sin letra pequeña · Todos los precios son + IVA</p>
-        <p class="pricing-topnote">¿No sabes cuál elegir? Si quieres clientes de verdad, el Plan Sistema es lo que funciona. Si solo necesitas presencia online por ahora, empieza con uno de los planes de web.</p>
-        <div class="pricing-grid">
-          <article class="price-card reveal" id="plan-sistema">
-            <div class="eyebrow">Plan Presencia</div>
-            <div class="price">65€/mes</div>
-            <p>Para negocios que solo necesitan estar en internet con algo profesional.</p>
-            <ul><li>Web básica funcional</li><li>Diseño limpio y funcional</li><li>Hosting, dominio y SSL incluidos</li><li>Certificado SSL</li><li>Cambios básicos incluidos</li><li>Soporte estándar</li></ul>
-            <a class="btn primary" href="https://wa.me/34644610120">Quiero solo una web</a>
-          </article>
-          <article class="price-card featured reveal">
-            <div class="badge">Más elegido</div>
-            <div class="eyebrow">Plan Clientes</div>
-            <div class="price">350€ + 55€/mes <small>mantenimiento opcional</small></div>
-            <p>Una web pensada para convertir visitas en clientes, no solo para tener presencia.</p>
-            <ul><li>Web totalmente personalizada (no plantilla)</li><li>Estructura optimizada para convertir visitas en clientes</li><li>Diseño profesional adaptado a móvil</li><li>SEO básico para aparecer en Google</li><li>Integración con WhatsApp y formularios</li><li>Cambios ilimitados hasta que te encante</li><li>Hosting, dominio y SSL incluidos</li><li>Soporte prioritario</li></ul>
-            <a class="btn primary" href="https://wa.me/34644610120">Quiero una web que convierta</a>
-          </article>
-          <article class="price-card reveal">
-            <div class="badge">Sistema completo</div>
-            <div class="eyebrow">Plan Sistema</div>
-            <div class="price">Precio personalizado</div>
-            <p>Web + anuncios en Meta gestionados por especialista + CRM + seguimiento automático de leads.</p>
-            <p style="color:var(--accent);font-weight:800">Nuestros clientes con el sistema reciben entre 15 y 500 leads al mes.</p>
-            <ul><li>Todo lo del Plan Clientes</li><li>Gestión completa de anuncios en Meta por especialista externo</li><li>CRM con seguimiento y automatización de leads</li><li>Respuesta automática 24h a nuevos contactos</li><li>Optimización continua de campañas</li><li>Estrategia mensual personalizada</li><li>Soporte prioritario y directo</li></ul>
-            <p style="color:var(--muted)">El presupuesto de anuncios es tuyo y lo controlas tú directamente.</p>
-            <a class="btn primary" href="https://wa.me/34644610120">Quiero el sistema completo</a>
-            <div style="color:var(--muted);font-size:.95rem">Te explicamos el precio en 5 min por WhatsApp</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">FAQ</div>
-        <h2 style="margin-top:16px;">Preguntas frecuentes</h2>
-        <div class="faq-list" style="margin-top:22px">
-          <div class="faq-item open reveal"><button class="faq-q" type="button"><span>¿Qué pasa si no me gusta el diseño?</span><span class="chev">+</span></button><div class="faq-a">No pagas nada. Te enseñamos la web antes de cualquier compromiso. Si no te convence, no hay coste.</div></div>
-          <div class="faq-item open reveal"><button class="faq-q" type="button"><span>¿Cuándo empiezo a ver resultados?</span><span class="chev">+</span></button><div class="faq-a">Con la web, desde el día del lanzamiento. Con el sistema completo, los primeros leads suelen llegar en los primeros 7–15 días.</div></div>
-          <div class="faq-item open reveal"><button class="faq-q" type="button"><span>¿Puedo cancelar cuando quiera?</span><span class="chev">+</span></button><div class="faq-a">Sí. Sin permanencia, sin penalización, sin costes ocultos.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Y si no tengo tiempo para ocuparme de esto?</span><span class="chev">+</span></button><div class="faq-a">No necesitas tiempo. Lo gestionamos todo nosotros.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Hay costes adicionales?</span><span class="chev">+</span></button><div class="faq-a">No. El precio que ves es el precio que pagas. El presupuesto de anuncios en el Plan Sistema es tuyo y lo controlas directamente tú.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Qué incluye exactamente el precio?</span><span class="chev">+</span></button><div class="faq-a">Está detallado en cada plan. Si tienes dudas concretas, escríbenos por WhatsApp.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Cuánto tengo que gastar en anuncios cada mes?</span><span class="chev">+</span></button><div class="faq-a">Depende de tu negocio y objetivo. Te lo explicamos en una llamada corta sin compromiso.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Puedo empezar solo con la web y añadir el sistema después?</span><span class="chev">+</span></button><div class="faq-a">Sí, muchos clientes empiezan así.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Los anuncios están incluidos en algún plan?</span><span class="chev">+</span></button><div class="faq-a">Solo en el Plan Sistema. Los planes de web no incluyen gestión de anuncios.</div></div>
-          <div class="faq-item reveal"><button class="faq-q" type="button"><span>¿Necesito saber de tecnología?</span><span class="chev">+</span></button><div class="faq-a">No. Nos encargamos de todo.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta section">
-      <div class="wrap" style="display:grid;gap:18px">
-        <div class="eyebrow" style="border-color:rgba(9,16,0,.15);color:#0a1100">CTA final</div>
-        <h2>Empieza hoy. Si no te gusta el diseño, no pagas nada.</h2>
-        <p>Respondemos en menos de 1 hora por WhatsApp en horario laboral.</p>
-        <div class="cta-row"><a class="btn secondary" href="https://wa.me/34644610120">Quiero llenar mi agenda</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-grid">
-      <div><strong style="color:var(--text)">Elevate Web</strong><div>644 610 120 · elevateweb@gmail.com</div></div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="#">Política de privacidad</a><a href="#">Aviso legal</a></div>
-      <div>© 2026 Elevate Web. Todos los derechos reservados.</div>
-    </div>
-  </footer>
-
-  <script>
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          if (entry.target.matches('[data-count]')) animateCount(entry.target);
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.18 });
-    document.querySelectorAll('.reveal, [data-count]').forEach((el) => obs.observe(el));
-
-    function animateCount(el) {
-      const end = parseFloat(el.dataset.count);
-      const suffix = el.dataset.suffix || '';
-      const duration = 1400;
-      const startTime = performance.now();
-      const isDecimal = String(end).includes('.');
-      function frame(now) {
-        const p = Math.min((now - startTime) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        const value = end * eased;
-        el.textContent = (isDecimal ? value.toFixed(1) : Math.round(value)) + suffix;
-        if (p < 1) requestAnimationFrame(frame);
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño web profesional para negocios locales | Elevate Web</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
-      requestAnimationFrame(frame);
+    </style>
+    <meta name="description" content="Creamos páginas web para conseguir clientes. Diseño web profesional para clínicas, restaurantes y negocios locales. Demo gratuita, sin permanencia." />
+    <meta name="keywords" content="diseño web profesional, página web para negocios, crear web para conseguir clientes, diseño web para clínicas, diseño web para restaurantes, web que convierte, diseño web para negocios locales" />
+    <meta name="keywords" content="diseño web palencia, paginas web baratas, web para restaurantes, diseño web autónomos, hosting web, mantenimiento web, seo palencia, tienda online, reservas online" />
+    <meta name="author" content="Elevate Web" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://elevateweb.es" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Elevate Web - Tu web profesional por 65€/mes + IVA" />
+    <meta property="og:description" content="Diseño web profesional por suscripción. Hosting, mantenimiento y cambios ilimitados incluidos. Sin permanencia. Desde 65€/mes + IVA." />
+    <meta property="og:image" content="/placeholder.svg" />
+    <meta property="og:url" content="https://elevateweb.es" />
+    <meta property="og:site_name" content="Elevate Web" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ElevateWeb" />
+    <meta name="twitter:title" content="Elevate Web - Tu web profesional por 65€/mes + IVA" />
+    <meta name="twitter:description" content="Diseño web profesional por suscripción. Hosting, mantenimiento y cambios ilimitados incluidos. Sin permanencia. Desde 65€/mes + IVA." />
+    <meta name="twitter:image" content="/placeholder.svg" />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://elevateweb.es#business",
+          "name": "Elevate Web",
+          "description": "Diseño web profesional por suscripción. Hosting, mantenimiento y cambios ilimitados incluidos.",
+          "url": "https://elevateweb.es",
+          "telephone": "+34644610120",
+          "email": "hola@elevateweb.es",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ES",
+            "addressLocality": "Palencia"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "42.0095",
+            "longitude": "-4.5279"
+          },
+          "openingHours": "Mo-Fr 09:00-18:00",
+          "priceRange": "€65-95/mes",
+          "sameAs": [
+            "https://wa.me/34644610120"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://elevateweb.es#service",
+          "name": "Diseño Web Profesional",
+          "description": "Diseño web profesional a medida con hosting, mantenimiento y soporte incluidos",
+          "provider": {
+            "@id": "https://elevateweb.es#business"
+          },
+          "serviceType": "Web Design",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Plan Básico",
+              "price": "65",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "65",
+                "priceCurrency": "EUR",
+                "billingDuration": "P1M"
+              },
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Plan Profesional",
+              "price": "95",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "95",
+                "priceCurrency": "EUR",
+                "billingDuration": "P1M"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://elevateweb.es#website",
+          "name": "Elevate Web",
+          "url": "https://elevateweb.es",
+          "description": "Diseño web profesional por suscripción para empresas y autónomos",
+          "inLanguage": "es",
+          "isAccessibleForFree": false,
+          "publisher": {
+            "@id": "https://elevateweb.es#business"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://elevateweb.es#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué incluye exactamente el servicio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Incluye diseño profesional a medida, desarrollo web completo, hosting, certificado SSL, mantenimiento continuo, cambios ilimitados (uso razonable), SEO básico y soporte continuo. Todo en una sola cuota mensual."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tarda en estar lista mi web?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Normalmente entre 3 y 6 días hábiles, dependiendo de la complejidad. Webs sencillas pueden estar listas en 3 días."
+              }
+            }
+          ]
+        }
+      ]
     }
+    </script>
+  </head>
 
-    document.querySelectorAll('.faq-item').forEach((item) => {
-      const btn = item.querySelector('.faq-q');
-      btn.addEventListener('click', () => item.classList.toggle('open'));
-    });
-
-        document.querySelector('[href="#precios"]').addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelector('#plan-sistema').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-  </script>
-</body>
-</html>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+  </html>
