@@ -84,12 +84,12 @@
     .carousel-wrap{display:grid;gap:12px}
     .carousel-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
     .carousel{position:relative;overflow:hidden}
-    .carousel-track{display:flex;transition:transform .35s ease;will-change:transform}
+    .carousel-track{display:flex;transition:transform .35s ease;will-change:transform;width:200%}
     .slide{flex:0 0 100%;padding:0 8px}
     .slide-inner{aspect-ratio:9/16;background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
-    .slide-inner.rect{aspect-ratio:4/3}
-    .slide-inner img{width:100%;height:100%;object-fit:cover}
-    .slide-inner.rect img{object-fit:cover;background:transparent}
+    .slide-inner.rect{aspect-ratio:auto;border:none;background:transparent;overflow:visible}
+    .slide-inner img{width:100%;height:100%;object-fit:cover;display:block}
+    .slide-inner.rect img{height:auto;object-fit:contain;background:transparent}
     .carousel-arrows{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:space-between;align-items:center;padding:0 4px}
     .arrow{pointer-events:auto;width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
     .dots{display:flex;gap:8px;justify-content:center;padding-top:8px}
@@ -465,8 +465,7 @@
     }
     function updateDots() { dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index)); }
     function render() {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(${-index * slideWidth}px)`;
+      track.style.transform = `translateX(${-index * 100}%)`;
       updateDots();
     }
     function goTo(i) { index = (i + slides.length) % slides.length; render(); }
