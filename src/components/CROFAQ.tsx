@@ -51,6 +51,10 @@ const CROFAQ = () => {
       answer: "Los anuncios están incluidos en el Plan Sistema. El presupuesto publicitario es tuyo y lo controlas tú directamente — nosotros nos encargamos de gestionar las campañas para maximizar tus resultados."
     },
     {
+      question: "¿Por qué el Plan Sistema es el más efectivo?",
+      answer: "Porque combina anuncios masivos con una IA que responde al segundo, asegurando que solo hables con clientes que de verdad van a contratarte."
+    },
+    {
       question: "¿Necesito saber de tecnología?",
       answer: "No necesitas saber nada. Nos encargamos de todo lo técnico. Tú solo decides si te gusta la web o el sistema."
     }

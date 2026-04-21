@@ -45,21 +45,18 @@ const Pricing = () => {
       whatsappMessage: "Hola%2C%20quiero%20el%20Plan%20Clientes%20para%20conseguir%20más%20clientes"
     },
     {
-      name: "Plan Sistema",
+      name: "Plan Sistema: Resultados en Piloto Automático",
       price: "Precio personalizado",
       additionalText: "Según el volumen de anuncios de tu negocio",
       features: [
-        "Todo lo del Plan Clientes",
-        "CRM con seguimiento y automatización de leads",
-        "Gestión completa de anuncios en Meta",
-        "Optimización continua de campañas",
-        "Mejora de conversión basada en datos",
-        "Soporte prioritario y directo",
-        "Estrategia mensual personalizada"
+        "Gestión profesional de anuncios en Meta",
+        "Filtro inteligente en WhatsApp (IA)",
+        "Seguimiento automático e inmediato",
+        "Base de datos (CRM) para control total"
       ],
       buttonText: "Quiero el sistema completo",
       featured: false,
-      description: "Si quieres anuncios, CRM y seguimiento para no perder oportunidades.",
+      description: "Si quieres un sistema que filtre, responda y haga seguimiento por ti.",
       whatsappMessage: "Hola%2C%20quiero%20información%20sobre%20el%20Plan%20Sistema",
       badge: "Sistema completo",
       hasInfoBox: true

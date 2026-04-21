@@ -14,13 +14,11 @@ const CustomerSystem = () => {
           className="text-center max-w-4xl mx-auto mb-10 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-            El sistema completo para llenar<br />
-            <span className="gradient-text">tu agenda cada semana</span>
+            <span className="gradient-text">Un sistema de ventas que trabaja mientras tú descansas</span>
           </h2>
           
           <p className="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Los resultados no vienen solo de tener una web.<br />
-            Vienen de captar, responder y hacer seguimiento sin perder ningún lead.
+            Lunes, 08:00 AM. Los anuncios han estado activos toda la noche. Nuestra IA ha recibido los leads de Instagram, los ha filtrado por zona y presupuesto, y los ha organizado en tu base de datos. Tú no has movido un dedo y ya tienes clientes reales listos para cerrar.
           </p>
         </motion.div>
 
