@@ -89,7 +89,7 @@
     .slide-inner{aspect-ratio:9/16;background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
     .slide-inner.rect{aspect-ratio:4/3}
     .slide-inner img{width:100%;height:100%;object-fit:cover}
-    .slide-inner.rect img{object-fit:contain;background:#1a1a1a}
+    .slide-inner.rect img{object-fit:cover;background:transparent}
     .carousel-arrows{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:space-between;align-items:center;padding:0 4px}
     .arrow{pointer-events:auto;width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
     .dots{display:flex;gap:8px;justify-content:center;padding-top:8px}
@@ -127,7 +127,7 @@
     .section-title{max-width:13ch}
     @media (max-width: 920px){.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr 1fr}}
     @media (max-width: 720px){.section{padding:70px 0}.nav-links{display:none}.brand{font-size:.85rem}.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr}.hero{padding-top:14px}.hero-card{transform:none;min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.cta-row{gap:12px}.cta-row .btn{width:100%;padding:12px 16px;min-height:48px;font-size:1rem}.trustbar{font-size:.9rem}.carousel-arrows{display:none}.slide{padding:0}.slide-inner{aspect-ratio:9/16}.faq-item.open .faq-a{max-height:240px}.system-text{font-size:clamp(1.7rem,8vw,2.55rem)}}
-    @media (min-width: 721px){.slide{flex-basis:50%}.slide-inner{aspect-ratio:4/3}.arrow{display:grid}}
+    @media (min-width: 721px){.slide{flex-basis:100%}.arrow{display:grid}}
   </style>
 </head>
 <body>
@@ -451,7 +451,7 @@
     let startX = 0;
     let deltaX = 0;
 
-    function visibleSlides() { return window.innerWidth >= 721 ? 2 : 1; }
+    function visibleSlides() { return 1; }
     function maxIndex() { return Math.max(0, slides.length - visibleSlides()); }
     function buildDots() {
       dotsWrap.innerHTML = '';
@@ -469,7 +469,7 @@
       track.style.transform = `translateX(${-index * slideWidth}px)`;
       updateDots();
     }
-    function goTo(i) { index = (i + maxIndex() + 1) % (maxIndex() + 1); render(); }
+    function goTo(i) { index = (i + slides.length) % slides.length; render(); }
     prevBtn.addEventListener('click', () => goTo(index - 1));
     nextBtn.addEventListener('click', () => goTo(index + 1));
     track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; deltaX = 0; }, { passive: true });
