@@ -86,9 +86,8 @@
     .carousel{position:relative;overflow:hidden}
     .carousel-track{display:flex;transition:transform .35s ease;will-change:transform}
     .slide{flex:0 0 100%;padding:0 8px}
-    .slide-inner{aspect-ratio:9/16;background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:20px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.42);font-size:.95rem}
-    .slide-inner span{display:flex;flex-direction:column;align-items:center;gap:10px}
-    .slide-inner svg{width:28px;height:28px;opacity:.55}
+    .slide-inner{aspect-ratio:9/16;background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
+    .slide-inner img{width:100%;height:100%;object-fit:cover}
     .carousel-arrows{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:space-between;align-items:center;padding:0 4px}
     .arrow{pointer-events:auto;width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
     .dots{display:flex;gap:8px;justify-content:center;padding-top:8px}
@@ -149,7 +148,7 @@
           <div class="eyebrow">Elevate Web · España</div>
           <h1 style="margin-top:16px">Más clientes cada semana para tu negocio local.</h1>
           <p class="lead">Tu negocio captando clientes esta semana — web lista en 48 horas. Te enseñamos la web antes de que pagues nada.</p>
-          <p class="system-note" style="margin-top:10px;font-size:.9rem;font-weight:400">Nuestro sistema consigue a nuestros clientes entre 15 y 500 contactos nuevos al mes.</p>
+          <p class="system-note" style="margin-top:16px;font-size:.9rem;font-weight:400">Nuestro sistema consigue a nuestros clientes entre 15 y 500 contactos nuevos al mes.</p>
           <div class="cta-row">
             <a class="btn primary" href="https://wa.me/34644610120" target="_blank" rel="noopener">Quiero ver mi web gratis</a>
             <a class="btn secondary" href="#testimonios">Ver ejemplos reales</a>
@@ -268,16 +267,12 @@
             <a class="btn secondary" href="https://wa.me/34644610120" target="_blank" rel="noopener">Ver su web →</a>
           </article>
         </div>
-        <div style="margin-top:24px;margin-bottom:12px;color:var(--muted);font-size:.95rem">Mensajes reales de clientes</div>
+        <div style="margin-top:24px;margin-bottom:12px;color:#fff;font-size:1.08rem;text-align:center;font-weight:700">Mensajes reales de clientes</div>
         <div class="carousel-wrap fade-in">
           <div class="carousel">
             <div class="carousel-track" id="carouselTrack">
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
-              <div class="slide"><div class="slide-inner"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M8 10l2.5 3L14 9l4 5"></path></svg>Próximamente</span></div></div>
+              <div class="slide"><div class="slide-inner"><img src="/src/assets/1.jpg" alt="Captura de cliente próximamente" /></div></div>
+              <div class="slide"><div class="slide-inner"><img src="/src/assets/2.jpg" alt="Captura de cliente próximamente" /></div></div>
             </div>
             <div class="carousel-arrows" aria-hidden="true">
               <button class="arrow" id="prevBtn" aria-label="Anterior">‹</button>
