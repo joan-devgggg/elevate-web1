@@ -24,7 +24,7 @@
     .wrap{width:min(1180px, calc(100% - 32px));margin:0 auto}
     .nav{position:sticky;top:0;z-index:40;background:rgba(10,10,10,.74);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800;letter-spacing:-.04em}
+    .brand{display:flex;align-items:center;gap:10px;font-family:'Syne';font-weight:800;letter-spacing:-.04em;white-space:nowrap}
     .brand-dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 24px rgba(200,241,53,.55)}
     .nav-links{display:flex;gap:18px;color:var(--muted);font-size:.95rem}
     .nav-links a:hover{color:var(--text)}
@@ -125,7 +125,7 @@
     .fade-in.visible{opacity:1;transform:translateY(0)}
     .section-title{max-width:13ch}
     @media (max-width: 920px){.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width: 720px){.section{padding:70px 0}.nav-links{display:none}.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr}.hero{padding-top:14px}.hero-card{transform:none;min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.cta-row{gap:12px}.cta-row .btn{width:100%;padding:12px 16px;min-height:48px;font-size:1rem}.trustbar{font-size:.9rem}.carousel-arrows{display:none}.slide{padding:0}.slide-inner{aspect-ratio:9/16}.faq-item.open .faq-a{max-height:240px}.system-text{font-size:clamp(1.7rem,8vw,2.55rem)}}
+    @media (max-width: 720px){.section{padding:70px 0}.nav-links{display:none}.brand{font-size:.85rem}.hero-grid,.grid-2,.testimonials-grid,.pricing-grid,.metrics-grid{grid-template-columns:1fr}.hero{padding-top:14px}.hero-card{transform:none;min-height:auto}.hero-metric{grid-template-columns:1fr 1fr}.cta-row{gap:12px}.cta-row .btn{width:100%;padding:12px 16px;min-height:48px;font-size:1rem}.trustbar{font-size:.9rem}.carousel-arrows{display:none}.slide{padding:0}.slide-inner{aspect-ratio:9/16}.faq-item.open .faq-a{max-height:240px}.system-text{font-size:clamp(1.7rem,8vw,2.55rem)}}
     @media (min-width: 721px){.slide{flex-basis:50%}.slide-inner{aspect-ratio:4/3}.arrow{display:grid}}
   </style>
 </head>
@@ -149,7 +149,7 @@
           <div class="eyebrow">Elevate Web · España</div>
           <h1 style="margin-top:16px">Más clientes cada semana para tu negocio local.</h1>
           <p class="lead">Tu negocio captando clientes esta semana — web lista en 48 horas. Te enseñamos la web antes de que pagues nada.</p>
-          <p class="concepto">Concepto rector: una landing nocturna de conversión, editorial y precisa, donde cada sección resuelve una sola idea.</p>
+          <p class="system-note" style="margin-top:6px;font-size:.9rem;font-weight:400">Nuestro sistema consigue a nuestros clientes entre 15 y 500 contactos nuevos al mes.</p>
           <div class="cta-row">
             <a class="btn primary" href="https://wa.me/34644610120" target="_blank" rel="noopener">Quiero ver mi web gratis</a>
             <a class="btn secondary" href="#testimonios">Ver ejemplos reales</a>
