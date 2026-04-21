@@ -87,7 +87,9 @@
     .carousel-track{display:flex;transition:transform .35s ease;will-change:transform}
     .slide{flex:0 0 100%;padding:0 8px}
     .slide-inner{aspect-ratio:9/16;background:#1a1a1a;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
+    .slide-inner.rect{aspect-ratio:4/3}
     .slide-inner img{width:100%;height:100%;object-fit:cover}
+    .slide-inner.rect img{object-fit:contain;background:#1a1a1a}
     .carousel-arrows{position:absolute;inset:0;pointer-events:none;display:flex;justify-content:space-between;align-items:center;padding:0 4px}
     .arrow{pointer-events:auto;width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
     .dots{display:flex;gap:8px;justify-content:center;padding-top:8px}
@@ -272,7 +274,7 @@
           <div class="carousel">
             <div class="carousel-track" id="carouselTrack">
               <div class="slide"><div class="slide-inner"><img src="/src/assets/1.jpg" alt="Captura de cliente próximamente" /></div></div>
-              <div class="slide"><div class="slide-inner"><img src="/src/assets/2.jpg" alt="Captura de cliente próximamente" /></div></div>
+              <div class="slide"><div class="slide-inner rect"><img src="/src/assets/2.jpg" alt="Captura de cliente próximamente" /></div></div>
             </div>
             <div class="carousel-arrows" aria-hidden="true">
               <button class="arrow" id="prevBtn" aria-label="Anterior">‹</button>
