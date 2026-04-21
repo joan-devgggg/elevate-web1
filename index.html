@@ -67,6 +67,7 @@
     .who-line{width:80px;height:2px;background:var(--accent);margin:16px 0 22px}
     .watermark{position:absolute;right:22px;bottom:16px;font-family:'Syne';font-size:clamp(2.4rem,7vw,5.5rem);line-height:1;color:rgba(200,241,53,.12);pointer-events:none}
     .steps{display:grid;gap:14px}
+    @media (min-width: 768px){.steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}}
     .step-card{padding:22px;display:grid;gap:10px}
     .step-card .n{font-family:'Syne';font-size:1.4rem;color:var(--accent)}
     .testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -94,6 +95,7 @@
     .dot.active{background:var(--accent)}
     .system-panel{display:grid;gap:18px}
     .system-text{font-family:'Syne';font-size:clamp(1.9rem,4vw,3.45rem);line-height:1.08;max-width:18ch}
+    .sistema-narrativa{font-variant-ligatures:none;-webkit-font-feature-settings:"liga" 0, "clig" 0;font-feature-settings:"liga" 0, "clig" 0}
     .system-note{color:var(--accent);font-weight:800}
     .pricing-top{color:var(--muted);margin:12px 0 22px;max-width:78ch}
     .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -222,10 +224,10 @@
         <div class="eyebrow">Proceso</div>
         <h2 style="margin-top:16px">Así funciona en 4 pasos</h2>
         <p class="muted" style="margin:14px 0 24px">De cero a clientes reales en menos de una semana</p>
-        <div class="steps">
-          <div class="step-card fade-in"><div class="n">01</div><h3>Nos cuentas tu negocio</h3><p>Hablamos contigo para entender lo que necesitas.</p><p class="muted">Normalmente en el mismo día.</p></div>
-          <div class="step-card fade-in"><div class="n">02</div><h3>Te enseñamos tu web en 48h</h3><p>Ves una primera versión lista para captar clientes.</p><p class="muted">Normalmente en 24–36h ya tienes algo que ver.</p></div>
-          <div class="step-card fade-in"><div class="n">03</div><h3>La ajustamos contigo hasta que te encante</h3><p>Cambios ilimitados sin coste extra.</p></div>
+        <div class="steps steps-grid">
+          <div class="step-card fade-in"><div class="n">01</div><h3>Nos cuentas tu negocio</h3><p>Analizamos tu negocio, tu competencia y lo que necesitas para captar más clientes.</p></div>
+          <div class="step-card fade-in"><div class="n">02</div><h3>Te enseñamos tu web en 48h</h3><p>Ves una primera versión real lista para captar clientes, diseñada específicamente para tu negocio.</p></div>
+          <div class="step-card fade-in"><div class="n">03</div><h3>La ajustamos contigo hasta que te encante</h3><p>Cambios ilimitados sin coste extra hasta que estés 100% satisfecho.</p></div>
           <div class="step-card fade-in"><div class="n">04</div><h3>La lanzamos y tu negocio empieza a trabajar solo</h3><p>Reservas, contactos y mensajes mientras tú atiendes tu negocio.</p></div>
         </div>
         <p class="muted" style="margin-top:18px">Si no te gusta el diseño en el paso 2, no pagas nada.</p>
@@ -288,7 +290,7 @@
       <div class="wrap panel fade-in system-panel" id="sistema">
         <div class="eyebrow">Sistema</div>
         <h2>Lo que pasa un lunes por la mañana</h2>
-        <div class="system-text">Lunes por la mañana. Abres el móvil. Tres personas han pedido información esta noche. Una ya ha confirmado cita. Las otras dos han recibido un mensaje automático con tus precios y disponibilidad. Tú no has hecho nada.</div>
+        <div class="system-text sistema-narrativa">Lunes por la mañana. Abres el móvil. Tres personas han pedido información esta noche. Una ya ha confirmado cita. Las otras dos han recibido un mensaje automático con tus precios y disponibilidad. Tú no has hecho nada.</div>
         <div class="system-note">Nuestros clientes con el sistema reciben entre 15 y 500 leads al mes.</div>
         <a class="btn primary" href="#plan-sistema">Ver cómo se consigue →</a>
       </div>
