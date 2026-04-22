@@ -49,19 +49,20 @@ const Pricing = () => {
       price: "Precio personalizado",
       additionalText: "Según el volumen de anuncios de tu negocio",
       features: [
-        "Todo el Plan Clientes incluido: Web personalizada, hosting y SEO",
-        "Gestión profesional de anuncios en Meta para atraer tráfico de calidad",
-        "Agente de IA en WhatsApp 24/7 que filtra y responde a cada contacto",
-        "Seguimiento automático inmediato para maximizar la conversión",
-        "Base de datos (CRM) en Airtable para el control total de tus leads",
-        "Soporte prioritario para asegurar el rendimiento de tu sistema"
+        "Todo el Plan Clientes incluido",
+        "Anuncios que traen Clientes: Nos encargamos de que tu negocio aparezca en Facebook e Instagram frente a personas que necesitan tus servicios ahora mismo.",
+        "Agente Inteligente en WhatsApp: Un asistente avanzado que atiende a cada persona con lenguaje natural 24/7. Califica la intención del cliente, solicita los datos necesarios y descarta a los curiosos antes de que te lleguen a ti.",
+        "Aviso de Clientes Listos: Recibes una notificación al móvil solo cuando el Agente ha verificado que el cliente es real y está listo para recibir una propuesta o presupuesto.",
+        "Tu Lista de Clientes Organizada: Una tabla sencilla donde tienes el control de quién te ha escrito y qué necesita exactamente, evitando que se pierda información en el caos de los chats.",
+        "Tu Socio Tecnológico: Estamos a tu lado para optimizar el sistema y que tú puedas centrarte en tu trabajo mientras la tecnología te trae los resultados."
       ],
       buttonText: "Quiero el sistema completo",
       featured: false,
       description: "La solución integral para el negocio local que busca resultados reales y no solo presencia. Un sistema llave en mano diseñado para escalar tu facturación de forma automática.",
       whatsappMessage: "Hola%2C%20quiero%20información%20sobre%20el%20Plan%20Sistema",
       badge: "Sistema completo",
-      hasInfoBox: true
+      hasInfoBox: true,
+      priceDescription: "Recibe entre 50 y 500 oportunidades reales cada mes. Tú solo te encargas de convertirlas en clientes."
     }
   ];
 
