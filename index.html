@@ -81,6 +81,14 @@
     .person .meta span{display:block;color:var(--muted);font-size:.95rem}
     .brand-logo{max-height:40px;max-width:120px;object-fit:contain;flex:0 0 auto}
     .result{font-family:'Syne';font-size:clamp(2rem,3vw,3rem);color:var(--accent)}
+    .stats-overlay{position:fixed;inset:0;z-index:100;background:rgba(6,6,6,.86);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px}
+    .stats-overlay.open{display:flex}
+    .stats-modal{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;max-width:min(920px,94vw)}
+    .stats-modal img{max-width:90vw;max-height:80vh;width:auto;height:auto;object-fit:contain;border-radius:14px;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--panel)}
+    .stats-caption{color:var(--muted);font-size:.92rem;text-align:center}
+    .stats-close{position:absolute;top:-18px;right:-18px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:var(--text);font-size:1.3rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer}
+    .stats-close:hover{border-color:rgba(200,241,53,.5);color:var(--accent)}
+    @media (max-width:720px){.stats-close{top:-44px;right:0}}
     .carousel-wrap{display:grid;gap:12px}
     .carousel-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
     .carousel{position:relative;overflow:hidden}
@@ -257,6 +265,7 @@
             <div class="result">+25 reservas online cada semana</div>
             <p class="muted">Pasamos de depender solo del teléfono a recibir reservas online cada semana en solo 30 días.</p>
             <a class="btn secondary" href="https://sanremopalencia.com" target="_blank" rel="noopener noreferrer">Ver su web →</a>
+            <button type="button" class="btn secondary stats-btn" data-stats-img="/stats/san-remo-stats.png" data-stats-alt="Estadísticas Restaurante San Remo">Ver últimas estadísticas</button>
           </article>
           <article class="testimonial fade-in">
             <div class="testimonial-head">
@@ -269,6 +278,7 @@
             <div class="result">+35 solicitudes al mes</div>
             <p class="muted">Ahora recibimos solicitudes de clientes todos los días sin hacer nada.</p>
             <a class="btn secondary" href="https://dentluxtravel.com" target="_blank" rel="noopener noreferrer">Ver su web →</a>
+            <button type="button" class="btn secondary stats-btn" data-stats-img="/stats/dentlux-stats.png" data-stats-alt="Estadísticas Dentlux Travel">Ver últimas estadísticas</button>
           </article>
         </div>
         <div style="margin-top:24px;margin-bottom:12px;color:#fff;font-size:1.08rem;text-align:center;font-weight:700">Mensajes reales de clientes</div>
@@ -347,6 +357,14 @@
       <div>© 2026 Elevate Web. Todos los derechos reservados.</div>
     </div>
   </footer>
+
+  <div class="stats-overlay" id="statsOverlay">
+    <div class="stats-modal">
+      <button type="button" class="stats-close" id="statsClose" aria-label="Cerrar">×</button>
+      <img id="statsImg" src="" alt="" />
+      <div class="stats-caption">Datos del último mes</div>
+    </div>
+  </div>
 
   <script>
     let metricsAnimated = false;
@@ -431,6 +449,26 @@
     track.addEventListener('touchend', () => { if (Math.abs(deltaX) > 50) goTo(index + (deltaX < 0 ? 1 : -1)); });
     window.addEventListener('resize', () => { buildDots(); if (index > maxIndex()) index = maxIndex(); render(); });
     buildDots(); render();
+
+    const statsOverlay = document.querySelector('#statsOverlay');
+    const statsImg = document.querySelector('#statsImg');
+    const statsClose = document.querySelector('#statsClose');
+    function openStats(src, alt) {
+      statsImg.src = src;
+      statsImg.alt = alt;
+      statsOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeStats() {
+      statsOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.stats-btn').forEach((btn) => {
+      btn.addEventListener('click', () => openStats(btn.dataset.statsImg, btn.dataset.statsAlt));
+    });
+    statsClose.addEventListener('click', closeStats);
+    statsOverlay.addEventListener('click', (e) => { if (e.target === statsOverlay) closeStats(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && statsOverlay.classList.contains('open')) closeStats(); });
   </script>
 </body>
 </html>
