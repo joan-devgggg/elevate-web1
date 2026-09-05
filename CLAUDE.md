@@ -72,6 +72,10 @@ El commit `e337aab` se llevó por delante, y no se han repuesto:
 Tampoco hay `public/sitemap.xml`, ni línea `Sitemap:` en `robots.txt`, ni
 `<link rel="icon">` (pese a que `public/favicon.ico` existe).
 
+**`docs/base-conocimiento-seo.md`** es la metodología de SEO del equipo, común a varios
+proyectos. **Léela antes de tocar metadata, JSON-LD/schema, `robots.txt`, sitemap, la
+estructura de un artículo o el enlazado interno.** Es criterio, no un plan a ejecutar aquí.
+
 ## Trampas
 
 **El WhatsApp `34644610120` está hardcodeado en ~25 sitios** — 5 URLs `wa.me` con textos
