@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "seo-kit": {
+      "source": {
+        "source": "github",
+        "repo": "joan-devgggg/seo-kit"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "seo@seo-kit": true
+  }
+}

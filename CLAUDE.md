@@ -72,9 +72,17 @@ El commit `e337aab` se llevó por delante, y no se han repuesto:
 Tampoco hay `public/sitemap.xml`, ni línea `Sitemap:` en `robots.txt`, ni
 `<link rel="icon">` (pese a que `public/favicon.ico` existe).
 
-**`docs/base-conocimiento-seo.md`** es la metodología de SEO del equipo, común a varios
-proyectos. **Léela antes de tocar metadata, JSON-LD/schema, `robots.txt`, sitemap, la
-estructura de un artículo o el enlazado interno.** Es criterio, no un plan a ejecutar aquí.
+La metodología de SEO del equipo **ya no vive en este repo**. Está en el plugin `seo`
+(marketplace `joan-devgggg/seo-kit`, **repo privado**), como un documento de referencia
+único que cargan los skills `seo-auditoria`, `seo-arranque` y `seo-articulos`.
+
+Antes de tocar metadata, JSON-LD/schema, `robots.txt`, sitemap, la estructura de un
+artículo o el enlazado interno, invoca el skill que toque.
+
+**Si el plugin no está instalado, no hay fallback.** El repo es privado y solo lo abre su
+dueño, así que no sirve de nada enlazarlo aquí: sin el plugin, este criterio no está
+disponible. Instala el plugin o pide acceso; no improvises las reglas de SEO. Es criterio,
+no un plan a ejecutar aquí.
 
 ## Trampas
 
