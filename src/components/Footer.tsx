@@ -35,7 +35,10 @@ const Footer = () => {
 
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} Elevate Web. Todos los derechos reservados.</span>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <a href="https://ceromanual.es" className="hover:text-foreground transition-colors">
+              Automatización con IA: Cero Manual
+            </a>
             <a href="/privacidad" className="hover:text-foreground transition-colors">Política de privacidad</a>
             <a href="/aviso-legal" className="hover:text-foreground transition-colors">Aviso legal</a>
           </div>
