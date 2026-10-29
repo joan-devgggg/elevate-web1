@@ -525,8 +525,146 @@ No es que no paguen ni que no estén en Meta: los profesionales sí ven anuncios
   - la garantía de 90 días.
 - Ángulo contra las plataformas de leads: «deja de pagar por un cliente que también le
   mandan a otros tres; que te llamen a ti directo desde Google».
-  - Lo que sí consta: Reforleads se anuncia como «exclusivos de verdad: no los compartimos
-    con ninguna otra empresa de reformas».
-  - El reparto de un mismo contacto entre varios profesionales **no se ha comprobado**
-    plataforma por plataforma. Ese ángulo se apoya en que los competidores de Reforleads
-    lo hacen, no en una medición.
+  - **Comprobado en el apartado 8**: Habitissimo, Cronoshare y Trustlocal reparten cada
+    solicitud entre hasta 4 profesionales, y Zaask y Fixando entre hasta 5 (lo dicen sus
+    propias páginas). Reforleads no es un marketplace sino una agencia de cuota fija, así
+    que no sirve como prueba.
+
+---
+
+## 8. Contra quién compite de verdad Elevate: las plataformas de leads (29/10/2026)
+
+Pregunta: ¿se sostiene «deja de pagar por contactos compartidos y que te llamen solo a
+ti»? Y ¿cuánto le cuesta hoy a un fontanero o un electricista un cliente por esas vías?
+
+**Cómo se ha medido:** condiciones, FAQ y precios de cada plataforma en su web, y quejas
+de profesionales en Trustpilot, GoWork, OCU, Forocoches, denuncioestafa y Portal da
+Queixa. Las cuatro afirmaciones clave (precio medio de Habitissimo, tope de 4 de
+Habitissimo, Cronoshare y Trustlocal) se comprobaron dos veces, leyendo la página
+original.
+
+Etiquetas:
+- **[web]**: lo dice la plataforma en su web o en sus condiciones.
+- **[usuario]**: lo dice un usuario o un artículo.
+- **[no consta]**: no se ha encontrado.
+
+### Hay tres modelos distintos y el argumento solo sirve contra uno
+
+**1 · Marketplaces que venden el mismo contacto a varios.** Contra estos, el argumento
+se sostiene.
+
+| Plataforma | Cómo cobra | A cuántos se manda cada solicitud |
+|---|---|---|
+| **Habitissimo** (del grupo HomeServe/Brookfield) | Suscripción obligatoria **más** pago por contacto: «La media está en 12-14 €, según la zona» [web, ayuda actualizada el 04/01/2024]. Cuota sin precio público; según usuarios, 72 €/trimestre (2018) o más de 1.000 €/año (2025) [usuario]. Renovación automática | «como máximo 4» [web] |
+| **Cronoshare** | Sin cuota; pago por contacto con saldo prepago («cronos»). 12–20 € por contacto según usuarios (2023–2026), y «El precio del crono ha aumentado más de un 50 %» (2026) [usuario] | «un máximo de 4 profesionales… de media contactan solo 2» [web] |
+| **Trustlocal** | Pago por solicitud; el precio solo se ve en la cuenta [web]. Una queja de cobro mensual «impuesto» [usuario] | «a un máximo de 4 empresas» [web] |
+| **Zaask** | Créditos por pedido; el precio varía según la competencia [web]. En euros, no consta | hasta 5 [web, versión de Portugal] |
+| **Fixando** | Créditos para responder; precio no publicado | hasta 5 propuestas [web] |
+| **ProntoPro** | Pago por presupuesto enviado; unos 6,75 € (2022) [usuario] | hasta 5 [usuario, Italia] |
+| **StarOfService** | Créditos y «autopiloto»; reclamaciones en OCU por cargos recurrentes que el usuario dice no haber consentido (59,29 € en 2024, 71 € en 2026) [usuario] | no consta |
+
+**2 · Plataformas que asignan el trabajo a uno solo.** Contra estas, el argumento NO
+sirve.
+- **Wegoo** (Canarias): el cliente paga por adelantado y la plataforma asigna un
+  profesional. Comisión del **15 %** y sin cuota [web]. Prohíbe quedarse con el cliente:
+  «son clientes exclusivos de la plataforma» [web].
+- **Curritos** (Cantabria): el cliente reserva a un profesional concreto; 25 €/mes (20 € con
+  la oferta, y el primer año gratis) más una reserva del 5 % por trabajo, con mínimo de 5 € y
+  máximo de 25 € [web].
+- **Flexrs y Xerux**: gratis por ahora; el cliente publica y responden varios [web].
+
+**3 · Agencias que montan campañas para el profesional (no marketplaces).** Son
+competencia directa de Elevate, no del argumento.
+- **Reeno**: 150 / 300 / 600 €/mes, **sin incluir la publicidad**. «Contactos exclusivos
+  para ti, nunca compartidos». «Coste medio por contacto €12,3» [web].
+- **Reforleads**: 1.200 €/mes (publicidad incluida, «Garantía de 70 contactos») y planes
+  de 2.500 y 5.000 €/mes, con la publicidad aparte. «No es para autónomos». Empresa
+  registrada en Chipre [web].
+- **Zaryven y Solvo**: agencias de Google Ads y Meta Ads, sin precios publicados (Solvo
+  anuncia «Web + Anuncios: 139 €»).
+
+### Las quejas de los profesionales
+
+En las tres plataformas grandes de pago por contacto se repiten las mismas cinco:
+
+1. **El contacto lo reciben otros 3 o 4.** Es un hecho declarado por las propias
+   plataformas, y hay usuarios que dicen que son más: «Le pasan el mismo contacto a 20
+   empresas» (GoWork, Habitissimo, 2023). Esa cifra contradice el máximo oficial de 4 y
+   no está comprobada.
+2. **Clientes que no contestan o contactos falsos:**
+   - «de 40 contactos solo 1 te puede contactar» (Habitissimo, 2024);
+   - «Ningún cliente responde ni coge el móvil» (Cronoshare, 2024);
+   - «Los clientes que te llegan son falsos» (ProntoPro, 2022).
+3. **Pagas aunque no salga nada:**
+   - «Ingrese 47€ y me enviaron dos supuestos contactos que no me interesaban»
+     (Habitissimo, Trustpilot, 28/09/2026);
+   - «I spent €100… and earned 0» (Cronoshare).
+4. **Devoluciones parciales o en saldo:**
+   - Cronoshare devuelve solo la comisión, «en cronos» y no en dinero [web];
+   - la garantía de Habitissimo solo cubre los 15 primeros contactos de las altas nuevas
+     [web].
+5. **Subidas de precio y cobros recurrentes:** el crono de Cronoshare subió más de un 50 %
+   (2026); en Habitissimo y StarOfService hay usuarios que cuentan subidas de cuota y
+   bajas difíciles.
+
+Las notas globales no reflejan esto porque la mayoría de las reseñas son de clientes
+finales:
+- Cronoshare: 4,7 en Trustpilot (4.539 reseñas), pero **2/5 en GoWork, con 553 reseñas y
+  un 69 % de una estrella**;
+- Habitissimo: 3,7 en Trustpilot (4.744 reseñas, 22 % de una estrella).
+
+### Cuánto le cuesta hoy un cliente a un fontanero o un electricista
+
+**Ninguna plataforma publica su tasa de cierre.** Lo que sigue es un cálculo con
+supuestos, no una medida.
+
+Datos de partida:
+- precio por contacto: 12–14 € de media en Habitissimo [web], 12–20 € en Cronoshare
+  [usuario];
+- cada contacto va a hasta 4 profesionales, y de media lo contactan 2 (Cronoshare) [web].
+  Aunque todos los clientes contrataran, al profesional le tocaría como mucho 1 de cada 2;
+- además, una parte de los clientes no contesta;
+- los usuarios cuentan cierres de 1–2 de cada 10 [usuario, anecdótico].
+
+| Escenario | Precio por contacto | Cierra | Coste por cliente |
+|---|---|---|---|
+| Bueno | 12 € | 1 de cada 4 | **48 €** |
+| Medio | 14 € | 1 de cada 7 | **≈ 100 €** |
+| Malo | 20 € | 1 de cada 10 | **200 €** |
+
+En Habitissimo hay que sumar además la cuota obligatoria, de precio desconocido.
+
+### Comparación con la cuota mensual de Elevate (Plan Local, 149 €/mes, propuesta)
+
+Para que Elevate le salga más barato que la plataforma, tiene que traerle cada mes:
+- en el escenario bueno, **3 clientes**;
+- en el medio, **1,5**;
+- en el malo, **menos de 1**.
+
+**Dónde está la trampa del argumento:**
+- la plataforma da contactos desde el primer día, y el SEO tarda (la propia FAQ de
+  Elevate dice 2–3 meses para resultados sólidos);
+- los primeros meses, Elevate sale más caro;
+- desde que posiciona, cada llamada es solo para él y no cuesta más por cliente.
+
+### Veredicto
+
+- **«Contactos compartidos» se sostiene con datos**, pero solo contra Habitissimo,
+  Cronoshare, Trustlocal, Zaask, Fixando y ProntoPro: lo dicen ellas mismas (hasta 4 o 5).
+- **No vale contra** Wegoo y Curritos, que asignan el trabajo a uno solo, ni contra
+  agencias como Reeno, que también promete exclusividad.
+- **«Pagas aunque no salga nada»** está respaldado por muchas quejas, pero son quejas, no
+  una medida.
+- **El coste por cliente** (48–200 €) es una estimación con supuestos. Lo honesto es
+  decirlo como pregunta y no como cifra: «¿Cuánto te ha costado el último cliente que te
+  llegó por una plataforma?».
+
+### Lo que no se ha podido confirmar
+
+- Las cuotas actuales de Habitissimo y el precio por contacto actual de Trustlocal, Zaask
+  y Fixando (solo se ven dentro de la cuenta).
+- Tasas de cierre reales.
+- Opiniones de profesionales de Wegoo, Curritos, Flexrs, Xerux, Locallista, Reeno,
+  Reforleads, Zaryven y Solvo: no hay ninguna fuera de sus propias webs.
+- Si Habitissimo y Cronoshare se anuncian en Meta para captar profesionales: en las
+  búsquedas por oficio no aparecieron, pero no se buscó por su nombre.
