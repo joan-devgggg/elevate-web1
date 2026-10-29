@@ -251,9 +251,10 @@ actual de Elevate, **ya lo usan al menos tres más desde esta semana.**
 
 **Casi nadie** (en las búsquedas hechas):
 
-- **Gremios y reformas** (fontaneros, electricistas, cerrajeros, reformas). Buscando
-  «reformas clientes Google web» salieron 10 anuncios y **ningún** SEO local: solo
-  plataformas de leads (Reeno, Solvo) y software (Profesional.io).
+- **Gremios y reformas** (fontaneros, electricistas, cerrajeros, reformas): **poco
+  disputados, pero no vacíos**. La primera pasada dijo «ningún SEO local» con una sola
+  búsqueda y era falso. La segunda pasada encontró a **Impulser**, que vende SEO local +
+  Maps + IA a oficios desde junio de 2026. Ver el apartado 7.
 - **Abogados y despachos**: solo Nacho Chambó (3 anuncios en un día) y «Leads Jurídicos».
 - **Ópticas**: solo optiqu.es.
 - **Tatuajes** (Agencia Nous) y **academias** (Cesar Auditore), con uno cada uno.
@@ -342,7 +343,8 @@ Tres planes, **publicados** y **sin permanencia**:
 
 **Gremios y reformas** (fontaneros, electricistas, cerrajeros, reformas):
 
-- es el hueco más claro de las búsquedas;
+- es el nicho menos disputado de las búsquedas (hay un competidor serio, Impulser; ver el
+  apartado 7);
 - el cliente busca con urgencia y por zona («fontanero urgente + ciudad»), que es lo que
   mejor premia el SEO local;
 - es un sector que no suele tener web buena.
@@ -407,3 +409,124 @@ la peor y se lanza una variante de la mejor (otra ciudad u otro gremio).
 - El **precio actual de BravoRank**: la web lo marca como disponible, pero la cifra no se
   pudo leer.
 - **Gasto, conversiones y rentabilidad** de cualquier anunciante: la biblioteca no los da.
+
+---
+
+## 7. Gremios y reformas: segunda búsqueda (29/10/2026)
+
+**Conclusión: el hueco NO está vacío; está poco disputado.** Hay un competidor serio
+(Impulser) y unos pocos recién llegados. Casi todo lo que se anuncia a los gremios en Meta
+son **plataformas que les venden clientes** (leads), no agencias de SEO.
+
+### Búsquedas hechas
+
+Biblioteca de Meta, España, anuncios activos, ordenados por impresiones:
+
+- «fontanero clientes» · «eres fontanero» (frase exacta)
+- «electricista clientes»
+- «reformas clientes Google» · «empresa de reformas» (frase exacta)
+- «carpintero clientes»
+- «cerrajero clientes»
+- «climatización instaladores clientes»
+- «pintores clientes»
+- «gremios»
+- «oficio ciudad Google» · «busca tu oficio en tu ciudad» (frase exacta)
+- consumidor: «fontanería averías presupuesto» · «electricista instalación presupuesto gratis»
+
+A los anunciantes que aparecieron se les miró la página entera, también los anuncios
+apagados.
+
+### Quién vende SEO o visibilidad en Google a los gremios
+
+| Anunciante | Desde | Anuncios | Alcance del principal | Qué vende (web) | Precio |
+|---|---|---|---|---|---|
+| **Impulser** (impulser.es) | **17 jun 2026** (4,5 meses en oficios) | ~130 en total, nuevos cada pocas semanas | 45.181 | SEO local (una web por servicio y zona) + ficha de Maps + Google Ads + «presencia en IAs» + panel con el origen de cada contacto. Oficios y reformas, también academias y estética. «Google Partner» | **No publicado** |
+| LaPera Marketing | 8 oct 2026 | 13 | 925 | Web + ficha de Google. No ofrece SEO como servicio | 29 €/mes web · 15 €/mes ficha · 44 €/mes las dos (anuncio) |
+| RelyViews | 29 oct 2026 | — | — | «Para empresas de reformas: 219 €/mes, web que ves antes de pagar» | 219 €/mes + IVA (anuncio) |
+| Profesional.io | 24 oct 2026 | — | 719 | **Software** (web + CRM + presupuestos) para oficios. «Busca tu oficio y tu ciudad en Google: ¿sales tú?» | 39–59 €/mes + IVA |
+| Loocaal | 1 oct 2026 | 2 | 4.603 (Barcelona) | «Le preguntamos a ChatGPT por un fontanero en Sabadell…» | Desde 690 € + IVA (anuncio) |
+
+**Impulser** lleva desde junio con anuncios solo para oficios y los va cambiando:
+- jun–jul: «Fontaneros, electricistas, pintores, jardineros… si vives del oficio en
+  España»;
+- ago–sep: un anuncio por oficio (fontanería, jardinería, reformas) y «te hicieron la web
+  con el Kit Digital y no te ha traído ni un cliente»;
+- oct: «Elige qué obras haces», «¿Cuántos clientes te trajo tu agencia?».
+
+Encaja con el patrón de los que funcionan: constancia y ángulos concretos.
+
+### Quién más se anuncia a los gremios: plataformas de leads, software y proveedores
+
+- **Plataformas que les venden clientes:**
+  - Wegoo: anuncios para profesionales desde el 7 abr 2026 (≈ 7 meses), sobre todo en
+    Canarias;
+  - Trustlocal (pintores): desde el 29 jul;
+  - Flexrs (Murcia): desde el 22 jul;
+  - Xerux, Curritos y Locallista (Madrid);
+  - y en reformas: Reeno, Solvo, Reforleads y Zaryven.
+- **Software de gestión:** Plancraft (un anuncio por oficio), GOLTRATEC, Tutti,
+  Profesional.io.
+- **Proveedores:** Primagran (programa para fontaneros), Integra Energía.
+- **Carpinteros, cerrajeros, climatización y pintores:** ninguna agencia de SEO.
+
+### ¿Esos negocios pagan por clientes? ¿Están en Meta?
+
+**Pagan por clientes (indicio fuerte, no medido):** las plataformas de leads les compran
+anuncios durante meses (Wegoo, 7 meses). Eso solo se sostiene si los profesionales se
+apuntan y les dejan dinero. El precio de esas plataformas **no se ha podido ver** (Wegoo
+dice «regístrate gratis»; la web de Trustlocal no da cifras).
+
+**Hay dinero en Google.** Mangools, España, volumen mensual y coste por clic de Google Ads:
+
+| Búsqueda | Búsquedas/mes | CPC | Dificultad SEO |
+|---|---|---|---|
+| fontanero urgente | 1.100 | **6,04 €** | 9 (baja) |
+| fontanero de urgencia 24 horas | 220 | 5,76 € | 16 |
+| electricista cerca de mi | 9.100 | 3,81 € | 10 |
+| cerrajero / cerrajero cerca de mí | 23.400 / 15.600 | no consta | 17 / 13 |
+| empresa de reformas | 2.800 | 3,35 € | 19 |
+| *(comparación)* dentista cerca de mi | 80.800 | 3,66 € | 9 |
+
+Un clic de «fontanero urgente» cuesta en Google **más que uno de dentista**. Alguien está
+pagando por esas búsquedas, y la dificultad para posicionar es baja.
+
+**Como anunciantes en Meta, casi no están:**
+- las búsquedas dirigidas al consumidor de fontanería y electricidad no devolvieron ni un
+  anuncio de un fontanero o un electricista;
+- las **empresas de reformas** sí se anuncian (Grupo Inventia con 13 anuncios desde junio,
+  Studio by Clikalia, NovaBuild Málaga, ReformaIdeal desde febrero);
+- tiene sentido: una avería se busca en Google con urgencia, y una reforma se planifica y
+  se mira con fotos.
+
+### Por qué casi nadie vende SEO a este sector
+
+Es mi lectura, no un dato:
+
+1. **Lo ocupan las plataformas de leads.** Venden «te mandamos clientes y pagas cuando
+   llegan», que encaja con la forma de pensar del oficio («cobro cuando trabajo»). Una
+   cuota mensual de SEO compite contra eso.
+2. **Las agencias prefieren clínicas.** Ticket más alto, dueños más acostumbrados a lo
+   digital y más fáciles de convencer. Por eso el sector salud está saturado.
+3. **Es más difícil de vender:** el dueño está en la obra, contesta tarde y desconfía de
+   las agencias. Impulser ataca justo eso («¿cuántos clientes te trajo tu agencia?»,
+   «pagas cada mes y nadie te contesta»).
+
+No es que no paguen ni que no estén en Meta: los profesionales sí ven anuncios en Meta
+(las plataformas los captan ahí) y la demanda está en Google.
+
+### Qué cambia para Elevate Web
+
+- Gremios sigue siendo buen nicho, pero **no es virgen**: Impulser lleva 4,5 meses, con
+  muchos anuncios, cubre toda España y vende casi lo mismo (SEO local + Maps + IA).
+- Lo que Impulser **no** hace y Elevate puede hacer:
+  - precio publicado;
+  - un solo oficio por anuncio y por ciudad;
+  - el informe mensual medido (posición en Maps y respuesta de ChatGPT);
+  - la garantía de 90 días.
+- Ángulo contra las plataformas de leads: «deja de pagar por un cliente que también le
+  mandan a otros tres; que te llamen a ti directo desde Google».
+  - Lo que sí consta: Reforleads se anuncia como «exclusivos de verdad: no los compartimos
+    con ninguna otra empresa de reformas».
+  - El reparto de un mismo contacto entre varios profesionales **no se ha comprobado**
+    plataforma por plataforma. Ese ángulo se apoya en que los competidores de Reforleads
+    lo hacen, no en una medición.
