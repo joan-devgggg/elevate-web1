@@ -88,7 +88,7 @@ Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que to
 - **Resultados**: Search Console de San Remo y Dentlux, 5 oct – 1 nov 2026. La captura de San
   Remo es `public/stats/san-remo-nov.jpg`. De Dentlux no hay captura nueva (las de
   `public/stats/*-stats.png` son antiguas y ya no se usan).
-- Testimonios y mensajes de WhatsApp: los que ya estaban publicados.
+- Testimonios: los que ya estaban publicados.
 
 ## Verificación
 
