@@ -1,7 +1,8 @@
 # Elevate Web
 
-Landing de la agencia (diseño web + SEO para negocios locales de España). Una sola página,
-en español, monolingüe.
+Landing de la agencia, **centrada solo en despachos de abogados**: SEO y posicionamiento en la IA
+(GEO) en toda España. Una sola página, en español, monolingüe. Rediseño del 4-11-2026 (rama
+`rediseno-seo-ia`).
 
 ## LO PRIMERO: la app de React no se ejecuta
 
@@ -57,50 +58,63 @@ línea del `README.md` dice `// Trigger Vercel deployment` y hay commits de "for
 **Los ajustes de dominio y redirects viven en el dashboard de Vercel y no se pueden verificar
 desde aquí.**
 
-## SEO: está casi todo desmontado
+## SEO (repuesto en el rediseño del 4-11-2026)
 
-**Dominio: `https://elevateweb.es`.** Se declara en **un único sitio**: el `og:url` de
-`index.html`. No hay nada más.
+**Dominio canónico: `https://www.myelevateweb.com/`.** Es el host que sirve 200. El apex
+`myelevateweb.com` redirige a www con un **307** (temporal): conviene cambiarlo a 301/308 en el
+dashboard de Vercel. `elevateweb.es` ya no es nuestro (redirige a un 404 de otro proveedor): no
+usarlo en ningún sitio. Comprobar con `curl -sI https://myelevateweb.com`.
 
-El commit `e337aab` se llevó por delante, y no se han repuesto:
+Todo vive en `index.html` y `public/`:
+- `<head>`: title, description, canonical, Open Graph y Twitter con `public/og.jpg` (1200×630,
+  sale de la composición `OgImage` de `~/Desktop/elevateweb-video`), favicons.
+- **JSON-LD en un único bloque `@graph`** en el `<head>`: `ProfessionalService` (#negocio, la
+  entidad global), `WebSite`, `Service` y `FAQPage`. **El `FAQPage` copia literalmente las
+  preguntas visibles** (`<details>` de la sección #faq): si cambias una, cambia las dos. Se
+  comprueba con el script de la sección "Verificación".
+- `public/robots.txt` (con la línea `Sitemap:`) y `public/sitemap.xml` (a mano, una sola URL;
+  actualiza `lastmod` cuando cambie la página).
 
-- `<link rel="canonical">`
-- todo el bloque JSON-LD de datos estructurados
-- las etiquetas `twitter:*`
-- `og:image`
+Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que toque (plugin
+`seo`, marketplace `joan-devgggg/seo-kit`).
 
-Tampoco hay `public/sitemap.xml`, ni línea `Sitemap:` en `robots.txt`, ni
-`<link rel="icon">` (pese a que `public/favicon.ico` existe).
+## Datos que salen en la web y de dónde vienen
 
-La metodología de SEO del equipo **ya no vive en este repo**. Está en el plugin `seo`
-(marketplace `joan-devgggg/seo-kit`, **repo privado**), como un documento de referencia
-único que cargan los skills `seo-auditoria`, `seo-arranque` y `seo-articulos`.
+- **Búsquedas, dificultad y CPC** (sección "El hueco", cinta y tarjetas): Mangools, Google
+  España, consultado el 4-11-2026, media de 12 meses. Están en el objeto `DATOS` del `<script>`
+  final (única fuente: la cinta y el explorador leen de ahí). Las cifras sueltas del HTML
+  (31.500, 5–26, 8,58 €, 14.900, 3.300, 12,20 €) salen de esa tabla: si se refrescan los datos,
+  hay que tocarlas también. 31.500 = suma de las 6 búsquedas generales de España.
+- **Resultados**: Search Console de San Remo y Dentlux, 5 oct – 1 nov 2026. La captura de San
+  Remo es `public/stats/san-remo-nov.jpg`. De Dentlux no hay captura nueva (las de
+  `public/stats/*-stats.png` son antiguas y ya no se usan).
+- Testimonios y mensajes de WhatsApp: los que ya estaban publicados.
 
-Antes de tocar metadata, JSON-LD/schema, `robots.txt`, sitemap, la estructura de un
-artículo o el enlazado interno, invoca el skill que toque.
+## Verificación
 
-**Si el plugin no está instalado, no hay fallback.** El repo es privado y solo lo abre su
-dueño, así que no sirve de nada enlazarlo aquí: sin el plugin, este criterio no está
-disponible. Instala el plugin o pide acceso; no improvises las reglas de SEO. Es criterio,
-no un plan a ejecutar aquí.
+- Vista local sin Vite: un servidor que sirva `index.html` de la raíz y el resto desde `public/`.
+- `npm run build` debe pasar y dejar `dist/media`, `dist/img`, `og.jpg`, `sitemap.xml`.
+- FAQ visible = schema: extraer los `<details>` y el `FAQPage` y compararlos (texto idéntico).
+- Mirar a 1440 y 375 px: sección fijada "Cómo trabajamos" (GSAP ScrollTrigger, desde cdnjs
+  3.12.5) y que nada desborde en horizontal.
 
 ## Trampas
 
-**El WhatsApp `34644610120` está hardcodeado en ~25 sitios** — 5 URLs `wa.me` con textos
-distintos en `index.html`, más una veintena de componentes muertos. Cambiarlo es un barrido
-global, no una edición.
+**El WhatsApp `34644610120` está hardcodeado**: 6 enlaces `wa.me` en `index.html` (atributo
+`data-wa`), el `tel:` y el JSON-LD, más una veintena de componentes muertos en `src/`. Cambiarlo
+es un barrido global, no una edición.
 
-**Las anclas del HTML y las de React no coinciden.** `index.html` usa `#testimonios`,
-`#precios`, `#garantia` y `#top`; `src/components/Navbar.tsx` apunta a `#como-funciona`,
-`#pricing` y `#faq`, que no existen. Otro síntoma de que los dos mundos divergieron.
+**Anclas de `index.html`:** `#top`, `#hueco`, `#metodo`, `#resultados`, `#garantia` y `#faq`.
+`src/components/Navbar.tsx` apunta a otras que no existen: es código muerto.
 
-**Dos convenciones de rutas de imagen dentro del mismo `index.html`.** Los `<img>` usan
-`/src/assets/...` y Vite los reescribe y hashea en el build; los `data-stats-img` apuntan a
-`/stats/...` (desde `public/`) y **no se hashean**. Si alguien mueve una imagen fuera de
-`src/assets/`, o abre el HTML sin Vite, la primera convención se rompe.
+**Todas las imágenes y el vídeo del rediseño están en `public/`** (`/img`, `/media`, `/stats`,
+`og.jpg`) con rutas absolutas, ya optimizadas (ninguna pasa de 120 KB; el vídeo del hero, 0,8 MB).
+Las de `src/assets/` ya no se usan desde `index.html`. Si añades una foto, redúcela antes
+(`sips -Z 900`).
 
-**Imágenes sin optimizar**: `foto-alberto` pesa 2,6 MB y `logo-sanremo` 2,5 MB en `dist/`.
-Más de 5 MB entre dos ficheros, en un sitio que vende SEO.
+**El vídeo del hero sale de Remotion**: composición `WebHero` de `~/Desktop/elevateweb-video`
+(Google → IA → resultados, sin voz), renderizada a 540×960 y comprimida. Para cambiarlo se
+vuelve a renderizar allí, no se edita aquí.
 
 **Los tests no prueban nada.** El único test del repo es
 `expect(true).toBe(true)`. Playwright está instalado y configurado con
@@ -127,9 +141,10 @@ que es justo lo que sobra en este repo.
 Contacto publicado: **644 610 120** · `elevateweb@gmail.com`. La conversión va 100 % por
 WhatsApp, no hay formularios.
 
-Oferta vigente **según `index.html`**: web en 48 h, precio a medida ("te lo decimos claro por
-WhatsApp"), si no gusta el diseño no se paga, garantía de resultados a 90 días condicionada a
-dar acceso a WhatsApp Business y Google Business Profile, sin permanencia.
+Oferta vigente **según `index.html`** (rediseño): auditoría gratis, precio a medida ("te lo
+decimos claro por WhatsApp en menos de 1 hora"), sin permanencia, y garantía de 90 días: si no
+apareces en Google para tu especialidad y tu zona, se devuelve lo pagado, con la condición de dar
+acceso a WhatsApp Business y al Perfil de Empresa de Google. Webs en 48 h, solo en la FAQ.
 
 **El `README.md` está desactualizado**: sigue diciendo "por suscripción, desde 65€/mes", que
 es el posicionamiento anterior al commit `27e667c`. Manda `index.html`.
