@@ -88,8 +88,9 @@ Todo vive en `index.html` y `public/`:
   actualiza `lastmod` cuando cambie cada página).
 - La entidad `ProfessionalService` (#negocio) es el mismo bloque en las tres páginas; las de sector
   añaden `Service`, `BreadcrumbList` y su `FAQPage` con `@id` propio.
-- `npm run preview` tiene fallback de SPA: `/abogados` sin barra sirve la portada en local. Enlazar
-  siempre con barra final y comprobar en Vercel con `curl -sI`.
+- `npm run preview` tiene fallback de SPA: `/abogados` sin barra sirve la portada en local. En
+  Vercel sí funciona (`/abogados` y `/clinicas-dentales` sin barra dan 200 con su página,
+  comprobado el 7-11-2026), pero se enlaza siempre con barra final, que es la canónica.
 
 Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que toque (plugin
 `seo`, marketplace `joan-devgggg/seo-kit`).
