@@ -92,6 +92,10 @@ Todo vive en `index.html` y `public/`:
   Vercel sí funciona (`/abogados` y `/clinicas-dentales` sin barra dan 200 con su página,
   comprobado el 7-11-2026), pero se enlaza siempre con barra final, que es la canónica.
 
+**Search Console**: propiedad de prefijo `https://www.myelevateweb.com/` (cuenta de Joan), verificada
+con la meta `google-site-verification` del `<head>` de `index.html`. No quitarla: se perdería la
+verificación.
+
 Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que toque (plugin
 `seo`, marketplace `joan-devgggg/seo-kit`).
 
