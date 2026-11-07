@@ -18,4 +18,15 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
   },
+  // El sitio son tres HTML estáticos: la portada y una página por sector.
+  // Cada página nueva se añade aquí y en public/sitemap.xml.
+  build: {
+    rollupOptions: {
+      input: {
+        portada: path.resolve(__dirname, "index.html"),
+        abogados: path.resolve(__dirname, "abogados/index.html"),
+        clinicas: path.resolve(__dirname, "clinicas-dentales/index.html"),
+      },
+    },
+  },
 }));

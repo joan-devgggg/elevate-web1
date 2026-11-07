@@ -1,8 +1,20 @@
 # Elevate Web
 
-Landing de la agencia, **centrada solo en despachos de abogados**: SEO y posicionamiento en la IA
-(GEO) en toda España. Una sola página, en español, monolingüe. Rediseño del 4-11-2026 (rama
-`rediseno-seo-ia`).
+Web de la agencia (Valencia): webs, SEO y posicionamiento en la IA (GEO) para negocios. En español,
+monolingüe. Desde el 7-11-2026 (rama `paginas-por-sector`) son **tres HTML estáticos**:
+
+- `index.html` → `/` — portada general, con una tarjeta por sector. WhatsApp: "...para mi negocio".
+- `abogados/index.html` → `/abogados/` — la landing de abogados del rediseño del 4-11-2026, casi tal
+  cual. WhatsApp: "Hola, quiero la auditoría gratis para mi despacho".
+- `clinicas-dentales/index.html` → `/clinicas-dentales/` — misma estructura, adaptada a clínicas
+  (implantes y ortodoncia). WhatsApp: "...para mi clínica".
+
+El mensaje de WhatsApp distinto por página sirve para saber de qué anuncio viene cada contacto: no
+unificarlo. **Añadir un sector = crear su carpeta con `index.html`, añadirlo a
+`build.rollupOptions.input` en `vite.config.ts`, a `public/sitemap.xml` y a las tarjetas y el pie de
+la portada.** Las páginas de sector no pueden compartir ninguna pregunta de FAQ entre sí (las
+genéricas van en la portada). El CSS y el JS comunes están copiados en línea en las tres páginas:
+un cambio de estilo global se hace en las tres.
 
 ## LO PRIMERO: la app de React no se ejecuta
 
@@ -19,7 +31,7 @@ No es un detalle histórico: es cómo funciona hoy.
 `src/pages/Index.tsx` y `src/App.tsx` **no se renderizan en ninguna parte**. Editarlos no
 cambia nada en producción.
 
-**Para tocar el sitio se edita `index.html`.** Los tres últimos commits del repo lo
+**Para tocar el sitio se editan los tres `index.html` (raíz, `abogados/`, `clinicas-dentales/`).** Los tres últimos commits del repo lo
 confirman: todos tocan solo ese fichero.
 
 Si algún día se quiere revivir React, hacen falta tres cosas: devolver el `<script>` y el
@@ -72,8 +84,12 @@ Todo vive en `index.html` y `public/`:
   entidad global), `WebSite`, `Service` y `FAQPage`. **El `FAQPage` copia literalmente las
   preguntas visibles** (`<details>` de la sección #faq): si cambias una, cambia las dos. Se
   comprueba con el script de la sección "Verificación".
-- `public/robots.txt` (con la línea `Sitemap:`) y `public/sitemap.xml` (a mano, una sola URL;
-  actualiza `lastmod` cuando cambie la página).
+- `public/robots.txt` (con la línea `Sitemap:`) y `public/sitemap.xml` (a mano, tres URL;
+  actualiza `lastmod` cuando cambie cada página).
+- La entidad `ProfessionalService` (#negocio) es el mismo bloque en las tres páginas; las de sector
+  añaden `Service`, `BreadcrumbList` y su `FAQPage` con `@id` propio.
+- `npm run preview` tiene fallback de SPA: `/abogados` sin barra sirve la portada en local. Enlazar
+  siempre con barra final y comprobar en Vercel con `curl -sI`.
 
 Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que toque (plugin
 `seo`, marketplace `joan-devgggg/seo-kit`).
@@ -85,6 +101,9 @@ Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que to
   final (única fuente: la cinta y el explorador leen de ahí). Las cifras sueltas del HTML
   (31.500, 5–26, 8,58 €, 14.900, 3.300, 12,20 €) salen de esa tabla: si se refrescan los datos,
   hay que tocarlas también. 31.500 = suma de las 6 búsquedas generales de España.
+- **Clínicas dentales**: sin datos de Mangools todavía, así que la página no da volúmenes (solo
+  ejemplos de búsquedas). **Dentlux Travel es turismo dental en Marrakech (carillas), no una
+  clínica**: la página lo dice así; no presentarlo como clínica.
 - **Resultados**: Search Console de San Remo y Dentlux, 5 oct – 1 nov 2026. La captura de San
   Remo es `public/stats/san-remo-nov.jpg`. De Dentlux no hay captura nueva (las de
   `public/stats/*-stats.png` son antiguas y ya no se usan).
@@ -100,8 +119,8 @@ Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que to
 
 ## Trampas
 
-**El WhatsApp `34644610120` está hardcodeado**: 6 enlaces `wa.me` en `index.html` (atributo
-`data-wa`), el `tel:` y el JSON-LD, más una veintena de componentes muertos en `src/`. Cambiarlo
+**El WhatsApp `34644610120` está hardcodeado**: enlaces `wa.me` (atributo `data-wa`) en los tres
+`index.html`, el `tel:` y el JSON-LD, más una veintena de componentes muertos en `src/`. Cambiarlo
 es un barrido global, no una edición.
 
 **Anclas de `index.html`:** `#top`, `#hueco`, `#metodo`, `#resultados`, `#garantia` y `#faq`.
