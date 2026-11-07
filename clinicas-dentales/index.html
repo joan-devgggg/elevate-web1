@@ -389,14 +389,6 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
 .p-ia{margin-top:auto;padding:10px 12px;border-radius:14px;background:var(--navy);color:#fff;font-size:.76rem;line-height:1.4;display:flex;gap:8px}
 .p-ia .av{width:20px;height:20px;border-radius:50%;flex:none;background:conic-gradient(from 90deg,#3D6BFF,#8FB0FF,#1E4FD8,#3D6BFF)}
 .p-ia mark{background:rgba(143,176,255,.25);color:#fff;padding:0 3px;border-radius:4px}
-.cifra.txt b{font-size:clamp(2rem,3.4vw,2.8rem)}
-/* Tabla de búsquedas por tratamiento */
-.fila-tr{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.4fr);gap:16px;align-items:center;padding:14px 16px;border-radius:16px;background:var(--bg);font-size:.95rem}
-.fila-tr.cab{background:none;padding:0 16px;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.fila-tr .kw{font-size:.98rem}
-.fila-tr[hidden]{display:none}
-@media (max-width:920px){.fila-tr{grid-template-columns:1fr;gap:4px}.fila-tr.cab{display:none}
-  .fila-tr span:nth-child(2)::before{content:"Quiere: ";font-weight:600;color:var(--ink)}.fila-tr span:nth-child(3)::before{content:"Tu web: ";font-weight:600;color:var(--ink)}}
 </style>
 </head>
 <body>
@@ -459,7 +451,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
         </div>
       </div>
       <div class="chip-dato chip-a"><span class="mono">caso real · sector dental</span><b>272</b>clics desde Google en 28 días</div>
-      <div class="chip-dato chip-b"><span class="mono">dónde te buscan</span><b>Google · Maps · IA</b>las tres a la vez</div>
+      <div class="chip-dato chip-b"><span class="mono">implantes dentales valencia</span><b>430</b>búsquedas al mes</div>
     </div>
   </div>
 </section>
@@ -477,41 +469,25 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
         <span class="eyebrow rv">Qué buscan tus pacientes</span>
         <h2 class="rv" data-d="1">«Dentista» trae revisiones. «Implantes» trae tratamientos.</h2>
       </div>
-      <p class="lead rv" data-d="2">No todas las búsquedas valen lo mismo para una clínica. Quien escribe el tratamiento y su ciudad ya sabe lo que quiere y está eligiendo dónde hacérselo. Ahí es donde hay que salir primero.</p>
+      <p class="lead rv" data-d="2">Hemos medido lo que busca la gente cuando quiere un tratamiento. Quien escribe el tratamiento y su ciudad ya sabe lo que quiere y está eligiendo clínica, y salir arriba en esas búsquedas es más fácil que en «dentista».</p>
     </div>
     <div class="cifras">
-      <div class="cifra txt rv"><b>Implantes</b><span>el tratamiento que más vale</span><small>Quien busca «implantes dentales valencia» ya ha decidido el tratamiento y está comparando clínicas.</small></div>
-      <div class="cifra txt rv" data-d="1"><b>Ortodoncia</b><span>un paciente durante meses</span><small>«Ortodoncia invisible» o «Invisalign» con tu ciudad: tratamientos largos que empiezan con una primera visita.</small></div>
-      <div class="cifra txt rv" data-d="2"><b>El mapa</b><span>las tres clínicas de arriba</span><small>En «dentista en valencia», Google enseña primero un mapa con tres clínicas. Si no estás ahí, el paciente ve antes a otras.</small></div>
+      <div class="cifra rv"><b data-count="75700" data-dec="0">75.700</b><span>búsquedas al mes de tratamientos</span><small>Suma de cinco búsquedas: implantes dentales, ortodoncia invisible, Invisalign, carillas dentales y dentista de urgencias, en toda España.</small></div>
+      <div class="cifra rv" data-d="1"><b><span data-count="8" data-dec="0">8</span>–<span data-count="15" data-dec="0">15</span></b><span>de dificultad en tratamiento + ciudad</span><small>Implantes, ortodoncia invisible y carillas en Madrid, Barcelona y Valencia. «Dentista» + ciudad está entre 22 y 26: los tratamientos son más fáciles.</small></div>
+      <div class="cifra rv" data-d="2"><b><span data-count="10.07" data-dec="2">10,07</span> €</b><span>por un solo clic en anuncios</span><small>Lo que se paga en Google Ads por «ortodoncia invisible». Con SEO, esos clics no se pagan uno a uno.</small></div>
     </div>
 
     <div class="explorador rv" id="explorador">
       <div class="exp-cab">
-        <h3>Qué busca el paciente y qué tiene que encontrar</h3>
-        <div class="chips" role="group" aria-label="Tratamiento">
-          <button type="button" class="chip" data-t="implantes" aria-pressed="true">Implantes</button>
-          <button type="button" class="chip" data-t="ortodoncia" aria-pressed="false">Ortodoncia</button>
-          <button type="button" class="chip" data-t="estetica" aria-pressed="false">Estética</button>
-          <button type="button" class="chip" data-t="urgencias" aria-pressed="false">Urgencias</button>
-          <button type="button" class="chip" data-t="general" aria-pressed="false">General</button>
-        </div>
+        <h3>Mira cuánto se busca cada tratamiento</h3>
+        <div class="chips" role="group" aria-label="Tratamiento"></div>
       </div>
-      <div class="tabla" role="table" aria-label="Búsquedas de pacientes por tratamiento">
-        <div class="fila-tr cab" role="row"><span role="columnheader">Búsqueda</span><span role="columnheader">Qué quiere</span><span role="columnheader">Qué tiene que ver en tu web o tu ficha</span></div>
-        <div class="fila-tr" role="row" data-t="implantes"><span class="kw" role="cell">implantes dentales valencia</span><span role="cell">Comparar clínicas para ponerse un implante</span><span role="cell">Una página de implantes con el proceso, casos y cómo se pide la primera visita</span></div>
-        <div class="fila-tr" role="row" data-t="implantes"><span class="kw" role="cell">implantes dentales precio</span><span role="cell">Saber cuánto cuesta antes de llamar</span><span role="cell">Un precio orientativo o «desde», y si hay financiación</span></div>
-        <div class="fila-tr" role="row" data-t="implantes"><span class="kw" role="cell">implantes dentales opiniones</span><span role="cell">Fiarse de alguien antes de operarse</span><span role="cell">Opiniones de pacientes en tu ficha de Google y en la web</span></div>
-        <div class="fila-tr" role="row" data-t="ortodoncia"><span class="kw" role="cell">ortodoncia invisible valencia</span><span role="cell">Corregir los dientes sin que se note</span><span role="cell">Una página de ortodoncia invisible con la duración del tratamiento y fotos de antes y después</span></div>
-        <div class="fila-tr" role="row" data-t="ortodoncia"><span class="kw" role="cell">invisalign valencia</span><span role="cell">Una marca concreta</span><span role="cell">Decir claro qué sistema usáis, con su nombre</span></div>
-        <div class="fila-tr" role="row" data-t="ortodoncia"><span class="kw" role="cell">brackets valencia</span><span role="cell">Ortodoncia clásica, muchas veces para un hijo</span><span role="cell">Opciones por edad y cómo es la primera revisión</span></div>
-        <div class="fila-tr" role="row" data-t="estetica"><span class="kw" role="cell">carillas dentales valencia</span><span role="cell">Mejorar la sonrisa</span><span role="cell">Fotos de casos reales y un precio orientativo</span></div>
-        <div class="fila-tr" role="row" data-t="estetica"><span class="kw" role="cell">blanqueamiento dental valencia</span><span role="cell">Un tratamiento rápido</span><span role="cell">Precio, duración y cuántas sesiones hacen falta</span></div>
-        <div class="fila-tr" role="row" data-t="urgencias"><span class="kw" role="cell">dentista de urgencia valencia</span><span role="cell">Le duele y quiere que le vean hoy</span><span role="cell">Teléfono a la vista, horario y si atendéis urgencias</span></div>
-        <div class="fila-tr" role="row" data-t="urgencias"><span class="kw" role="cell">dentista cerca de mí</span><span role="cell">Una clínica a mano</span><span role="cell">Una ficha de Google completa, con dirección y horario al día</span></div>
-        <div class="fila-tr" role="row" data-t="general"><span class="kw" role="cell">dentista en valencia</span><span role="cell">Una clínica para una revisión o una limpieza</span><span role="cell">Ficha de Google y portada claras: es la puerta de entrada, no lo que más vale</span></div>
-        <div class="fila-tr" role="row" data-t="general"><span class="kw" role="cell">clínica dental valencia</span><span role="cell">Comparar clínicas en general</span><span role="cell">Qué tratamientos hacéis, en qué barrio y cómo se pide cita</span></div>
+      <div class="tabla" role="table" aria-label="Búsquedas al mes, dificultad y coste por clic">
+        <div class="fila-kw cab" role="row"><span role="columnheader">Búsqueda</span><span role="columnheader">Búsquedas al mes</span><span role="columnheader">Dificultad</span><span role="columnheader">Clic en anuncios</span></div>
+        <div id="filas"></div>
       </div>
-      <p class="exp-pie">Son ejemplos de búsquedas que hacen los pacientes en Google, con Valencia como ciudad. Cuántas búsquedas hay en tu ciudad para cada tratamiento, y lo difícil que es salir arriba, te lo enseñamos en la auditoría gratis con datos de tu zona.</p>
+      <p class="exp-pie">Datos de Mangools para Google España, consultados el 7 de noviembre de 2026: búsquedas al mes (media mensual), dificultad SEO (0-100) y coste por clic en Google Ads. Son estimaciones de la herramienta. «—» = sin dato, o con un coste por clic que la herramienta da claramente erróneo (en algunas búsquedas de Valencia pasa de 100 €).</p>
+      <noscript><p>Ejemplos: implantes dentales, 9.900 búsquedas al mes, dificultad 20; implantes dentales valencia, 430 al mes, dificultad 12; ortodoncia invisible, 7.100 al mes, 10,07 € por clic.</p></noscript>
     </div>
   </div>
 </section>
@@ -526,19 +502,19 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
         <span class="n">01</span>
         <h3>El paciente compara antes de decidir</h3>
         <p>Un implante o una ortodoncia no se deciden en un minuto. Se miran webs, opiniones y fotos, y se pide primera visita a una o dos clínicas.</p>
-        <div class="dato"><b>implantes dentales opiniones</b> · se busca antes de llamar</div>
+        <div class="dato"><b>implantes dentales precio</b> · 5.000 búsquedas al mes</div>
       </article>
       <article class="razon rv" data-d="1">
         <span class="n">02</span>
         <h3>El mapa decide la primera llamada</h3>
         <p>En búsquedas como «dentista en valencia», Google enseña primero tres clínicas en el mapa. Una ficha completa, con tratamientos, fotos, horario y opiniones, es media batalla.</p>
-        <div class="dato"><b>dentista en valencia</b> · mapa con tres clínicas arriba</div>
+        <div class="dato"><b>dentista en valencia</b> · 2.100 búsquedas al mes</div>
       </article>
       <article class="razon rv" data-d="2">
         <span class="n">03</span>
         <h3>Cada tratamiento vale mucho</h3>
         <p>Un implante o una ortodoncia son tratamientos de cientos o miles de euros. Unos pocos pacientes nuevos de tratamiento al mes compensan el trabajo.</p>
-        <div class="dato"><b>ortodoncia invisible valencia</b> · un tratamiento de meses</div>
+        <div class="dato"><b>ortodoncia invisible</b> · 10,07 € por clic</div>
       </article>
     </div>
     <p class="cierre-razones rv">No queremos llenarte la agenda de revisiones: queremos pacientes de tratamiento.</p>
@@ -563,7 +539,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
       <span class="ilus">ILUSTRACIÓN</span>
       <div class="serp-busca">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <span class="q">dentista en valencia</span> <span class="vol-tag">Valencia</span>
+        <span class="q">dentista en valencia</span> <span class="vol-tag">2.100 / mes</span>
       </div>
       <div class="serp-lista">
         <div class="res tuyo" style="--s:0" data-final="0"><span class="ini">T</span><div><b>Tu clínica</b><small>Implantes y ortodoncia · Valencia</small></div><span class="puesto">Nº <span id="puesto">1</span></span></div>
@@ -709,19 +685,39 @@ document.documentElement.classList.add('js');
 document.getElementById('anio').textContent = new Date().getFullYear();
 const fmt = (n, d=0) => { const [e, f] = n.toFixed(d).split('.'); return e.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (f ? ',' + f : ''); };
 
-// Cinta: búsquedas de pacientes (sin cifras: no hay datos de volumen medidos para este sector)
+// Datos de Mangools (Google España, 7-11-2026): búsquedas/mes, dificultad 0-100, CPC en € (null = sin dato o anómalo).
+const DATOS = {
+  'Implantes':   [['implantes dentales','España',9900,20,2.71],['implantes dentales precio','España',5000,8,1.34],['implantes dentales barcelona','Barcelona',630,15,null],['implantes dentales madrid','Madrid',530,14,null],['implantes dentales valencia','Valencia',430,12,null],['implantes dentales alicante','Alicante',100,null,null]],
+  'Ortodoncia':  [['ortodoncia invisible','España',7100,19,10.07],['ortodoncia invisible precio','España',2600,18,3.79],['ortodoncia invisible madrid','Madrid',330,15,null],['ortodoncia invisible valencia','Valencia',330,12,null],['ortodoncia invisible barcelona','Barcelona',220,8,null],['ortodoncia invisible alicante','Alicante',120,null,null]],
+  'Invisalign':  [['invisalign','España',38100,21,null],['invisalign precio','España',5700,6,7.74],['invisalign madrid','Madrid',610,9,null],['invisalign barcelona','Barcelona',480,12,null],['invisalign valencia','Valencia',180,28,null],['invisalign alicante','Alicante',130,null,null]],
+  'Carillas':    [['carillas dentales','España',18900,15,2.24],['carillas dentales precio','España',5200,16,1.25],['carillas dentales madrid','Madrid',240,12,null],['carillas dentales valencia','Valencia',140,11,null],['carillas dentales alicante','Alicante',20,null,null]],
+  'Urgencias':   [['dentista urgencias','España',1700,12,3.16],['dentista urgencias madrid','Madrid',690,12,3.11],['dentista urgencias barcelona','Barcelona',420,16,2.85],['dentista urgencias valencia','Valencia',150,null,2.66],['dentista urgencias alicante','Alicante',40,null,4.93]],
+  'Dentista':    [['dentista','España',70000,28,4.64],['dentista madrid','Madrid',3000,22,7.01],['dentista barcelona','Barcelona',2300,26,7.60],['dentista en valencia','Valencia',2100,22,5.28],['dentista alicante','Alicante',1900,15,4.58]]
+};
+// Cinta con búsquedas reales
 (() => {
-  const items = ['implantes dentales valencia','ortodoncia invisible valencia','invisalign valencia','dentista en valencia','carillas dentales valencia','implantes dentales precio','dentista de urgencia valencia','clínica dental valencia','brackets valencia','blanqueamiento dental valencia','implantes dentales opiniones','dentista cerca de mí'];
-  const html = items.map(q => `<span class="cinta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><b>${q}</b></span>`).join('');
+  const items = Object.values(DATOS).flat().sort((a,b)=>b[2]-a[2]).slice(0,14);
+  const html = items.map(r => `<span class="cinta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><b>${r[0]}</b><em>${fmt(r[2])} / mes</em></span>`).join('');
   document.getElementById('cinta').innerHTML = html + html.replace(/<span class="cinta-item">/g,'<span class="cinta-item" aria-hidden="true">');
 })();
 
-// Explorador por tratamiento: las filas están en el HTML; los chips solo filtran
+// Explorador del hueco
 (() => {
-  const chips = [...document.querySelectorAll('#explorador .chip')], filas = [...document.querySelectorAll('#explorador .fila-tr[data-t]')];
-  const pinta = (t) => { filas.forEach(f => f.hidden = f.dataset.t !== t); chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.t === t)); };
-  chips.forEach(c => c.addEventListener('click', () => pinta(c.dataset.t)));
-  pinta('implantes');
+  const chips = document.querySelector('#explorador .chips'), filas = document.getElementById('filas');
+  const pinta = (esp) => {
+    const rows = DATOS[esp], max = Math.max(...Object.values(DATOS).flat().map(r=>r[2]));
+    filas.innerHTML = rows.map(r => {
+      const kd = r[3]==null ? '<span class="kd nd">—</span>' : `<span class="kd ${r[3]<15?'baja':'media'}">${r[3]} · ${r[3]<15?'baja':'media'}</span>`;
+      return `<div class="fila-kw" role="row"><span class="kw" role="cell">${r[0]}<small>${r[1]}</small></span><span class="vol" role="cell"><span class="bar"><i style="--w:0%" data-w="${Math.max(3,Math.sqrt(r[2]/max)*100).toFixed(1)}%"></i></span><b>${fmt(r[2])}</b></span><span role="cell">${kd}</span><span class="cpc" role="cell">${r[4]==null?'—':fmt(r[4],2)+' €'}</span></div>`;
+    }).join('');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>filas.querySelectorAll('.bar i').forEach(i=>i.style.setProperty('--w', i.dataset.w))));
+    chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c.dataset.esp===esp));
+  };
+  Object.keys(DATOS).forEach(esp => {
+    const b = document.createElement('button'); b.type='button'; b.className='chip'; b.dataset.esp=esp; b.textContent=esp;
+    b.addEventListener('click',()=>pinta(esp)); chips.appendChild(b);
+  });
+  pinta('Implantes');
 })();
 
 // Reveal + contadores + gráficas, con red de seguridad
