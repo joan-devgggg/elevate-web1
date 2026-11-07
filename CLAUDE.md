@@ -112,6 +112,12 @@ Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que to
   carillas dentales + dentista urgencias (España). Mangools da CPC absurdos en varias búsquedas
   de Valencia (148-154 €): van como `null` («—»), no se publican. **Dentlux Travel es turismo dental en Marrakech (carillas), no una
   clínica**: la página lo dice así; no presentarlo como clínica.
+- **Mensaje "sin anuncios"** (las tres páginas): Elevate Web no hace anuncios. El coste por clic
+  se presenta siempre como lo que el cliente **se ahorra** ("Te ahorras por clic"), nunca como
+  algo que vendemos. Bloque `#sin-anuncios` (SEO frente a Google Ads) con dos ejemplos calculados:
+  búsquedas × 31 % (CTR del nº 1 según Mangools) × CPC → «abogado penalista madrid» 3.300 × 0,31 ×
+  8,58 ≈ 8.800 €/mes; «dentista en valencia» 2.100 × 0,31 × 5,28 ≈ 3.400 €/mes. Si cambian los
+  datos, se recalculan.
 - **Resultados**: Search Console de San Remo y Dentlux, 5 oct – 1 nov 2026. La captura de San
   Remo es `public/stats/san-remo-nov.jpg` y la de Dentlux, `public/stats/dentlux-nov.jpg`
   (propiedad `sc-domain:dentluxtravel.com`, sacada el 7-11-2026). El pie del visor sale del

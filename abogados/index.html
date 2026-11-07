@@ -230,7 +230,7 @@ p{color:var(--muted)}
 @media (max-width:920px){.hueco-top{grid-template-columns:1fr}.cifras{grid-template-columns:1fr}
   .fila-kw{grid-template-columns:1fr auto;gap:8px 12px}.fila-kw.cab{display:none}
   .fila-kw .vol{grid-column:1/-1;order:3}.fila-kw .kd{order:2;justify-self:end}.fila-kw .cpc{order:4;grid-column:1/-1;font-size:.82rem;color:var(--muted);font-weight:500}
-  .fila-kw .cpc::before{content:"Clic en anuncios: "}}
+  .fila-kw .cpc::before{content:"Te ahorras por clic: "}}
 
 /* Por qué abogados */
 .razones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
@@ -379,6 +379,26 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .js .rv{opacity:1;transform:none}
 }
+/* Sin anuncios: SEO frente a Google Ads */
+.vs-grid{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;align-items:stretch;margin-top:48px}
+.vs-col{position:relative;padding:clamp(26px,3vw,36px);border-radius:var(--r-lg);border:1px solid var(--line)}
+.vs-col .tag{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.vs-col h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-top:12px}
+.vs-col ul{list-style:none;display:grid;gap:14px;margin-top:24px}
+.vs-col li{display:flex;gap:12px;align-items:flex-start;font-weight:600;line-height:1.4}
+.vs-col li svg{width:22px;height:22px;flex:none;margin-top:1px}
+.vs-col.ads{background:#E9E9EE;color:var(--muted)}
+.vs-col.ads h3{color:#6E6F78;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgba(29,29,31,.35)}
+.vs-col.ads li svg{color:#A1A2AA}
+.vs-col.seo{background:radial-gradient(70% 60% at 85% 10%,rgba(255,255,255,.18),transparent 60%),var(--brand);color:#fff;border-color:transparent;box-shadow:0 30px 70px rgba(30,79,216,.32)}
+.vs-col.seo .tag{color:#C9D7FF}
+.vs-medio{display:grid;place-items:center}
+.vs-medio span{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-family:var(--display);font-weight:900;font-size:1.25rem;letter-spacing:-.03em;box-shadow:0 14px 30px rgba(16,24,64,.25)}
+.vs-cuenta{margin-top:18px;padding:22px 26px;border-radius:var(--r);background:#fff;border:1px dashed rgba(30,79,216,.4);display:grid;gap:10px}
+.vs-cuenta p{color:var(--ink);font-size:1.02rem}
+.vs-cuenta p b{color:var(--brand);font-family:var(--display);font-weight:900;font-size:1.25em;letter-spacing:-.02em}
+.vs-cuenta small{color:var(--muted);font-size:.8rem}
+@media (max-width:920px){.vs-grid{grid-template-columns:minmax(0,1fr);gap:0}.vs-medio{margin:-14px 0;position:relative;z-index:2}}
 </style>
 </head>
 <body>
@@ -425,6 +445,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
       <div class="confianza">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Garantía de 90 días</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h16M12 4v16" transform="rotate(45 12 12)"/></svg>Sin permanencia</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>Sin pagar anuncios</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Respondemos en menos de 1 hora</span>
       </div>
     </div>
@@ -456,7 +477,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
     <div class="cifras">
       <div class="cifra rv"><b data-count="31500" data-dec="0">31.500</b><span>búsquedas al mes</span><small>Suma de seis búsquedas: abogado laboralista, penalista, de extranjería, de herencias, de divorcio y de accidente de tráfico, en toda España.</small></div>
       <div class="cifra rv" data-d="1"><b><span data-count="5" data-dec="0">5</span>–<span data-count="26" data-dec="0">26</span></b><span>de dificultad sobre 100</span><small>En las búsquedas de abajo. Cuanto más baja, más fácil es ponerse delante.</small></div>
-      <div class="cifra rv" data-d="2"><b><span data-count="8.58" data-dec="2">8,58</span> €</b><span>por un solo clic en anuncios</span><small>Lo que se paga en Google Ads por «abogado penalista madrid». Con SEO, esos clics no se pagan uno a uno.</small></div>
+      <div class="cifra rv" data-d="2"><b><span data-count="8.58" data-dec="2">8,58</span> €</b><span>que te ahorras en cada clic</span><small>Es lo que cobra Google Ads por un clic de «abogado penalista madrid». Con SEO, ese clic no se paga.</small></div>
     </div>
 
     <div class="explorador rv" id="explorador">
@@ -464,12 +485,30 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
         <h3>Mira el hueco de tu especialidad</h3>
         <div class="chips" role="group" aria-label="Especialidad"></div>
       </div>
-      <div class="tabla" role="table" aria-label="Búsquedas al mes, dificultad y coste por clic">
-        <div class="fila-kw cab" role="row"><span role="columnheader">Búsqueda</span><span role="columnheader">Búsquedas al mes</span><span role="columnheader">Dificultad</span><span role="columnheader">Clic en anuncios</span></div>
+      <div class="tabla" role="table" aria-label="Búsquedas al mes, dificultad y lo que te ahorras por clic">
+        <div class="fila-kw cab" role="row"><span role="columnheader">Búsqueda</span><span role="columnheader">Búsquedas al mes</span><span role="columnheader">Dificultad</span><span role="columnheader">Te ahorras por clic</span></div>
         <div id="filas"></div>
       </div>
-      <p class="exp-pie">Datos de Mangools para Google España, consultados el 4 de noviembre de 2026: media mensual de los últimos 12 meses, dificultad SEO (0-100) y coste por clic en Google Ads. Son estimaciones de la herramienta. «—» = sin dato.</p>
+      <p class="exp-pie">Datos de Mangools para Google España, consultados el 4 de noviembre de 2026: media mensual de los últimos 12 meses, dificultad SEO (0-100) y lo que cobra Google Ads por cada clic de esa búsqueda: con SEO, ese clic no lo pagas. Son estimaciones de la herramienta. «—» = sin dato.</p>
       <noscript><p>Ejemplos: abogado laboralista, 14.900 búsquedas al mes, dificultad 9; abogado penalista madrid, 3.300 al mes, dificultad 6, 8,58 € por clic.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- SIN ANUNCIOS -->
+<section id="sin-anuncios" class="fondo-textura">
+  <div class="wrap">
+    <span class="eyebrow rv">Sin anuncios</span>
+    <h2 class="rv" data-d="1">Los clics de los anuncios se pagan. Los del SEO, no.</h2>
+    <p class="lead rv" data-d="2" style="margin-top:20px">No hacemos anuncios ni tienes que pagarle a Google por cada visita. Hacemos que tu despacho salga en los resultados normales y en el mapa, que es donde los clics no se pagan.</p>
+    <div class="vs-grid">
+      <div class="vs-col ads rv"><span class="tag">Anuncios de Google</span><h3>Pagas cada clic</h3><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>Pagas cada clic, aunque esa persona no acabe contratando</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>El precio por clic sube cuando tu competencia puja más</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>El día que dejas de pagar, desapareces de Google</li></ul></div>
+      <div class="vs-medio rv" data-d="1" aria-hidden="true"><span>VS</span></div>
+      <div class="vs-col seo rv" data-d="2"><span class="tag">Con Elevate Web</span><h3>Los clics no se pagan</h3><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Cada visita que te llega desde Google es gratis</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Una cuota fija al mes, sin pagar por clic</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Lo que posicionas se queda trabajando para ti</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Sin permanencia: te quedas porque funciona</li></ul></div>
+    </div>
+    <div class="vs-cuenta rv">
+        <p>Ejemplo: «abogado penalista madrid» tiene 3.300 búsquedas al mes. Si estuvieras el primero y esos clics los pagaras en anuncios (31 % de clics × 8,58 € cada uno), serían <b>unos 8.800 € al mes</b>. Con SEO, esos clics no se pagan.</p>
+      <small>Búsquedas y coste por clic: Mangools, Google España. 31 %: los clics que Mangools estima que se lleva el primer resultado.</small>
     </div>
   </div>
 </section>
@@ -496,7 +535,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
         <span class="n">03</span>
         <h3>Cada cliente vale mucho</h3>
         <p>Lo dicen los propios anuncios: los despachos pagan varios euros por cada clic porque un solo caso lo compensa. El SEO te trae esos clics sin pagarlos uno a uno.</p>
-        <div class="dato"><b>abogado accidente de tráfico barcelona</b> · 12,20 € por clic</div>
+        <div class="dato"><b>abogado accidente de tráfico barcelona</b> · 12,20 € por clic que no pagas</div>
       </article>
     </div>
     <p class="cierre-razones rv">Menos sectores, más profundidad: sabemos qué busca cada especialidad y en qué ciudad.</p>
@@ -613,6 +652,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
       <p>Cada despacho y cada ciudad son distintos, así que el precio depende de lo que necesites. Te lo decimos claro por WhatsApp en menos de 1 hora, sin compromiso.</p>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Auditoría gratis antes de nada</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sin pagar anuncios ni clics</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sin permanencia</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Garantía de 90 días</li>
       </ul>

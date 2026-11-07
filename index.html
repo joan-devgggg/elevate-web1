@@ -61,6 +61,7 @@
       "@type": "FAQPage",
       "@id": "https://www.myelevateweb.com/#faq",
       "mainEntity": [
+        { "@type": "Question", "name": "¿Esto es lo mismo que poner anuncios en Google?", "acceptedAnswer": { "@type": "Answer", "text": "No. No hacemos anuncios ni tienes que pagar a Google por cada clic. Trabajamos para que salgas en los resultados normales y en el mapa, donde los clics no se pagan. Pagas una cuota fija al mes, lleguen los clientes que lleguen." } },
         { "@type": "Question", "name": "¿Qué hacéis exactamente?", "acceptedAnswer": { "@type": "Answer", "text": "Tres cosas: webs, SEO para salir en Google y en Google Maps, y trabajo para que los asistentes de IA como ChatGPT te recomienden. Normalmente van juntas: la web es la base de las otras dos." } },
         { "@type": "Question", "name": "¿Por qué tenéis páginas para clínicas dentales y para abogados?", "acceptedAnswer": { "@type": "Answer", "text": "Porque son los sectores en los que más nos centramos: en los dos la gente busca con su ciudad y cada cliente vale mucho. Si tu negocio es de otro sector, escríbenos igualmente y te decimos si podemos ayudarte." } },
         { "@type": "Question", "name": "¿Trabajáis solo en Valencia?", "acceptedAnswer": { "@type": "Answer", "text": "Estamos en Valencia, pero trabajamos con negocios de toda España: todo se hace en remoto y por WhatsApp." } },
@@ -214,7 +215,7 @@ p{color:var(--muted)}
 @media (max-width:920px){.hueco-top{grid-template-columns:1fr}.cifras{grid-template-columns:1fr}
   .fila-kw{grid-template-columns:1fr auto;gap:8px 12px}.fila-kw.cab{display:none}
   .fila-kw .vol{grid-column:1/-1;order:3}.fila-kw .kd{order:2;justify-self:end}.fila-kw .cpc{order:4;grid-column:1/-1;font-size:.82rem;color:var(--muted);font-weight:500}
-  .fila-kw .cpc::before{content:"Clic en anuncios: "}}
+  .fila-kw .cpc::before{content:"Te ahorras por clic: "}}
 
 /* Por qué abogados */
 .razones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
@@ -380,6 +381,26 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
 .tarjeta.otro .ic{background:rgba(255,255,255,.12);color:#fff}
 .tarjeta.otro .ir{color:#8FB0FF}
 @media (max-width:920px){.sectores{grid-template-columns:minmax(0,1fr)}}
+/* Sin anuncios: SEO frente a Google Ads */
+.vs-grid{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;align-items:stretch;margin-top:48px}
+.vs-col{position:relative;padding:clamp(26px,3vw,36px);border-radius:var(--r-lg);border:1px solid var(--line)}
+.vs-col .tag{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.vs-col h3{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-top:12px}
+.vs-col ul{list-style:none;display:grid;gap:14px;margin-top:24px}
+.vs-col li{display:flex;gap:12px;align-items:flex-start;font-weight:600;line-height:1.4}
+.vs-col li svg{width:22px;height:22px;flex:none;margin-top:1px}
+.vs-col.ads{background:#E9E9EE;color:var(--muted)}
+.vs-col.ads h3{color:#6E6F78;text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:rgba(29,29,31,.35)}
+.vs-col.ads li svg{color:#A1A2AA}
+.vs-col.seo{background:radial-gradient(70% 60% at 85% 10%,rgba(255,255,255,.18),transparent 60%),var(--brand);color:#fff;border-color:transparent;box-shadow:0 30px 70px rgba(30,79,216,.32)}
+.vs-col.seo .tag{color:#C9D7FF}
+.vs-medio{display:grid;place-items:center}
+.vs-medio span{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-family:var(--display);font-weight:900;font-size:1.25rem;letter-spacing:-.03em;box-shadow:0 14px 30px rgba(16,24,64,.25)}
+.vs-cuenta{margin-top:18px;padding:22px 26px;border-radius:var(--r);background:#fff;border:1px dashed rgba(30,79,216,.4);display:grid;gap:10px}
+.vs-cuenta p{color:var(--ink);font-size:1.02rem}
+.vs-cuenta p b{color:var(--brand);font-family:var(--display);font-weight:900;font-size:1.25em;letter-spacing:-.02em}
+.vs-cuenta small{color:var(--muted);font-size:.8rem}
+@media (max-width:920px){.vs-grid{grid-template-columns:minmax(0,1fr);gap:0}.vs-medio{margin:-14px 0;position:relative;z-index:2}}
 </style>
 </head>
 <body>
@@ -425,6 +446,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
       <div class="confianza">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Garantía de 90 días</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h16M12 4v16" transform="rotate(45 12 12)"/></svg>Sin permanencia</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>Sin pagar anuncios</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Respondemos en menos de 1 hora</span>
       </div>
     </div>
@@ -550,8 +572,27 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
   </div>
 </section>
 
+<!-- SIN ANUNCIOS -->
+<section id="sin-anuncios" class="fondo-claro">
+  <div class="wrap">
+    <span class="eyebrow rv">Sin anuncios</span>
+    <h2 class="rv" data-d="1">Los clics de los anuncios se pagan. Los del SEO, no.</h2>
+    <p class="lead rv" data-d="2" style="margin-top:20px">No hacemos anuncios ni tienes que pagarle a Google por cada visita. Hacemos que tu negocio salga en los resultados normales y en el mapa, que es donde los clics no se pagan.</p>
+    <div class="vs-grid">
+      <div class="vs-col ads rv"><span class="tag">Anuncios de Google</span><h3>Pagas cada clic</h3><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>Pagas cada clic, aunque esa persona no acabe contratando</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>El precio por clic sube cuando tu competencia puja más</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>El día que dejas de pagar, desapareces de Google</li></ul></div>
+      <div class="vs-medio rv" data-d="1" aria-hidden="true"><span>VS</span></div>
+      <div class="vs-col seo rv" data-d="2"><span class="tag">Con Elevate Web</span><h3>Los clics no se pagan</h3><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Cada visita que te llega desde Google es gratis</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Una cuota fija al mes, sin pagar por clic</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Lo que posicionas se queda trabajando para ti</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></svg>Sin permanencia: te quedas porque funciona</li></ul></div>
+    </div>
+    <div class="vs-cuenta rv">
+        <p>Ejemplo: «abogado penalista madrid» tiene 3.300 búsquedas al mes. Si estuvieras el primero y esos clics los pagaras en anuncios (31 % de clics × 8,58 € cada uno), serían <b>unos 8.800 € al mes</b>. Con SEO, esos clics no se pagan.</p>
+        <p>Ejemplo: «dentista en valencia» tiene 2.100 búsquedas al mes. Si estuvieras el primero y esos clics los pagaras en anuncios (31 % de clics × 5,28 € cada uno), serían <b>unos 3.400 € al mes</b>. Con SEO, esos clics no se pagan.</p>
+      <small>Búsquedas y coste por clic: Mangools, Google España. 31 %: los clics que Mangools estima que se lleva el primer resultado.</small>
+    </div>
+  </div>
+</section>
+
 <!-- RESULTADOS -->
-<section id="resultados" class="fondo-claro">
+<section id="resultados" class="fondo-textura">
   <div class="wrap">
     <span class="eyebrow rv">Resultados reales</span>
     <h2 class="rv" data-d="1">Ya lo hemos hecho. Estos son los datos de Google.</h2>
@@ -610,6 +651,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
       <p>El precio depende de tu sector, tu ciudad y lo que necesites. Te lo decimos claro por WhatsApp en menos de 1 hora, sin compromiso.</p>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Auditoría gratis antes de nada</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sin pagar anuncios ni clics</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sin permanencia</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Garantía de 90 días</li>
       </ul>
@@ -618,6 +660,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
     <div class="faq">
       <span class="eyebrow rv">Preguntas frecuentes</span>
       <h2 class="rv" data-d="1" style="margin:16px 0 20px">Lo que suelen preguntarnos</h2>
+      <details class="rv"><summary>¿Esto es lo mismo que poner anuncios en Google?<i></i></summary><p>No. No hacemos anuncios ni tienes que pagar a Google por cada clic. Trabajamos para que salgas en los resultados normales y en el mapa, donde los clics no se pagan. Pagas una cuota fija al mes, lleguen los clientes que lleguen.</p></details>
       <details class="rv"><summary>¿Qué hacéis exactamente?<i></i></summary><p>Tres cosas: webs, SEO para salir en Google y en Google Maps, y trabajo para que los asistentes de IA como ChatGPT te recomienden. Normalmente van juntas: la web es la base de las otras dos.</p></details>
       <details class="rv"><summary>¿Por qué tenéis páginas para clínicas dentales y para abogados?<i></i></summary><p>Porque son los sectores en los que más nos centramos: en los dos la gente busca con su ciudad y cada cliente vale mucho. Si tu negocio es de otro sector, escríbenos igualmente y te decimos si podemos ayudarte.</p></details>
       <details class="rv"><summary>¿Trabajáis solo en Valencia?<i></i></summary><p>Estamos en Valencia, pero trabajamos con negocios de toda España: todo se hace en remoto y por WhatsApp.</p></details>
