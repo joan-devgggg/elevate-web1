@@ -12,8 +12,8 @@ monolingüe. Desde el 7-11-2026 (rama `paginas-por-sector`) son **tres HTML est�
 El mensaje de WhatsApp distinto por página sirve para saber de qué anuncio viene cada contacto: no
 unificarlo. **Añadir un sector = crear su carpeta con `index.html`, añadirlo a
 `build.rollupOptions.input` en `vite.config.ts`, a `public/sitemap.xml` y a las tarjetas y el pie de
-la portada.** Las páginas de sector no pueden compartir ninguna pregunta de FAQ entre sí (las
-genéricas van en la portada). El CSS y el JS comunes están copiados en línea en las tres páginas:
+la portada.** Las páginas de sector no pueden compartir ninguna pregunta de FAQ entre sí ni con
+la portada (las genéricas van solo en la portada). El CSS y el JS comunes están copiados en línea en las tres páginas:
 un cambio de estilo global se hace en las tres.
 
 ## LO PRIMERO: la app de React no se ejecuta
@@ -99,11 +99,22 @@ verificación.
 Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que toque (plugin
 `seo`, marketplace `joan-devgggg/seo-kit`).
 
+**Keywords (revisión con el seo-kit del 8-11-2026)**: el mapa URL ↔ keyword está en
+`docs/keywords/mapa.md` y el registro de consultas a Mangools, en `docs/keywords/consultas.md`
+(España = `location_id` 2724, español = `language_id` 1003). Portada → «agencia seo local» (sin
+ciudad en el title ni en el H1: trabajamos en toda España); `/abogados/` → «seo para abogados»;
+`/clinicas-dentales/` → «seo para clínicas dentales» («seo para dentistas» va en el texto de la
+misma página). Cada principal va en el title, en el H1 y en el primer párrafo. Las URLs se
+quedan como están (Joan decidió no pasarlas a `/servicios/seo/<sector>/`).
+
 ## Datos que salen en la web y de dónde vienen
 
 - **Búsquedas, dificultad y CPC** (sección "El hueco", cinta y tarjetas): Mangools, Google
   España, consultado el 4-11-2026, media de 12 meses. Están en el objeto `DATOS` del `<script>`
-  final (única fuente: la cinta y el explorador leen de ahí). Las cifras sueltas del HTML
+  final (la cinta y el explorador leen de ahí). **Excepción:** las filas de la pestaña por
+  defecto del explorador (Laboral en abogados, Implantes en clínicas) están además escritas en el
+  HTML dentro de `#filas`, para que las lean los bots de IA, que no ejecutan JavaScript. El JS
+  las repinta igual al cargar; si cambias `DATOS`, regenera también esas filas. Las cifras sueltas del HTML
   (31.500, 5–26, 8,58 €, 14.900, 3.300, 12,20 €) salen de esa tabla: si se refrescan los datos,
   hay que tocarlas también. 31.500 = suma de las 6 búsquedas generales de España.
 - **Clínicas dentales**: Mangools, Google España, consultado el 7-11-2026 (objeto `DATOS` de
