@@ -105,8 +105,9 @@ Antes de tocar metadata, schema, robots o sitemap, invoca el skill de SEO que to
   ejemplos de búsquedas). **Dentlux Travel es turismo dental en Marrakech (carillas), no una
   clínica**: la página lo dice así; no presentarlo como clínica.
 - **Resultados**: Search Console de San Remo y Dentlux, 5 oct – 1 nov 2026. La captura de San
-  Remo es `public/stats/san-remo-nov.jpg`. De Dentlux no hay captura nueva (las de
-  `public/stats/*-stats.png` son antiguas y ya no se usan).
+  Remo es `public/stats/san-remo-nov.jpg` y la de Dentlux, `public/stats/dentlux-nov.jpg`
+  (propiedad `sc-domain:dentluxtravel.com`, sacada el 7-11-2026). El pie del visor sale del
+  `data-pie` de cada botón. Las de `public/stats/*-stats.png` son antiguas y ya no se usan.
 - Testimonios: los que ya estaban publicados.
 
 ## Verificación

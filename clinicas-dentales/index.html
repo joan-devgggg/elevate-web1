@@ -610,8 +610,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
           <div><b data-count="6.1" data-dec="1">6,1</b><span>posición media</span></div>
         </div>
         <svg class="grafica" viewBox="0 0 400 90" preserveAspectRatio="none" data-serie="14,5,11,8,11,8,13,10,17,15,7,6,10,10,11,7,8,10,5,2,10,11,11,5,10,10,6,21" aria-label="Clics diarios en 28 días"><defs><linearGradient id="gradg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E4FD8" stop-opacity=".22"/><stop offset="1" stop-color="#1E4FD8" stop-opacity="0"/></linearGradient></defs><path class="a"/><path class="l"/></svg>
-        <!-- PENDIENTE (Joan): captura de Search Console de Dentlux de este periodo. Cuando esté en public/stats/, añadir aquí el botón data-captura como en San Remo. -->
-        <div class="periodo"><span>Clics diarios · 28 días</span></div>
+        <div class="periodo"><span>Clics diarios · 28 días</span><button type="button" data-captura="/stats/dentlux-nov.jpg" data-pie="Google Search Console · Dentlux Travel · 5 oct – 1 nov 2026">Ver la captura de Search Console</button></div>
         <div class="testimonio"><img src="/img/dentlux.jpg" alt="Equipo de Dentlux Travel" width="46" height="46" loading="lazy"><div><q>Ahora recibimos solicitudes de clientes todos los días sin hacer nada.</q><small>Equipo Dentlux Travel · <span class="extra">+35 solicitudes al mes</span></small></div></div>
       </article>
       <article class="caso rv" data-d="1">
@@ -622,7 +621,7 @@ dialog figcaption{padding:12px 18px;font-size:.85rem;color:var(--muted)}
           <div><b data-count="8.7" data-dec="1">8,7</b><span>posición media</span></div>
         </div>
         <svg class="grafica" viewBox="0 0 400 90" preserveAspectRatio="none" data-serie="21,34,28,25,39,38,40,17,37,28,19,29,27,19,22,24,32,21,34,48,21,19,27,23,28,35,29,34" aria-label="Clics diarios en 28 días"><path class="a"/><path class="l"/></svg>
-        <div class="periodo"><span>Clics diarios · 28 días</span><button type="button" data-captura="/stats/san-remo-nov.jpg">Ver la captura de Search Console</button></div>
+        <div class="periodo"><span>Clics diarios · 28 días</span><button type="button" data-captura="/stats/san-remo-nov.jpg" data-pie="Google Search Console · Restaurante San Remo · 5 oct – 1 nov 2026">Ver la captura de Search Console</button></div>
         <div class="testimonio"><img src="/img/alberto.jpg" alt="Alberto Villegas" width="46" height="46" loading="lazy"><div><q>Pasamos de depender solo del teléfono a recibir reservas online cada semana en solo 30 días.</q><small>Alberto Villegas · <span class="extra">+25 reservas online cada semana</span></small></div></div>
       </article>
     </div>
@@ -775,8 +774,8 @@ const fmt = (n, d=0) => { const [e, f] = n.toFixed(d).split('.'); return e.repla
 
 // Captura de Search Console
 (() => {
-  const dlg = document.getElementById('captura'), img = dlg.querySelector('img');
-  document.querySelectorAll('[data-captura]').forEach(b => b.addEventListener('click', () => { img.src = b.dataset.captura; dlg.showModal(); }));
+  const dlg = document.getElementById('captura'), img = dlg.querySelector('img'), pie = dlg.querySelector('figcaption');
+  document.querySelectorAll('[data-captura]').forEach(b => b.addEventListener('click', () => { img.src = b.dataset.captura; pie.textContent = b.dataset.pie; dlg.showModal(); }));
   dlg.querySelector('.cerrar').addEventListener('click', () => dlg.close());
   dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 })();
