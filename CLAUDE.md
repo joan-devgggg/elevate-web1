@@ -73,8 +73,8 @@ desde aquí.**
 ## SEO (repuesto en el rediseño del 4-11-2026)
 
 **Dominio canónico: `https://www.myelevateweb.com/`.** Es el host que sirve 200. El apex
-`myelevateweb.com` redirige a www con un **307** (temporal): conviene cambiarlo a 301/308 en el
-dashboard de Vercel. `elevateweb.es` ya no es nuestro (redirige a un 404 de otro proveedor): no
+`myelevateweb.com` redirige a www con un **308** (permanente; cambiado de 307 en el dashboard de
+Vercel el 8-11-2026, Settings → Domains del proyecto `elevate-web1`). `elevateweb.es` ya no es nuestro (redirige a un 404 de otro proveedor): no
 usarlo en ningún sitio. Comprobar con `curl -sI https://myelevateweb.com`.
 
 Todo vive en `index.html` y `public/`:
