@@ -4,9 +4,11 @@ Una keyword principal por URL, y ninguna secundaria de una URL es la principal d
 
 ## / (portada)
 - Tipo: home comercial
-- Keyword principal: agencia seo local
-- Intención: comercial (el top 10 son páginas de agencias y un directorio)
-- Secundarias (cuerpo): diseño web, seo para ia / posicionamiento en la IA, seo local
+- Keyword principal: agencia seo y geo (cabeza: «agencia seo»; cambio del 9-11-2026 por el reposicionamiento SEO + GEO multisectorial)
+- Intención: comercial
+- Secundarias (cuerpo): agencia geo, seo local, diseño web
+- «agencia geo» (340/mes, dificultad 23, Mangools 9-11-2026) y «agencia seo local» (650, dificultad 15) se las quedarán páginas de servicio propias (/geo/, /seo-local/) cuando existan; la portada va a la categoría amplia con la marca (seo-kit, «Home comercial»)
+- Antes (hasta el 8-11-2026): «agencia seo local». Search Console de la propiedad no tenía datos de rendimiento el 9-11-2026, así que el cambio no pierde historial medible
 - Evidencia: Mangools, 8-11-2026, España/español: 650 búsquedas/mes, dificultad 15 → `mangools/2026-11-08_kwfinder-related_agencia-seo_2724_1003.json`. En el SERP casi todo son agencias con Moz DA de 7 a 32 → `mangools/2026-11-07_serpchecker_agencia-seo-local_2724_0.json`
 - Sin ciudad en el title ni en el H1: el negocio trabaja en toda España (§1). «agencia seo valencia» (1.100, dificultad 19) iría en una página propia si algún día se hace.
 - Estado: publicada

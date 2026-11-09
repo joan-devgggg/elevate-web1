@@ -9,6 +9,8 @@ Los ficheros de `mangools/` guardan los campos que deciden (posición, URL, titl
 - 2026-11-07 · serpchecker_get_serp · kw «seo para abogados», location 2724 · 1 SERP · `mangools/2026-11-07_serpchecker_seo-para-abogados_2724_0.json`
 - 2026-11-07 · serpchecker_get_serp · kw «agencia seo local», location 2724 · 1 SERP · `mangools/2026-11-07_serpchecker_agencia-seo-local_2724_0.json`
 - 2026-11-08 · kwfinder_search_related_keywords · kw «agencia seo», location 2724, language 1003 · 1 consulta de ideas · `mangools/2026-11-08_kwfinder-related_agencia-seo_2724_1003.json`
+- 2026-11-09 · kwfinder_search_related_keywords · kw «agencia geo», location 2724, language 1003 · 1 consulta de ideas · `mangools/2026-11-09_kwfinder-related_agencia-geo_2724_1003.json`
+- 2026-11-09 · serpchecker_get_serp · kw «agencia geo», location 2724 · 1 SERP (snapshot 8-11-2026) · `mangools/2026-11-09_serpchecker_agencia-geo_2724_0.json`
 
 Las fechas de los SERP son las del snapshot de Mangools (7-11-2026); se pidieron el 8-11-2026.
 

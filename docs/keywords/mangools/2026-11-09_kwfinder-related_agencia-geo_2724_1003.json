@@ -1,0 +1,30 @@
+{
+ "tool": "kwfinder_search_related_keywords",
+ "kw": "agencia geo",
+ "location_id": 2724,
+ "language_id": 1003,
+ "total_keywords": 2,
+ "campos": [
+  "kw",
+  "búsquedas/mes",
+  "búsquedas media 12m",
+  "dificultad",
+  "CPC €"
+ ],
+ "keywords": [
+  [
+   "agencia geo",
+   340,
+   390,
+   23,
+   10.95
+  ],
+  [
+   "geo tours agencia de viajes",
+   10,
+   10,
+   14,
+   null
+  ]
+ ]
+}

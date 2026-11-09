@@ -1,0 +1,71 @@
+{
+ "tool": "serpchecker_get_serp",
+ "kw": "agencia geo",
+ "location_id": 2724,
+ "snapshot": "2026-11-08",
+ "serp_features": [
+  "PEOPLE_ALSO_ASK"
+ ],
+ "campos": [
+  "posición",
+  "url",
+  "title",
+  "Moz DA"
+ ],
+ "organic": [
+  [
+   1,
+   "https://themediapower.com/agencia-seo/geo/",
+   "Agencia GEO especializada en IA",
+   21
+  ],
+  [
+   2,
+   "https://www.eskimoz.es/agencia-geo/",
+   "Agencia GEO - Eskimoz",
+   38
+  ],
+  [
+   3,
+   "https://agenciageo.ai/",
+   "Agencia GEO AMD ✔️ N°1 en Posicionamiento en IA",
+   11
+  ],
+  [
+   4,
+   "https://www.optimoclick.com/agencia-geo/",
+   "Agencia GEO en Barcelona | Visibilidad en motores de IA",
+   18
+  ],
+  [
+   5,
+   "https://www.webpositer.com/agencia-geo/",
+   "Agencia GEO · Posicionamiento para IA (y LLMs)",
+   45
+  ],
+  [
+   6,
+   "https://www.isocialweb.agency",
+   "Mejores agencias SEO para IA y GEO de España en 2026",
+   38
+  ],
+  [
+   7,
+   "https://agenciageo.io",
+   "Agencia GEO | SEO en AI Mode, GPT, Gemini y Claude",
+   12
+  ],
+  [
+   8,
+   "https://proseo.es",
+   "Agencia GEO | Posicionamiento Web en LLMs",
+   17
+  ],
+  [
+   9,
+   "https://www.talentumdigital.com",
+   "Ranking de agencias GEO en España 2026",
+   24
+  ]
+ ]
+}

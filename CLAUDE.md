@@ -1,11 +1,12 @@
 # Elevate Web
 
-Web de la agencia (Valencia): webs, SEO y posicionamiento en la IA (GEO) para negocios. En español,
+Web de la agencia (Valencia): agencia especializada en SEO y GEO (visibilidad en Google y en búsquedas
+con IA) para empresas de cualquier sector; SEO local y webs como complementos. En español,
 monolingüe. Desde el 7-11-2026 (rama `paginas-por-sector`) son **tres HTML estáticos**:
 
 - `index.html` → `/` — portada general, con una tarjeta por sector. WhatsApp: "...para mi negocio".
 - `abogados/index.html` → `/abogados/` — la landing de abogados del rediseño del 4-11-2026, casi tal
-  cual. WhatsApp: "Hola, quiero la auditoría gratis para mi despacho".
+  cual. WhatsApp: "Hola, os escribo desde vuestra web: quiero una valoración inicial para mi despacho".
 - `clinicas-dentales/index.html` → `/clinicas-dentales/` — misma estructura, adaptada a clínicas
   (implantes y ortodoncia). WhatsApp: "...para mi clínica".
 
@@ -133,7 +134,8 @@ quedan como están (Joan decidió no pasarlas a `/servicios/seo/<sector>/`).
   Remo es `public/stats/san-remo-nov.jpg` y la de Dentlux, `public/stats/dentlux-nov.jpg`
   (propiedad `sc-domain:dentluxtravel.com`, sacada el 7-11-2026). El pie del visor sale del
   `data-pie` de cada botón. Las de `public/stats/*-stats.png` son antiguas y ya no se usan.
-- Testimonios: los que ya estaban publicados.
+- Testimonios y cifras de San Remo y Dentlux: Joan confirmó el 9-11-2026 que tiene las pruebas y el
+  permiso de los dos clientes. La captura de San Remo no enseña las fechas (solo «28 días»).
 
 ## Verificación
 
@@ -186,10 +188,17 @@ que es justo lo que sobra en este repo.
 Contacto publicado: **644 610 120** · `elevateweb@gmail.com`. La conversión va 100 % por
 WhatsApp, no hay formularios.
 
-Oferta vigente **según `index.html`** (rediseño): auditoría gratis, precio a medida ("te lo
-decimos claro por WhatsApp en menos de 1 hora"), sin permanencia, y garantía de 90 días: si no
-apareces en Google para tu especialidad y tu zona, se devuelve lo pagado, con la condición de dar
-acceso a WhatsApp Business y al Perfil de Empresa de Google. Webs en 48 h, solo en la FAQ.
+Oferta vigente (rama `web-seo-geo`, 9-11-2026, alineada con el manual estratégico de Elevate Web):
+- **Valoración inicial sin coste** antes de contratar (breve). La **auditoría completa va incluida al
+  contratar**. No volver a escribir «auditoría gratis».
+- Precio a medida, **sin publicar cifra** (decisión de Joan): propuesta por escrito tras la valoración.
+- Sin permanencia. Webs en 48 h (Joan confirma que lo cumple), presupuestadas aparte.
+- **Sin garantía de 90 días** (retirada; ningún cliente la contrató). En su lugar, la sección
+  `#compromisos`: propuesta por escrito, auditoría incluida, informe mensual, sin permanencia.
+- **Sin «respondemos en menos de 1 hora»** ni horario (decisión de Joan).
+- GEO sin promesas: nunca «que ChatGPT te nombre/recomiende». Fórmula: facilitar que los asistentes
+  encuentren, entiendan y, cuando sus sistemas lo decidan, citen la información de la empresa.
+- Instagram: `@myelevateweb` (la cuenta `@elevatewebb` se abandonó).
 
 **El `README.md` está desactualizado**: sigue diciendo "por suscripción, desde 65€/mes", que
 es el posicionamiento anterior al commit `27e667c`. Manda `index.html`.
