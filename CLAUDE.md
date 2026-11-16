@@ -9,6 +9,12 @@ monolingüe. Desde el 7-11-2026 (rama `paginas-por-sector`) son **tres HTML est�
   cual. WhatsApp: "Hola, os escribo desde vuestra web: quiero una valoración inicial para mi despacho".
 - `clinicas-dentales/index.html` → `/clinicas-dentales/` — misma estructura, adaptada a clínicas
   (implantes y ortodoncia). WhatsApp: "...para mi clínica".
+- `privacidad/index.html` → `/privacidad/` y `aviso-legal/index.html` → `/aviso-legal/` (16-11-2026):
+  páginas legales con su propio CSS mínimo, enlazadas desde el pie de las tres páginas. La de
+  privacidad es la URL del formulario instantáneo de Meta: no cambiarla. Texto pendiente de revisión
+  por un profesional; borradores y trazabilidad en el paquete de Elevate Web
+  (`07_Guiones/ANUNCIOS/LEGAL_WEB/`). Si se añade analítica, cookies o un formulario, hay que
+  actualizar las dos.
 
 El mensaje de WhatsApp distinto por página sirve para saber de qué anuncio viene cada contacto: no
 unificarlo. **Añadir un sector = crear su carpeta con `index.html`, añadirlo a

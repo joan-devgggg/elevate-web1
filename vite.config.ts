@@ -26,6 +26,8 @@ export default defineConfig(({ mode }) => ({
         portada: path.resolve(__dirname, "index.html"),
         abogados: path.resolve(__dirname, "abogados/index.html"),
         clinicas: path.resolve(__dirname, "clinicas-dentales/index.html"),
+        privacidad: path.resolve(__dirname, "privacidad/index.html"),
+        avisoLegal: path.resolve(__dirname, "aviso-legal/index.html"),
       },
     },
   },
